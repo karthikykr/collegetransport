@@ -80,12 +80,12 @@
         </div>
 
         <div class="form-group">
-            <label for="drop_to">Drop-off Location:</label>
+            <label for="drop_to">Drop Location:</label>
             <input type="text" id="drop_to" name="drop_to" placeholder="Enter drop-off location" required>
         </div>
 
         <div class="form-group">
-            <label for="drop_time">Drop-off Time:</label>
+            <label for="drop_time">Drop Time:</label>
             <select id="drop_time" name="drop_time" required>
                 <option value="Morning">Morning</option>
                 <option value="Evening">Evening</option>

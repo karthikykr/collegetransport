@@ -39,8 +39,9 @@ h2 {
 label {
     display: block;
     font-size: 14px;
+    font-weight: bold;
     margin-bottom: 5px;
-    color: #555;
+    color: #0c0c0c;
 }
 
 /* Input, textarea and Select Style */
@@ -67,7 +68,7 @@ input[type="text"], input[type="number"], input[type="date"], select, textarea {
 }
 
 .submit-btn:hover {
-    background-color: #45a049;
+    background-color: #020267;
 }
 
 /* Responsive Styles */
@@ -88,7 +89,7 @@ input[type="text"], input[type="number"], input[type="date"], select, textarea {
 }
 
 /* Button Focus State */
-button:focus, input:focus, select:focus {
+button:focus, input:focus, textarea:focus, select:focus {
     outline: none;
-    border-color: #4CAF50;
+    border-color: #4d4de6;
 }
