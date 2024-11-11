@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
-    <link rel="stylesheet" href="style/add_vehicle.css"> <!-- Your custom CSS file -->
-
-    <!-- Sidebar Navigation -->
+    <link rel="stylesheet" href="../style/add_vehicle.css"> <!-- Your custom CSS file -->
+   
     <aside class="sidebar">
         <div class="sidebar-header">
             <div class="logo">
-                <img src="Assets/logo.jpg" alt="transport">
+                <img src="../Assets/logo.jpg" alt="transport">
             </div>
         </div>
         <ul class="nav-links">
