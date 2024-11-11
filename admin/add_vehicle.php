@@ -27,7 +27,7 @@
         <!-- Header -->
         <header class="header">
             <h2>St Joseph Engineering College</h2>
-            <img src="Assets/logo.jpg" alt="Profile">
+            <img src="../Assets/logo.jpg" alt="Profile">
         </header>
     </head>
 <body>
