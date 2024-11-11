@@ -10,15 +10,15 @@
     <aside class="sidebar">
         <div class="sidebar-header">
             <div class="logo">
-                <img src="/Assets/logo.jpg" alt="transport">
+                <img src="Assets/logo.jpg" alt="transport">
             </div>
         </div>
         <ul class="nav-links">
             <li><a href="#" class="active">Vehicles</a></li>
             <!-- <li><a href="#">Add</a></li> -->
-            <li><a href="#">Book</a></li>
-            <li><a href="#">Status</a></li>
-            <li><a href="#">My Bookings</a></li>
+            <!-- <li><a href="#">Book</a></li> -->
+            <!-- <li><a href="#">Status</a></li> -->
+            <!-- <li><a href="#">My Bookings</a></li> -->
         </ul>
     </aside>
 
@@ -27,7 +27,7 @@
         <!-- Header -->
         <header class="header">
             <h2>St Joseph Engineering College</h2>
-            <img src="/Assets/logo.jpg" alt="Profile">
+            <img src="Assets/logo.jpg" alt="Profile">
         </header>
     </head>
 <body>
@@ -38,6 +38,7 @@
     <form id="vehicleForm">
         <label for="vehicles">Select Vehicle Type:</label>
         <select id="vehicles" name="vehicleType" class="vehicle">
+            <option value="" disabled selected>Select a vehicle</option>
             <option value="bus">Bus</option>
             <option value="car">Car</option>
             <option value="truck">Truck</option>
