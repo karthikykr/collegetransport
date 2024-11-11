@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>transport</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
@@ -13,12 +13,12 @@
     <aside class="sidebar">
         <div class="sidebar-header">
             <div class="logo">
-                <img src="Assets/logo.jpg" alt="transport">
+                <img src="../Assets/logo.jpg" alt="transport">
             </div>
         </div>
         <ul class="nav-links">
             <li><a href="#" class="active">vehicles</a></li>
-            <li><a href="../add_vehicle.php">Add</a></li>
+            <li><a href="add_vehicle.php">Add</a></li>
         </ul>
     </aside>
 
@@ -27,7 +27,7 @@
         <!-- Header -->
         <header class="header">
             <h2>St Joseph Engineering College</h2>
-            <img src="./Assets/logo.jpg" alt="Profile">
+            <img src="../Assets/logo.jpg" alt="Profile">
         </header>
 
         <!-- Dashboard Section -->

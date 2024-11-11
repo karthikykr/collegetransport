@@ -1,16 +1,18 @@
+<?php 
+    include('db.php');
+?>
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
-    <link rel="stylesheet" href="style/add_vehicle.css"> <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="../styles/add_vehicle.css"> <!-- Your custom CSS file -->
 
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
         <div class="sidebar-header">
             <div class="logo">
-                <img src="Assets/logo.jpg" alt="transport">
+                <img src="../Assets/logo.jpg" alt="transport">
             </div>
         </div>
         <ul class="nav-links">
@@ -27,7 +29,7 @@
         <!-- Header -->
         <header class="header">
             <h2>St Joseph Engineering College</h2>
-            <img src="Assets/logo.jpg" alt="Profile">
+            <img src="../Assets/logo.jpg" alt="Profile">
         </header>
     </head>
 <body>
@@ -35,9 +37,9 @@
 <!-- Form to Add Vehicle -->
 <div class="add_vehicles">
     <h2>Add Vehicle</h2><br>
-    <form id="vehicleForm">
+    <form id="vehicleForm" action="#" method="POST">
         <label for="vehicles">Select Vehicle Type:</label>
-        <select id="vehicles" name="vehicleType" class="vehicle">
+        <select id="vehicles" name="vehicleType" class="vehicle" required>
             <option value="" disabled selected>Select a vehicle</option>
             <option value="bus">Bus</option>
             <option value="car">Car</option>
@@ -58,6 +60,17 @@
 
         <input type="submit" value="Add Vehicle" class="btnAdd"><br><br>
     </form>
+    <?php 
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Get email and password from form
+            $vehicle_type =$_POST['vehicleType'];
+            $v_regno = $_POST['registerNumber'];
+        
+            // Query to check if the user exists
+            $sql = "SELECT id, password, role FROM users WHERE email = '$email'";
+            $result = $conn->query($sql);
+        }
+    ?>
 </div>
 </body>
 </html>
