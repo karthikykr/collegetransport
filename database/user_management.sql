@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2024 at 06:21 AM
+-- Generation Time: Nov 12, 2024 at 06:41 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `user_management`
+-- Database: `collegetransport`
 --
 
 -- --------------------------------------------------------
@@ -29,6 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `designation` varchar(255) NOT NULL,
+  `department` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('admin','user') NOT NULL
@@ -38,9 +41,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
-(1, 'admin@example.com', 'hashedpassword', 'admin'),
-(2, 'user@example.com', 'hashedpassword', 'user');
+INSERT INTO `users` (`id`, `name`, `designation`, `department`, `email`, `password`, `role`) VALUES
+(2, 'charan', 'faculty', 'mca', 'user@test.com', '1234', 'user'),
+(3, 'karthik ', 'admin', 'admin', 'admin@test.com', '1234', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

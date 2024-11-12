@@ -9,7 +9,7 @@
     <div class="sidebar-header">
         <div class="logo">
             <img src="../Assets/logo.jpg" alt="transport">
-        </div>
+        </div>  
     </div>
     <ul class="nav-links">
         <li><a href="../admin/admin_home.php" class="active">Vehicles</a></li>
@@ -35,7 +35,7 @@
         <div class="add_user_container">
             <div class="add_user">
                 <h2>Add User</h2><br>
-                <form id="userForm" action="#" method="POST">
+                <form id="userForm" action="add_user_backend.php" method="POST">
 
                     <!-- Name -->
                     <label for="name">Full Name:</label>
