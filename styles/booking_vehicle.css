@@ -23,6 +23,54 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+table {
+    background-color: #fff;
+    max-width: 100%;
+    margin: 0 auto;
+    border: none;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.booking-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-details th, .booking-details td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.booking-details th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.booking-details tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.booking-details tr:hover {
+    background-color: #f1f1f1;
+}
+
+.booking-details td {
+    background-color: #fff;
+}
+
+.booking-details td:last-child {
+    font-weight: bold;
+}
+
+
 /* Form Title */
 h2 {
     text-align: center;
@@ -45,7 +93,7 @@ label {
 }
 
 /* Input, textarea and Select Style */
-input[type="text"], input[type="number"], input[type="date"], select, textarea {
+input[type="text"], input[type="number"], input[type="date"], input[type="time"], select, textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -54,11 +102,19 @@ input[type="text"], input[type="number"], input[type="date"], select, textarea {
     background-color: #f9f9f9;
 }
 
+.button-flex {
+    display: flex;                  /* Enable Flexbox */
+    justify-content :left; /* Space buttons evenly across the container */
+    align-items: center;   
+    margin-top: 10px;         /* Vertically align items */
+    gap: 10px;                      /* Optional: space between the buttons */
+}
+
 /* Button Style */
 .submit-btn {
     background-color: #4d4de6;
     border-radius: 30px;
-    width: 100%;
+    width: 30%;
     height: 40px;
     color: white;
     font-size: 16px;
