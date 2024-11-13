@@ -1,3 +1,9 @@
+
+<?php
+ // Get the current script name to dynamically show/hide links
+    $current_page = basename($_SERVER['PHP_SELF']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +24,10 @@
         </div>
         <ul class="nav-links">
         <li><a href="#" class="active">Vehicles</a></li>
-            <li><a href="../users/booking_vehicle.php">Book Vehicle</a></li>
+        <li><a href="../users/booking_vehicle.php">Book Vehicle</a></li>
+        <?php if ($current_page == 'hod_home.php'): ?>
+            <li><a href="../user_hod/hod_approval.php">Add New Vehicle</a></li>
+        <?php endif; ?>
             <li><a href="#">Status</a></li>
             <li><a href="#">My Bookings</a></li>
         </ul>
