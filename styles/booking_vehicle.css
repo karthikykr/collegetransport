@@ -23,6 +23,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.container{
+    background-color:#dde1fd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
 table {
     background-color: #fff;
     max-width: 100%;
@@ -38,6 +45,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    background-color: #ccc;
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -49,9 +57,10 @@ table {
 }
 
 .booking-details th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #f4f4f6;
+    color: rgb(6, 6, 6);
     font-weight: bold;
+    width: 50%;
 }
 
 .booking-details tr:nth-child(even) {
@@ -80,7 +89,7 @@ h2 {
 
 /* Form Group Style */
 .form-group {
-    margin-bottom: 15px;git 
+    margin-bottom: 15px;
 }
 
 /* Label Style */
@@ -104,16 +113,23 @@ input[type="text"], input[type="number"], input[type="date"], input[type="time"]
 
 .button-flex {
     display: flex;                  /* Enable Flexbox */
-    justify-content :left; /* Space buttons evenly across the container */
-    align-items: center;   
+    justify-content :center; /* Space buttons evenly across the container */
+    /* align-items: center;    */
     margin-top: 10px;         /* Vertically align items */
     gap: 10px;                      /* Optional: space between the buttons */
+}
+.btn-con{
+    display: flex;                  /* Enable Flexbox */
+    justify-content :center; /* Space buttons evenly across the container */
+    align-items: center;   
+    margin-top: 10px;         /* Vertically align items */     
 }
 
 /* Button Style */
 .submit-btn {
     background-color: #4d4de6;
-    border-radius: 30px;
+    border-radius: 20px;
+    align-items: center;
     width: 30%;
     height: 40px;
     color: white;

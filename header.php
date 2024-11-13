@@ -17,7 +17,7 @@
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="active">vehicles</a></li>
+        <li><a href="#" class="active">vehicles</a></li>
             <li><a href="#">Add</a></li>
             <li><a href="../users/booking_vehicle.php">Book</a></li>
             <li><a href="#">Status</a></li>

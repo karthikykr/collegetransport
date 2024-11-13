@@ -88,7 +88,7 @@
                 <input type="time" id="drop_time" name="drop_time" required>
             </div>
 
-            <div class="form-group">
+            <div class="btn-con">
                 <button type="submit" class="submit-btn">Submit</button>
             </div>
         </form>
