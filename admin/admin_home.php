@@ -17,8 +17,9 @@
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="active">vehicles</a></li>
-            <li><a href="add_vehicle.php">Add</a></li>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="add_vehicle.php">Add Vehicle</a></li>
+            <li><a href="add_user.php">Add User</a></li>
         </ul>
     </aside>
 

@@ -1,19 +1,14 @@
-<?php 
-    include('db.php');
-?>
 
 <!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="../styles/add_vehicle.css"> <!-- Your custom CSS file -->
 
     <!-- Sidebar Navigation -->
-=======
+
     <link rel="stylesheet" href="../style/add_vehicle.css"> <!-- Your custom CSS file -->
    
->>>>>>> f66a7043178baca367a85d78164912a8e0dd7f40
     <aside class="sidebar">
         <div class="sidebar-header">
             <div class="logo">
@@ -21,7 +16,7 @@
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="active">Vehicles</a></li>
+            <li><a href="admin_home.php" class="active">Vehicles</a></li>
             <!-- <li><a href="#">Add</a></li> -->
             <!-- <li><a href="#">Book</a></li> -->
             <!-- <li><a href="#">Status</a></li> -->
@@ -42,7 +37,7 @@
 <!-- Form to Add Vehicle -->
 <div class="add_vehicles">
     <h2>Add Vehicle</h2><br>
-    <form id="vehicleForm" action="#" method="POST">
+    <form id="vehicleForm" action="add_vehicle_backend.php" method="POST">  <!--redirect to add_vehicle_backend -->     
         <label for="vehicles">Select Vehicle Type:</label>
         <select id="vehicles" name="vehicleType" class="vehicle" required>
             <option value="" disabled selected>Select a vehicle</option>
@@ -65,17 +60,7 @@
 
         <input type="submit" value="Add Vehicle" class="btnAdd"><br><br>
     </form>
-    <?php 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Get email and password from form
-            $vehicle_type =$_POST['vehicleType'];
-            $v_regno = $_POST['registerNumber'];
-        
-            // Query to check if the user exists
-            $sql = "SELECT id, password, role FROM users WHERE email = '$email'";
-            $result = $conn->query($sql);
-        }
-    ?>
+   
 </div>
 </body>
 </html>
