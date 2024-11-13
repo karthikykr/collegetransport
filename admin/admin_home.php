@@ -35,28 +35,46 @@
             <div class="board-header">
                 <h3>Vehicle Information</h3>
             </div>
+
+         
+         
             <div class="grid-container">
-                <div class="grid-item">1</div>
-            <div class="grid-item">2</div>  
-                <div class="grid-item">3</div>
-                <div class="grid-item">4</div>
-                <div class="grid-item">5</div>
-                <div class="grid-item">6</div>
-                <div class="grid-item">7</div>
-                <div class="grid-item">8</div>
-                <div class="grid-item">9</div>
-                <div class="grid-item">10</div>
-                <div class="grid-item">11</div>
-                <div class="grid-item">12</div>
-                <div class="grid-item">13</div>
-                <div class="grid-item">14</div>
-                <div class="grid-item">15</div>
-                <div class="grid-item">16</div>
-                <div class="grid-item">17</div>
-                <div class="grid-item">18</div>
-                <div class="grid-item">19</div>
-                <div class="grid-item">20</div>
+
+            <?php 
+
+include('admin_home_backend.php');
+
+if ($result->num_rows > 0) {
+    // Loop through the results and display them
+    while ($row = $result->fetch_assoc()) {
+        // Display each field from the row
+       // echo "Vehicle ID: " . $row['v_id'] . "<br>";
+        //echo "Vehicle Name: " . $row['vehicle_name'] . "<br>";
+        //echo "Vehicle Model: " . $row['vehicle_model'] . "<br>";
+        //echo "<hr>"; // Separator between records
+?>
+                
+        <a href="vehicle_detail.php ?v_id=<?php echo $row['v_id']; ?>">
+                <div class="grid-item">     
+                <h3><?php  echo $row['vehicle_type'] ;?></h3>
+                <h3><?php  echo  $row['v_reg_no'] ?></h3>
+                <h6><?php  echo "Insurance valid    till: " . $row['v_insurance_valid']; ?></h6>
+                <h6><?php  echo "emission valid till: " . $row['v_emission_valid'] ;?></h6>
+
             </div>
+    </a>
+
+                <?php       }
+        } else {
+            echo "No records found.";
+        }
+
+        $conn->close();
+
+        ?>
+            </div>
+
+         
 
         </section>
     </main>
