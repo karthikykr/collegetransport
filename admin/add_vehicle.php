@@ -4,10 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
     <link rel="stylesheet" href="../styles/add_vehicle.css"> <!-- Your custom CSS file -->
-
-    <!-- Sidebar Navigation -->
-
-    <link rel="stylesheet" href="../style/add_vehicle.css"> <!-- Your custom CSS file -->
    
     <aside class="sidebar">
         <div class="sidebar-header">

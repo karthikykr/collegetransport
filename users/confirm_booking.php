@@ -14,10 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Convert 24-hour time to 12-hour AM/PM format
     $pickup_time_formatted = date("g:i A", strtotime($pickup_time)); // 12-hour format with AM/PM
     $drop_time_formatted = date("g:i A", strtotime($drop_time));     // 12-hour format with AM/PM
-} else {
-    // Redirect to form if no data is posted
-    header("Location: booking_form.php");
-    exit();
 }
 ?>
 
@@ -32,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="container">
         <h2>Confirm Vehicle Booking</h2>
-        <table border="1">
+        <table class="booking-details" border="1">
             <tr>
                 <th>Vehicle Type</th>
                 <td><?php echo htmlspecialchars($vehicle); ?></td>
@@ -78,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="hidden" name="drop_time" value="<?php echo htmlspecialchars($drop_time); ?>">
             <div class="button-flex">
                 <button type="submit" name="confirm" class="submit-btn">Confirm</button>
-                <button  name="cancel" class="submit-btn">Cancel</button>
+                <button  name="cancel" class="submit-btn" href="booking_vehicle.php">Cancel</button>
             </div>
         </form>
     </div>
