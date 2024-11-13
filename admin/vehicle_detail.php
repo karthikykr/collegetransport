@@ -22,11 +22,11 @@ $result = $conn->query($sql);
         <input type="hidden" name="v_id" value="<?php echo $row['v_id']; ?>">
             <tr>
                 <th>Vehicle Type</th>
-               <th> <input type="text" name="vehicle_type" value="<?php echo $row['vehicle_type']; ?>" required></th>
+               <th> <?php echo $row['vehicle_type']; ?> </th>
             </tr>
             <tr>
                 <th>Register No</th>
-                <th><input type="text" name="v_reg_no" value="<?php echo $row['v_reg_no']; ?>" required></th>
+                <th><?php echo $row['v_reg_no']; ?> </th>
             </tr>
 
             <tr>
@@ -44,13 +44,17 @@ $result = $conn->query($sql);
                 <th><input type="date" name="v_emission_valid" value="<?php echo $row['v_emission_valid']; ?>" required></th>
 
             </tr>
+            <tr>
+                <td><input type="submit" name="updatebtn" value="Update"></td>
+                <td><button type=button onclick="window.location.href='delete_vehicle.php ?vid=<?php echo $v_id; ?>'" name="deletebtn">Delete</button></td>
+
+            </tr>
         </table>
         
 
 </form>
     </body>
     </html>
+    <?php $conn->close(); ?>
 
-<?php 
-$conn->close();
-?>
+      
