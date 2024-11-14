@@ -27,10 +27,15 @@
         <h2>St Joseph Engineering College</h2>
         <img src="../Assets/logo.jpg" alt="Profile">
     </header>
+    <style>
+        #department{
+            
+        }
+    </style>
     </head>
 
     <body>
-
+        
         <!-- Form to Add User -->
         <div class="add_user_container">
             <div class="add_user">
@@ -44,7 +49,7 @@
 
                     <!-- Designation -->
                     <label for="designation">Designation:</label>
-                    <select id="designation" name="designation" class="user_input" required>
+                    <select id="designation" name="designation" class="user_input" onchange="displayDepartment()" required>
                         <option value="" disabled selected>Select Designation</option>
                         <option value="faculty">Faculty</option>
                         <option value="hod">HOD</option>
@@ -54,11 +59,11 @@
                     </select><br><br>
 
                     <!-- Department -->
-                    <label for="department">Department:</label>
-                    <input type="text" id="department" name="department" class="user_input"
-                        placeholder="Enter department" required><br><br>
+                   <label for="department" id="department_lbl">Department:</label>
+                     <input type="text" id="department" name="department" class="user_input"
+                        placeholder="Enter department" ><br><br>
 
-                    <!-- Email -->
+                    <!-- Email --> 
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" class="user_input" placeholder="Enter email"
                         required><br><br>
@@ -74,6 +79,23 @@
                     <!-- Submit Button -->
                     <input type="submit" value="Add User" class="btnAdd"><br><br>
                 </form>
+                <script>
+        function displayDepartment() {
+            const selectedItem = document.getElementById("designation").value;
+            const department = document.getElementById("department");
+            const departmentLabel = document.getElementById("department_lbl");
+
+            if (selectedItem === "hod") {
+                department.style.display = "block";
+                departmentLabel.style.display = "block";
+                department.setAttribute("required","required");
+            } else {
+                department.style.display = "none";
+                departmentLabel.style.display = "none";
+            }
+        }
+    </script>
+
             </div>
         </div>
     </body>

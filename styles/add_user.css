@@ -133,6 +133,7 @@
 }
 
 .add_user_container {
+
     background-color: #cbcbf9;
     color: black;
     padding: 30px;
@@ -141,6 +142,7 @@
     width: 80%;
     max-width: 600px;
     margin: 20px auto;
+    gap:10px;
 }
 
 .add_user_container h2 {
@@ -158,6 +160,13 @@
     margin-bottom: 15px;
 }
 
+#department{
+    display:none;
+}
+
+#department_lbl{
+    display:none;
+}
 
 
 input[type="text"],
