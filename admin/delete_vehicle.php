@@ -6,9 +6,11 @@ $vid=$_GET['vid'];
 $query="DElETE FROM `add_vehicle` WHERE `v_id`='$vid'";
 
 if($conn->query($query)){
-    echo"deleted sucessfully";
+    echo"<script>alert('Deleted sucessfully..');</script>";
+    echo"<script>location.href='admin_home.php'</script>";
 }else{
-    echo"not deleted";
+    echo"<script>alert('Vehicle detail not Deleted..');</script>";
+    echo"<script>location.href='admin_home.php'</script>";
 }
 
 
