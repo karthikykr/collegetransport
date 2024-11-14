@@ -24,9 +24,11 @@ if (isset($_POST['confirm'])) {
     $drop_to = $_POST['drop_to'];
     $drop_time = $_POST['drop_time'];
 
+    $status = 'pending';
+
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO bookings (vehicle, travel_date, purpose, num_people, pickup_from, pickup_time, drop_to, drop_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssss", $vehicle, $travel_date, $purpose, $num_people, $pickup_from, $pickup_time, $drop_to, $drop_time);
+    $stmt = $conn->prepare("INSERT INTO bookings (vehicle, travel_date, purpose, num_people, pickup_from, pickup_time, drop_to, drop_time, booking_status) VALUES (?, ?, ?, ?, ?, ?, ?, ? , ?)");
+    $stmt->bind_param("sssssssss", $vehicle, $travel_date, $purpose, $num_people, $pickup_from, $pickup_time, $drop_to, $drop_time, $status);
 
     // Execute the statement
     if ($stmt->execute()) {
