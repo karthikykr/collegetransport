@@ -47,6 +47,7 @@
                     <label for="designation">Designation:</label>
                     <select id="designation" name="designation" class="user_input" onchange="displayDepartment()" required>
                         <option value="" disabled selected>Select Designation</option>
+                        <option value="admin">Admin</option>
                         <option value="faculty">Faculty</option>
                         <option value="hod">HOD</option>
                         <option value="assistant director">Assistant Director</option>
@@ -81,7 +82,7 @@
             const department = document.getElementById("department");
             const departmentLabel = document.getElementById("department_lbl");
 
-            if (selectedItem === "hod") {
+            if (selectedItem === "hod" || selectedItem === "faculty") {
                 department.style.display = "block";
                 departmentLabel.style.display = "block";
                 department.setAttribute("required","required");

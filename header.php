@@ -25,9 +25,17 @@
         <ul class="nav-links">
         <li><a href="#" class="active">Vehicles</a></li>
         <li><a href="../users/booking_vehicle.php">Book Vehicle</a></li>
+
+        <!-- to assign the approval requests if it hod user -->
         <?php if ($current_page == 'hod_home.php'): ?>
             <li><a href="../user_hod/hod_approval.php">Requests Approval</a></li>
         <?php endif; ?>
+
+        <!-- to assign the approval requests if it hod user -->
+        <?php if ($current_page == 'a_dir_home.php'): ?>
+            <li><a href="../user_a_dir/a_dir_approval.php">Requests Approval</a></li>
+        <?php endif; ?>
+
             <li><a href="#">Status</a></li>
             <li><a href="#">My Bookings</a></li>
         </ul>

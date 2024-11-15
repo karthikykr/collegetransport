@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT id, password, role FROM users WHERE email = '$email'";
     $result = $conn->query($sql);
 
+
     if ($result->num_rows > 0) {
         // Fetch user data
         $user = $result->fetch_assoc();
@@ -50,16 +51,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($user['role'] == 'admin') {
                 header("Location: ../admin/admin_home.php");
                 exit();
-            } else {
-                header("Location: ../user/users.php");
+            } elseif ($user['role'] == 'hod') {
+                header("Location: ../user_hod/hod_home.php");
                 exit();
+            }elseif($user['role'] == 'a_director'){
+                header("Location: ../user_a_dir/a_dir_home.php");
+                exit();
+            } else {
+                echo "Invalid password.";
             }
-        } else {
-            echo "Invalid password.";
-        }
     } else {
         echo "No user found with that email.";
     }
+}
+
 }
 
 $conn->close();

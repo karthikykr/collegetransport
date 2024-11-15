@@ -22,7 +22,7 @@
                 }
             }
 
-            $query = "INSERT INTO `users` (`name`, `designation`, `department`, `email`, `password`, `role`) VALUES ('$name','$designation','$department','$email','$password','$role')";
+            $query = "INSERT INTO `users` (`name`, `role`, `department`, `email`, `password`) VALUES ('$name','$designation','$department','$email','$password')";
            
             if($conn->query($query)){
                 echo"<script>alert('user added sucessfully');</script>";
