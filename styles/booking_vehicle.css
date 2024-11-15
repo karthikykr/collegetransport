@@ -10,86 +10,32 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     color: #333;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 /* Form Container */
 .form-container {
-    background-color: #fff;
-    max-width: 600px;
+    background-color: #dde1fd;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container{
-    background-color:#dde1fd;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-table {
-    background-color: #fff;
-    max-width: 100%;
-    margin: 0 auto;
-    border: none;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Table Styles */
-.booking-details {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #ccc;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.booking-details th, .booking-details td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.booking-details th {
-    background-color: #f4f4f6;
-    color: rgb(6, 6, 6);
-    font-weight: bold;
-    width: 50%;
-}
-
-.booking-details tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.booking-details tr:hover {
-    background-color: #f1f1f1;
-}
-
-.booking-details td {
-    background-color: #fff;
-}
-
-.booking-details td:last-child {
-    font-weight: bold;
-}
-
-
-/* Form Title */
-h2 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-/* Form Group Style */
-.form-group {
+/* Row for Two-Column Layout */
+.row {
+    display: flex;
+    gap: 10px;
     margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group.full-width {
+    flex: 100%;
 }
 
 /* Label Style */
@@ -111,26 +57,23 @@ input[type="text"], input[type="number"], input[type="date"], input[type="time"]
     background-color: #f9f9f9;
 }
 
-.button-flex {
-    display: flex;                  /* Enable Flexbox */
-    justify-content :center; /* Space buttons evenly across the container */
-    /* align-items: center;    */
-    margin-top: 10px;         /* Vertically align items */
-    gap: 10px;                      /* Optional: space between the buttons */
+textarea {
+    width: 100%; /* Full Width for Purpose Field */
+    height: 80px;
 }
-.btn-con{
-    display: flex;                  /* Enable Flexbox */
-    justify-content :center; /* Space buttons evenly across the container */
-    align-items: center;   
-    margin-top: 10px;         /* Vertically align items */     
+
+.btn-con {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
 }
 
 /* Button Style */
 .submit-btn {
-    background-color: #4d4de6;
+    background-color: #020267;
     border-radius: 20px;
-    align-items: center;
-    width: 30%;
+    width: 200px;
     height: 40px;
     color: white;
     font-size: 16px;
@@ -140,28 +83,17 @@ input[type="text"], input[type="number"], input[type="date"], input[type="time"]
 }
 
 .submit-btn:hover {
-    background-color: #020267;
+    background-color: #4d4de6;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column;
+    }
+
     .form-container {
-        padding: 20px;
-        width: 90%;
+        width: 100%;
+        padding: 15px;
     }
-    
-    h2 {
-        font-size: 24px;
-    }
-
-    input, select, button {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-/* Button Focus State */
-button:focus, input:focus, textarea:focus, select:focus {
-    outline: none;
-    border-color: #4d4de6;
 }

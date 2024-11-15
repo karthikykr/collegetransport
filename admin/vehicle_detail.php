@@ -1,5 +1,6 @@
 <?php  
 include('../db.php');
+include('../header1.php');
 
 $v_id = $_GET['v_id'];
 include('../db.php');
@@ -14,11 +15,12 @@ $result = $conn->query($sql);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="../styles/booking_vehicle.css" >
     </head>
     <h1>Vehicle details</h1>
     <body>
         <form action="update_vehicle.php" method="POST">
-        <table border=1>
+        <table class="booking-details" border="1">
         <input type="hidden" name="v_id" value="<?php echo $row['v_id']; ?>">
             <tr>
                 <th>Vehicle Type</th>
@@ -45,9 +47,10 @@ $result = $conn->query($sql);
 
             </tr>
             <tr>
+            <div class="btn-con">
                 <td><input type="submit" name="updatebtn" value="Update"></td>
                 <td><button type=button onclick="window.location.href='delete_vehicle.php ?vid=<?php echo $v_id; ?>'" name="deletebtn">Delete</button></td>
-
+            </div>
             </tr>
         </table>
         

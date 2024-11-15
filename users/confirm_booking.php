@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include('../header.php');?>
+    <?php include('../header1.php');?>
     <link rel="stylesheet" href="../styles/booking_vehicle.css">
 </head>
 <body>
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </tr>
         </table>
 
-        <form action="store_booking.php" method="POST">
+        <form action="booking_backend.php" method="POST">
             <input type="hidden" name="vehicle" value="<?php echo htmlspecialchars($vehicle); ?>">
             <input type="hidden" name="travel_date" value="<?php echo htmlspecialchars($travel_date); ?>">
             <input type="hidden" name="purpose" value="<?php echo htmlspecialchars($purpose); ?>">
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="hidden" name="pickup_time" value="<?php echo htmlspecialchars($pickup_time); ?>">
             <input type="hidden" name="drop_to" value="<?php echo htmlspecialchars($drop_to); ?>">
             <input type="hidden" name="drop_time" value="<?php echo htmlspecialchars($drop_time); ?>">
-            <div class="button-flex">
+            <div class="btn-con">
                 <button type="submit" name="confirm" class="submit-btn">Confirm</button>
                 <button  name="cancel" class="submit-btn" href="booking_vehicle.php">Cancel</button>
             </div>
