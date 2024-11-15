@@ -50,12 +50,21 @@ $result = $conn->query($sql);
             <div class="btn-con">
                 <td><input type="submit" name="updatebtn" value="Update"></td>
                 <td><button type=button onclick="window.location.href='delete_vehicle.php ?vid=<?php echo $v_id; ?>'" name="deletebtn">Delete</button></td>
-            </div>
-            </tr>
-        </table>
-        
 
+            </tr>
+        </table> 
 </form>
+<script>
+        function confirmDelete() {
+            const userConfirmed = confirm("Are you sure you want to delete this record?");
+            if (userConfirmed) {
+                // Perform delete operation here, e.g., call an API or submit a form
+                location.href='delete_vehicle.php ?vid=<?php echo $v_id; ?>'
+            } else {
+                alert("Deletion canceled.");
+            }
+        }
+    </script>
     </body>
     </html>
     <?php $conn->close(); ?>

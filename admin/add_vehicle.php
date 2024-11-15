@@ -52,7 +52,7 @@
         <input type="date" id="insuranceValidTill" name="insuranceValidTill" required><br><br>
 
         <label for="emissionValidTill">Emission Valid Till:</label>
-        <input type="date" id="emissionValidTill" name="emissionValidTill" required><br><br>
+        <input type="date" id="emissionValidTill" name="emissionValidTill"  required><br><br>
 
         <input type="submit" value="Add Vehicle" class="btnAdd"><br><br>
     </form>
