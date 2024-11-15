@@ -159,13 +159,14 @@
     margin-bottom: 15px;
 }
 
-#department,#department_lbl{
+#department{
     display:none;
+  
 }
 
-/* #department_lbl{
+#department_lbl{
     display:none;
-} */
+}
 
 
 input[type="text"],

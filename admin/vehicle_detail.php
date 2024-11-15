@@ -49,7 +49,7 @@ $result = $conn->query($sql);
             <tr>
             <div class="btn-con">
                 <td><input type="submit" name="updatebtn" value="Update"></td>
-                <td><button type=button onclick="window.location.href='delete_vehicle.php ?vid=<?php echo $v_id; ?>'" name="deletebtn">Delete</button></td>
+                <td><button type=button onclick="confirmDelete()" name="deletebtn">Delete</button></td>
 
             </tr>
         </table> 
