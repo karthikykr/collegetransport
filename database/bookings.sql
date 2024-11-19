@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2024 at 10:45 AM
+-- Generation Time: Nov 19, 2024 at 06:25 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,16 +37,17 @@ CREATE TABLE `bookings` (
   `pickup_time` time NOT NULL,
   `drop_to` varchar(255) NOT NULL,
   `drop_time` time NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `booking_status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `bookings`
 --
 
-INSERT INTO `bookings` (`id`, `vehicle`, `travel_date`, `purpose`, `num_people`, `pickup_from`, `pickup_time`, `drop_to`, `drop_time`, `created_at`) VALUES
-(6, 'Car', '2024-11-21', 'c c ccc  c', 44, 'eeee', '02:34:00', 'bddj', '04:37:00', '2024-11-12 06:54:45'),
-(7, 'Tempo Traveller', '2024-11-25', 'mnsmnmsnmnsmmssns', 34, 'sjec', '07:44:00', 'mangalore', '07:41:00', '2024-11-12 09:15:51');
+INSERT INTO `bookings` (`id`, `vehicle`, `travel_date`, `purpose`, `num_people`, `pickup_from`, `pickup_time`, `drop_to`, `drop_time`, `created_at`, `booking_status`) VALUES
+(8, 'Car', '2024-11-20', 'sss', 22, 'mangalore', '21:42:00', 'jsh', '22:43:00', '2024-11-14 14:10:19', 'principal_approved'),
+(9, 'Bus', '2024-11-07', 'jhds', 88, 'ss', '11:55:00', 'sss', '13:58:00', '2024-11-15 04:25:08', 'a_dir_rejected');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +69,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
