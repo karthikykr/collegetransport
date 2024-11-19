@@ -16,14 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pickup_time_formatted = date("g:i A", strtotime($pickup_time)); // 12-hour format with AM/PM
     $drop_time_formatted = date("g:i A", strtotime($drop_time));     // 12-hour format with AM/PM
 }
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include('../header1.php');?>
+    include('../header1.php');?>
     <link rel="stylesheet" href="../styles/booking_vehicle.css">
 </head>
 <body>

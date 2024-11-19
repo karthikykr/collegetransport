@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: #f8fbfc;
+    /* background-color: #f8fbfc; */
+    background-color: #f70606;
 }
 
 /* Top Navbar */
@@ -15,7 +16,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1c076f;
+    /* background-color: #1c076f; */
+    background-color: #f70606;
     color: #fff;
     position: fixed;
     top: 0;
