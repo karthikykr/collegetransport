@@ -11,7 +11,7 @@
     <main>
         <!-- Vehicle Booking Form -->
         <div class="form-container">
-            <h2>Vehicle Booking Form</h2>
+            <center><h2>Vehicle Booking Form</h2></center><br>
             <form action="confirm_booking.php" method="POST">
                 
                 <div class="row">
@@ -31,6 +31,10 @@
                 </div>
 
                 <div class="row">
+                    <div class="form-group">
+                        <label for="num_people">Number of Days:</label>
+                        <input type="number" id="num_days" name="num_days" min="1" placeholder="Enter number of days" required>
+                    </div>
                 <div class="form-group">
                     <label for="travel_date">Travel Date:</label>
                     <input type="date" id="travel_date" name="travel_date" required>

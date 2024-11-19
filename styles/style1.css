@@ -21,20 +21,17 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px;
 }
 
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 .logo {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     padding: 8px;
-    margin-left: 15px;
 }
 
 .profile-section .profile {
@@ -47,7 +44,7 @@ body {
 }
 
 .nav-icon {
-    display: none; /* Hidden by default */
+    display: none;
     font-size: 1.5rem;
     color: white;
     margin-right: 15px;
@@ -61,19 +58,19 @@ body {
     color: #080808;
     height: 100%;
     padding: 5px;
+    margin-top: 120px;
     position: fixed;
     top: 0;
-    right: -250px; /* Initially hidden on the right */
+    left: 0;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    transition: transform 0.3s ease, right 0.3s ease;
-    z-index: 1000;
+    transition: width 0.3s ease, transform 0.3s ease;
     box-shadow: 0 7px 0 rgba(0, 0, 0, 0.10), 0 5px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sidebar.visible {
-    right: 0; /* Show sidebar when visible */
+.sidebar.collapsed {
+    width: 80px;
 }
 
 .sidebar-toggle {
@@ -81,13 +78,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 10px;
+    margin: 10px;
+    padding: 12px;
+    justify-content: center ;
 }
 
 .sidebar-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: #0c0c0c;
+    background-color: #fefdfd;
 }
 
 /* Sidebar Links */
@@ -109,6 +108,7 @@ body {
     border-radius: 4px;
     transition: background-color 0.3s ease;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .sidebar-links li a i {
@@ -124,15 +124,6 @@ body {
     display: inline;
 }
 
-.active {
-    background-color: #c4cbff;
-}
-
-/* Collapsed Sidebar */
-.sidebar.collapsed {
-    width: 80px;
-}
-
 .sidebar.collapsed .sidebar-links li a {
     justify-content: center;
 }
@@ -141,24 +132,8 @@ body {
     display: none;
 }
 
-/* Mobile View */
-@media (max-width: 768px) {
-    .sidebar {
-        right: -100%; /* Fully hidden on mobile by default */
-    }
-
-    .sidebar.visible {
-        right: 0; /* Slide in sidebar on toggle */
-    }
-
-    .nav-icon {
-        display: block; /* Show nav icon in mobile view */
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 20px;
-    }
+.active {
+    background-color: #c4cbff;
 }
 
 /* Main Content */
@@ -168,13 +143,150 @@ body {
     margin-bottom: 100px;
 }
 
+.logoutbtn{
+    display: flex;
+    justify-content: center;
+    /* margin: 10px; */
+    gap: 10px; 
+}
+
+.logout-btn {
+    background-color: #f70606;
+    border-radius: 12px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #4d4de6;
+}
+
+.divgrp{
+    display: flex;
+    padding: 10px;
+}
+
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+    .sidebar-links li a {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .main-content {
+        margin-left: 180px;
+    }
+
+    .sidebar-links li a {
+        font-size: 0.9rem;
+    }
+
+    .topbar .logo {
+        height: 80px;
+        width: 80px;
+    }
+}
+
 @media (max-width: 768px) {
-    .topbar {
-        padding: 0.5em;
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    .sidebar {
+        width: 160px;
     }
 
     .main-content {
         margin-left: 0;
+    }
+
+    .sidebar-links li a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .topbar {
+        /* flex-direction: column; */
+        padding: 0.5em;
+        font-size: 10px;
+    }
+    
+    .sidebar {
+        width: 100%;
+        /* margin-top: 60px; */
+    }
+
+    .sidebar-links li a {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        height: 60px;
+        width: 60px;
+    }
+
+    .profile-section .profile {
+        height: 30px;
+        width: 30px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 5px;
+        margin-top: 50px;
+    }
+
+    .sidebar-links li a {
+        font-size: 0.75rem;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logout-btn{
+        padding: 4px;
     }
 }
