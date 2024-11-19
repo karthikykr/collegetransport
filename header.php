@@ -31,9 +31,14 @@
             <li><a href="../user_hod/hod_approval.php">Requests Approval</a></li>
         <?php endif; ?>
 
-        <!-- to assign the approval requests if it hod user -->
+        <!-- to assign the approval requests if it assistant director user -->
         <?php if ($current_page == 'a_dir_home.php'): ?>
             <li><a href="../user_a_dir/a_dir_approval.php">Requests Approval</a></li>
+        <?php endif; ?>
+
+        <!-- to assign the approval requests if it principal user -->
+        <?php if ($current_page == 'principal_home.php'): ?>
+            <li><a href="../user_principal/principal_approval.php">Requests Approval</a></li>
         <?php endif; ?>
 
             <li><a href="#">Status</a></li>
