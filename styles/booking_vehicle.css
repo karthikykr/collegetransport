@@ -13,9 +13,68 @@ body {
     /* padding: 20px; */
 }
 
+.table{
+    background-color: rgb(139, 160, 160);
+    width: fit-content;
+}
+
+.container{
+    background-color: rgb(255, 0, 111);
+    border-radius: 12px;
+    width: fit-content;
+    padding: 20px;
+}
+
+table {
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-details th, .booking-details td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.booking-details th {
+    background-color: #f4f4f6;
+    color: #333;
+    font-weight: bold;
+}
+
+.booking-details tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.booking-details tr:hover {
+    background-color: #e1e1f9;
+}
+
+.booking-details td {
+    background-color: #fff;
+}
+
+.booking-details td:last-child {
+    font-weight: bold;
+}
+
 /* Form Container */
 .form-container {
     background-color: #dde1fd;
+    /* background-color: #0a25f6; */
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 10px;

@@ -18,11 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
     include('../header1.php');?>
     <link rel="stylesheet" href="../styles/booking_vehicle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
         <h2>Confirm Vehicle Booking</h2>
-        <table class="booking-details" border="1">
+        <table class="table table-hover" border="1">
+        <center>
             <tr>
                 <th>Vehicle Type</th>
                 <td><?php echo htmlspecialchars($vehicle); ?></td>
@@ -59,6 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <th>Purpose</th>
                 <td><?php echo htmlspecialchars($purpose); ?></td>
             </tr>
+            </center>
         </table>
 
         <form action="store_booking.php" method="POST">

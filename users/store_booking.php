@@ -21,9 +21,14 @@ if (isset($_POST['confirm'])) {
     $stmt->bind_param("sssiisssss", $vehicle, $travel_date, $purpose, $num_people, $num_days, $pickup_from, $pickup_time, $drop_to, $drop_time, $status);
 
     // Execute the statement
-    if ($stmt->execute()) {
-        echo "Booking confirmed! Your details have been stored in the database.";
-    } else {
+    if ($stmt->execute()) {?>
+       <div class="alert alert-success" role="alert">
+        <?php echo "<script>alert('Booking confirmed! Your details have been stored in the database.');
+        location.href='user_home.php';
+        </script>";
+        ?>
+        </div>
+    <?php } else {
         echo "Error: " . $stmt->error;
     }
 
