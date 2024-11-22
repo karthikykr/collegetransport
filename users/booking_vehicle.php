@@ -32,7 +32,7 @@
 
                 <div class="row">
                     <div class="form-group">
-                        <label for="num_people">Number of Days:</label>
+                        <label for="num_days">Number of Days:</label>
                         <input type="number" id="num_days" name="num_days" min="1" placeholder="Enter number of days" required>
                     </div>
                 <div class="form-group">

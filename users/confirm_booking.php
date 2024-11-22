@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </tr>
         </table>
 
-        <form action="booking_backend.php" method="POST">
+        <form action="store_booking.php" method="POST">
             <input type="hidden" name="vehicle" value="<?php echo htmlspecialchars($vehicle); ?>">
             <input type="hidden" name="travel_date" value="<?php echo htmlspecialchars($travel_date); ?>">
             <input type="hidden" name="purpose" value="<?php echo htmlspecialchars($purpose); ?>">
