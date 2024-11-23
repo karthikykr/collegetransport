@@ -3,16 +3,6 @@
     $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transport</title>
-    <link rel="stylesheet" href="styles/style_header1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- Font Awesome for icons -->
-</head>
-<body>
 
     <!-- Top Navbar -->
     <div class="topbar">
@@ -23,7 +13,7 @@
             <span class="bar"></span>
         </div>
         <div class="logo-section">
-            <img src="../Assets/SJECLogo.png" alt="College Logo" class="logo">
+            <img src="Assets/SJECLogo.png" alt="College Logo" class="logo">
         </div>
         </div>
         <div class="search-bar">
@@ -31,7 +21,7 @@
         </div>
         <div class="divgrp">
         <div class="profile-section">
-            <img src="../Assets/image.png" class="profile" alt="Profile">
+            <img src="Assets/image.png" class="profile" alt="Profile">
         </div>
         <!-- <div class="nav-icon" id="navIcon">
             <i class="fa fa-bars"></i>
@@ -79,5 +69,5 @@
             // });
         });
     </script>
-</body>
-</html>
+<!-- </body>
+</html> -->

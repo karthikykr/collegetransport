@@ -5,8 +5,21 @@ include('../db.php');
 $sql = "SELECT * FROM add_vehicle";
 $result = $conn->query($sql);
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style_header.css">
+    <link rel="stylesheet" href="../styles/style.css">
 
-    <?php include('../header.php'); ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- Font Awesome for icons -->
+    <title>Home</title>
+</head>
+<body>
+    
+
+    <?php include('../header2.php'); ?>
 
         <!-- Dashboard Section -->
         <section class="board">
@@ -16,9 +29,9 @@ $result = $conn->query($sql);
             <div class="grid-container">
                 <?php if ($result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
-                        <a href="../admin/vehicle_detail.php?v_id=<?= htmlspecialchars($row['v_id']) ?>">
+                        <a href="../vehicle_details.php?v_id=<?= htmlspecialchars($row['v_id']) ?>">
                             <div class="grid-item">
-                                <h3><?= htmlspecialchars($row['vehicle_type']) ?></h3>
+                                <h3><?= htmlspecialchars($row['vehicle_type']) ?></h3> 
                                 <h3><?= htmlspecialchars($row['v_reg_no']) ?></h3>
                                 <p>Insurance valid till: <?= htmlspecialchars($row['v_insurance_valid']) ?></p>
                                 <p>Emission valid till: <?= htmlspecialchars($row['v_emission_valid']) ?></p>
