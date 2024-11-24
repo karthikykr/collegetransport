@@ -16,26 +16,21 @@ if (isset($_POST['confirm'])) {
 
     $status = 'pending';
 
-    // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO bookings (vehicle, travel_date, purpose, num_people, num_days, pickup_from, pickup_time, drop_to, drop_time, booking_status) VALUES (?, ?, ?, ?, ?, ?, ?, ? ,?, ?)");
-    $stmt->bind_param("sssiisssss", $vehicle, $travel_date, $purpose, $num_people, $num_days, $pickup_from, $pickup_time, $drop_to, $drop_time, $status);
 
-    // Execute the statement
-    if ($stmt->execute()) {?>
-       <div class="alert alert-success" role="alert">
-        <?php echo "<script>alert('Booking confirmed! Your details have been stored in the database.');
-        location.href='user_home.php';
-        </script>";
-        ?>
-        </div>
-    <?php } else {
-        echo "Error: " . $stmt->error;
+    $query = "INSERT INTO `bookings` (`vehicle`, `travel_date`, `purpose`, `num_people`, `num_days`,`pickup_from`,`pickup_time`,`drop_to`,`drop_time`,`booking_status`) VALUES ('$vehicle','$travel_date','$purpose','$num_people','$num_days','$pickup_from','$pickup_time','$drop_to','$drop_time','$status')";
+           
+    if($conn->query($query)){
+        echo"<script>alert('Booking confirmed!');</script>";
+         echo"<script>location.href='user_home.php'</script>";
+    }else{
+            echo"<script>alert('booking is not done');</script>";
+             echo"<script>location.href='booking_vehicle.php';</script>";
+        }
+        echo"<script>alert('Invalid booking!....');</script>";
+        echo"<script>location.href='booking_vehicle.php';</script>";
     }
-
-    // Close the statement and connection
-    $stmt->close();
-    $conn->close();
-} else {
-    echo "Invalid request.";
-}
+   $conn->close();
 ?>
+
+
+

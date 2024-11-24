@@ -14,7 +14,7 @@
 
             <?php 
 
-include('user_home_backend.php');
+include('../selecting_vehicle.php');
 
 if ($result->num_rows > 0) {
     // Loop through the results and display them
@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
         //echo "<hr>"; // Separator between records
 ?>
                 
-        <a href="../admin/vehicle_detail.php ?v_id=<?php echo $row['v_id']; ?>">
+        <a href="../vehicle_details.php ?v_id=<?php echo $row['v_id']; ?>">
                 <div class="grid-item">     
                 <h3><?php  echo $row['vehicle_type'] ;?></h3>
                 <h3><?php  echo  $row['v_reg_no'] ?></h3>

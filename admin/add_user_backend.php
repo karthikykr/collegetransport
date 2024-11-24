@@ -31,9 +31,11 @@
                     echo"<script>alert('User not added');</script>";
                     echo"<script>location.href='add_user.php';</script>";
                 }
+                echo"<script>alert('Invalid!....');</script>";
+                echo"<script>location.href='add_user.php';</script>";
             }
                 
-            //$con->query($query);
+            
        
          $conn->close();
 
