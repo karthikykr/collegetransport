@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2024 at 06:41 AM
+-- Generation Time: Nov 25, 2024 at 05:39 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -30,20 +30,22 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `designation` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL,
   `department` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `role` enum('admin','user') NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `designation`, `department`, `email`, `password`, `role`) VALUES
-(2, 'charan', 'faculty', 'mca', 'user@test.com', '1234', 'user'),
-(3, 'karthik ', 'admin', 'admin', 'admin@test.com', '1234', 'admin');
+INSERT INTO `users` (`id`, `name`, `role`, `department`, `email`, `password`) VALUES
+(2, 'charan', 'faculty', 'mca', 'user@test.com', '1234'),
+(3, 'karthik ', 'admin', 'admin', 'admin@test.com', '1234'),
+(4, 'manvith', 'hod', 'mca', 'karthikr16@gmail.com', '1234'),
+(5, 'karthik', 'principal', '', 'kartkykr16@gmail.com', '1234'),
+(6, 'kaushik', 'faculty', 'mca', 'test@try.com', '1234');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +66,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
