@@ -11,15 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'], $_POST[
     $stmt->bind_param("si", $new_status, $booking_id);
 
     if ($stmt->execute()) {
-        echo "Booking status updated successfully.";
+        echo "<script>alert('Booking status updated successfully.');</script>";
     } else {
-        echo "Failed to update status: " . $stmt->error;
+        echo "<script>alert('Booking status updated.');</script>" . $stmt->error;
     }
     $stmt->close();
 }
 
 // Display pending booking requests
-$sql = "SELECT * FROM bookings WHERE booking_status = 'pending'";
+$sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.user_id = users.id WHERE booking_status='pending'" ;
 $result = $conn->query($sql);
 ?>
 
@@ -40,11 +40,13 @@ $result = $conn->query($sql);
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <div class="grid-item">
                         <h4>Booking ID: <?= htmlspecialchars($row['id']) ?></h4>
+                        <h4>Booking ID: <?= htmlspecialchars($row['bookid']) ?></h4>
                         <p>Vehicle: <?= htmlspecialchars($row['vehicle']) ?></p>
                         <p>Travel Date: <?= htmlspecialchars($row['travel_date']) ?></p>
                         <p>Purpose: <?= htmlspecialchars($row['purpose']) ?></p>
+                        <p>name: <?= htmlspecialchars($row['name']) ?></p>
                         <form method="POST">
-                            <input type="hidden" name="booking_id" value="<?= htmlspecialchars($row['id']) ?>">
+                            <input type="hidden" name="booking_id" value="<?= htmlspecialchars($row['bookid']) ?>">
                             <button type="submit" name="action" value="approve">Approve</button>
                             <button type="submit" name="action" value="reject">Reject</button>
                         </form>

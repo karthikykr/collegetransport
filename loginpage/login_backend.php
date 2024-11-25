@@ -3,7 +3,7 @@
 // ob_start();
 
 // // Start session
-// session_start();
+session_start();
 
 // // Enable error reporting for debugging
 // ini_set('display_errors', 1);
@@ -54,8 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } elseif ($user['role'] == 'hod') {
                 header("Location: ../user_hod/hod_home.php");
                 exit();
-            }elseif($user['role'] == 'a_director'){
-                header("Location: ../user_a_dir/a_dir_home.php");
+            }elseif($user['role'] == 'user'){
+                header("Location: ../users/user_home.php");
                 exit();
             } else {
                 echo "Invalid password.";

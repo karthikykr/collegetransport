@@ -2,8 +2,7 @@
 include('../db.php');
 
 // Retrieve vehicle information
-$sql = "SELECT * FROM add_vehicle";
-$result = $conn->query($sql);
+include('../selecting_vehicle.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
