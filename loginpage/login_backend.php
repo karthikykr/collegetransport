@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../user_hod/hod_home.php");
                 exit();
             }elseif($user['role'] == 'user'){
-                header("Location: ../users/user_home.php");
+                header("Location: ../faculty/user_home.php");
                 exit();
             } else {
                 echo "Invalid password.";
