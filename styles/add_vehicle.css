@@ -84,11 +84,10 @@
     color: white;
     border-radius: 8px;
 }
-
+/* 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* Responsive columns */
     gap: 20px;
     padding: 20px;
 }
@@ -122,7 +121,7 @@
 .grid-item p {
     font-size: 1rem;
     color: #555;
-}
+} */
 
 @media (max-width: 768px) {
     .grid-container {

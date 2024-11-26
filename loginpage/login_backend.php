@@ -31,14 +31,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Query to check if the user exists
-    $sql = "SELECT id, password, role FROM users WHERE email = '$email'";
+    $sql = "SELECT `id`, `password`, `role` FROM `users` WHERE `email` = '$email'";
     $result = $conn->query($sql);
 
+     
 
     if ($result->num_rows > 0) {
         // Fetch user data
         $user = $result->fetch_assoc();
 
+        echo $user['password'];
+        echo $email,$user['id'];
         // Verify password
         // Use password_verify() if the password is hashed
         // if (password_verify($password, $user['password']))
@@ -54,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } elseif ($user['role'] == 'hod') {
                 header("Location: ../user_hod/hod_home.php");
                 exit();
-            }elseif($user['role'] == 'user'){
+            }elseif($user['role'] == 'faculty'){
                 header("Location: ../faculty/user_home.php");
                 exit();
             } else {

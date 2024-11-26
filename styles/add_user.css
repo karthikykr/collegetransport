@@ -86,44 +86,6 @@
     border-radius: 8px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* Responsive columns */
-    gap: 20px;
-    padding: 20px;
-}
-
-.grid-item {
-    background-color: #add8e6;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-}
-
-.grid-item:hover {
-    background-color: #87ceeb;
-    transform: scale(1.05);
-}
-
-.grid-item h4 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.grid-item p {
-    font-size: 1rem;
-    color: #555;
-}
 
 @media (max-width: 768px) {
     .grid-container {
