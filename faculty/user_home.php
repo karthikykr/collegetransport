@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
          //echo "<hr>"; // Separator between records
 ?>
                 
-        <a href="../vehicle_details.php ?v_id=<?php echo $row['v_id']; ?>">
+        <a href="../vehicle_details/vehicle_details.php ?v_id=<?php echo $row['v_id']; ?>">
             <div class="grid-item">     
                 <h3><?php  echo $row['vehicle_type'] ;?></h3>
                 <h3><?php  echo  $row['v_reg_no'] ?></h3>

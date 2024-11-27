@@ -1,14 +1,8 @@
-<?php session_start();?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include('../header2.php');?>
+<?php session_start();
+include('../header.php');?>
     <link rel="stylesheet" href="../styles/booking_vehicle.css">
-    <link rel="stylesheet" href="../styles/style_header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- Font Awesome for icons -->
+    <!-- <link rel="stylesheet" href="../styles/style_header.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
     <title>Vehicle Booking Form</title>
 </head>
 <body>

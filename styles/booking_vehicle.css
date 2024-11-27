@@ -13,26 +13,33 @@ body {
     /* padding: 20px; */
 }
 
-.table{
+/* .table{
     background-color: rgb(139, 160, 160);
     width: fit-content;
-}
+} */
 
 .container{
-    background-color: rgb(255, 0, 111);
+    background-color: rgb(250, 251, 249);
     border-radius: 12px;
     width: fit-content;
     padding: 20px;
+    margin: 0 auto;
+    /* margin-left: 20px; */
+    /* max-width: 800px; */
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 table {
-    background-color: #fff;
+    background-color: #def6fa;
     width: 100%;
+    max-width: 800px;
     border-collapse: collapse;
     margin: 0 auto;
+    /* margin-left: 20px; */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .booking-details {

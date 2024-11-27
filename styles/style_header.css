@@ -54,7 +54,7 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #e8e8f5;
+    background-color: white;
     color: #080808;
     height: 100%;
     padding: 5px;
@@ -71,6 +71,10 @@ body {
 
 .sidebar.collapsed {
     width: 80px;
+}
+
+.sidebar.sidebar.collapsed.active{
+    background-color: white;
 }
 
 .sidebar-toggle {

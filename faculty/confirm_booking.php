@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="container">
+    <center>
         <h2>Confirm Vehicle Booking</h2>
         <table class="table table-hover" border="1">
-        <center>
             <tr>
                 <th>Vehicle Type</th>
                 <td><?php echo htmlspecialchars($vehicle); ?></td>
@@ -62,8 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <td><?php echo htmlspecialchars($purpose); ?></td>
             </tr>
             </center>
-        </table>
-
+            </table>
+            
         <form action="store_booking.php" method="POST">
             <input type="hidden" name="vehicle" value="<?php echo htmlspecialchars($vehicle); ?>">
             <input type="hidden" name="travel_date" value="<?php echo htmlspecialchars($travel_date); ?>">

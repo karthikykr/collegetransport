@@ -13,13 +13,13 @@
         <!-- Dashboard Section -->
         <section class="board">
             <div class="board-header">
-                <h3>Vehicle Information</h3>
+                <h6>Vehicle Information</h6>
             </div>
 
          
-         
+        <div id="main" class="main">
             <div class="grid-container">
-
+            
             <?php 
 
 include('../selecting_vehicle.php');
@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
         //echo "<hr>"; // Separator between records
 ?>
                 
-        <a href="vehicle_detail.php ?v_id=<?php echo $row['v_id']; ?>">
+        <a class="details-link" href="vehicle_detail.php ?v_id=<?php echo $row['v_id']; ?>">
                 <div class="grid-item">     
                 <h3><?php  echo $row['vehicle_type'] ;?></h3>
                 <h3><?php  echo  $row['v_reg_no'] ?></h3>
@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
             </div>
 
          
-
+        </div>
         </section>
     </main>
 

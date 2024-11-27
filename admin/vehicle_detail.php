@@ -9,18 +9,12 @@ $result = $conn->query($sql);
 
     $row = $result->fetch_assoc();
     ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+    
         <link rel="stylesheet" href="../styles/booking_vehicle.css" >
-    </head>
     <h1>Vehicle details</h1>
     <body>
         <form action="update_vehicle.php" method="POST">
-        <table class="booking-details" border="1">
+        <table class="table table-hover">
         <input type="hidden" name="v_id" value="<?php echo $row['v_id']; ?>">
             <tr>
                 <th>Vehicle Type</th>
