@@ -10,6 +10,7 @@ include('../header.php');
         <section class="board">
             <div class="board-header">
                 <h3>Vehicle Information</h3>
+                <a href="my_bookings.php">My bookings</a>
             </div>
             <div class="grid-container">
 <?php 
