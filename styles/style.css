@@ -95,6 +95,8 @@
 
 .grid-item {
     background-color: #add8e6;
+    /* background-color: #f2f3f2; */
+    /* background-color:#d3e3fd ; */
     color: #333;
     display: flex;
     flex-direction: column;
