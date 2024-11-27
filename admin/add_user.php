@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transport</title>
-<link rel="stylesheet" href="../styles/add_user.css"> <!-- Your custom CSS file -->
-
-<!-- Sidebar Navigation -->
-<aside class="sidebar">
-    <div class="sidebar-header">
-        <div class="logo">
-            <img src="../Assets/logo.jpg" alt="transport">
-        </div>  
-    </div>
-    <ul class="nav-links">
-        <li><a href="../admin/admin_home.php" class="active">Vehicles</a></li>
-        <!-- <li><a href="#">Add</a></li> -->
-        <!-- <li><a href="#">Book</a></li> -->
-        <!-- <li><a href="#">Status</a></li> -->
-        <!-- <li><a href="#">My Bookings</a></li> -->
-    </ul>
-</aside>
-
-<!-- Main Content Area -->
-<main class="main-content">
-    <!-- Header -->
-    <header class="header">
-        <h2>St Joseph Engineering College</h2>
-        <img src="../Assets/logo.jpg" alt="Profile">
-    </header>
+<?php include('../header.php');?>
+<link rel="stylesheet" href="../styles/add_user.css"> 
  
-    </head>
-
-    <body>
-        
         <!-- Form to Add User -->
         <div class="add_user_container">
             <div class="add_user">

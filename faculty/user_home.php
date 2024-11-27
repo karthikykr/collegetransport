@@ -1,21 +1,22 @@
 <?php 
 session_start();   //starting session 
 include('../header.php');
+include('../selecting_vehicle.php');
  $user_id= $_SESSION['user_id'];
  $user_role=$_SESSION['role'];
 ?>
 
-
-        <!-- Dashboard Section -->
-        <section class="board">
+    <link rel="stylesheet" href="../styles/style.css">
+      <!-- Dashboard Section -->
+      <section class="board">
             <div class="board-header">
                 <h3>Vehicle Information</h3>
-                <a href="my_bookings.php">My bookings</a>
             </div>
+
+         
+         
             <div class="grid-container">
 <?php 
-include('../header1.php');
-include('../selecting_vehicle.php');
 
 if ($result->num_rows > 0) {
     // Loop through the results and display them

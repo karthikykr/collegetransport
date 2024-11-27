@@ -151,7 +151,7 @@ body {
 }
 
 .logout-btn {
-    background-color: #f70606;
+    background-color: #ff1c1c;
     border-radius: 12px;
     width: 100px;
     height: 40px;
@@ -163,7 +163,8 @@ body {
 }
 
 .logout-btn:hover {
-    background-color: #4d4de6;
+    /* background-color: #fd4040; */
+    background-color: #df0101;
 }
 
 .divgrp{

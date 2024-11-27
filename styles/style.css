@@ -90,10 +90,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
     gap: 20px;
-    padding: 20px;
-    /* align-items: center;
-    justify-content: center; */
-    max-width: 800px;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
     margin: 0 auto;
     margin-bottom: 10px;
     padding: 20px;

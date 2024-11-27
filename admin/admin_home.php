@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include('../header1.php');?>
+    <?php include('../header.php');?>
     <title>transport</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>

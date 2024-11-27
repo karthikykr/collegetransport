@@ -18,7 +18,7 @@ include('../selecting_vehicle.php');
 <body>
     
 
-    <?php include('../header2.php'); ?>
+    <?php include('../header.php'); ?>
 
         <!-- Dashboard Section -->
         <section class="board">

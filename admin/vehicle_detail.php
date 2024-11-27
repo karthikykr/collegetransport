@@ -1,6 +1,6 @@
 <?php  
 include('../db.php');
-include('../header1.php');
+include('../header.php');
 
 $v_id = $_GET['v_id'];
 include('../db.php');
