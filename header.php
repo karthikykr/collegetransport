@@ -24,7 +24,7 @@
         </div>
         <ul class="nav-links">
         <li><a href="#" class="active">Vehicles</a></li>
-        <li><a href="../users/booking_vehicle.php">Book Vehicle</a></li>
+        <li><a href="booking_vehicle.php">Book Vehicle</a></li>
 
         <!-- to assign the approval requests if it hod user -->
         <?php if ($current_page == 'hod_home.php'): ?>
