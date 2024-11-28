@@ -6,14 +6,11 @@
 <body>
         <!-- Dashboard Section -->
         <section class="board">
-            <div class="board-header">
-                <h6>Vehicle Information</h6>
-            </div>
-
-         
+        <div class="board-header">
+            <h6>Vehicle Information</h6>
+        </div>
         <div id="main" class="main">
             <div class="grid-container">
-            
             <?php 
 
 include('../selecting_vehicle.php');
@@ -52,6 +49,18 @@ if ($result->num_rows > 0) {
         </div>
         </section>
     </main>
+
+    <script>
+        const sidebar = document.querySelector('.sidebar-toggle'); // Sidebar element
+const gridContainer = document.querySelector('.grid-container'); // Grid container
+
+document.querySelector('.sidebar-toggle').addEventListener('click', () => {
+
+    // Toggle the grid container's class for resizing
+    gridContainer.classList.toggle('sidebar-collapsed');
+    // gridContainer.style.margin='20px';
+});
+    </script>
 
 </body>
 

@@ -80,6 +80,8 @@
 .board-header {
     text-align: center;
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: calc(100%-250px);
     padding: 10px;
     font-size: 25px;
     /* background-color: #e1e1f8; */
@@ -98,9 +100,16 @@
     max-width: 1200px;
     margin: 0 1px 0 300px;
     /* margin-bottom: 10px; */
-    /* margin-left: auto; */
+    margin-left: 300px; /* Adjust based on sidebar width */
+    transition: margin-left 0.3s ease, width 0.3s ease; /* Smooth resizing */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* State when the sidebar is hidden */
+.grid-container.sidebar-collapsed {
+    margin-left: 50px; /* Adjust margin for a collapsed sidebar */
+    width: calc(100% - 50px); /* Adjust width accordingly */
 }
 
 .grid-container a{
