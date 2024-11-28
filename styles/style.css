@@ -91,13 +91,14 @@
     display: grid;
     background-color: rgb(239, 241, 246);
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 20px;
+    gap: 60px;
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    max-width: 1200px;
+    margin: 0 1px 0 300px;
+    /* margin-bottom: 10px; */
+    /* margin-left: auto; */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -112,9 +113,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 250px;
     width: fit-content;
-    padding: 10px;
+    padding: 30px;
     border-radius: 8px;
     font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
