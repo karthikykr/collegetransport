@@ -11,9 +11,10 @@
 <body>
 
 <!-- Form to Add Vehicle -->
-<div class="add_vehicles">
+<div class="add_vehicles" >
     <h2>Add Vehicle</h2><br>
-    <form id="vehicleForm" action="add_vehicle_backend.php" method="POST">  <!--redirect to add_vehicle_backend -->     
+    <form id="vehicleForm" action="add_vehicle_backend.php" method="POST" >  <!--redirect to add_vehicle_backend --> 
+            
         <label for="vehicles">Select Vehicle Type:</label>
         <select id="vehicles" name="vehicleType" class="vehicle" required>
             <option value="" disabled selected>Select a vehicle</option>

@@ -28,7 +28,7 @@
             location.href='user_hod/hod_approval.php';
             </script>";
         } else {
-            echo "<script>alert('unable to update bookng status');
+            echo "<script>alert('unable to update booking status');
             location.href='user_hod/hod_approval.php';
             </script>";
         }

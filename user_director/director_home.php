@@ -1,1 +1,1 @@
-<?php include('../users/user_home.php'); ?>
+<?php include('../user_home/home.php'); ?>
