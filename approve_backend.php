@@ -25,11 +25,11 @@
 
         if ($stmt->execute()) {
             echo "<script>alert('Booking status updated successfully.');
-            location.href='hod_approval.php';
+            location.href='user_hod/hod_approval.php';
             </script>";
         } else {
             echo "<script>alert('unable to update bookng status');
-            location.href='hod_approval.php';
+            location.href='user_hod/hod_approval.php';
             </script>";
         }
         $stmt->close();

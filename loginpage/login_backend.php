@@ -60,6 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }elseif($user['role'] == 'faculty'){
                 header("Location: ../faculty/user_home.php");
                 exit();
+            }elseif($user['role'] == 'principal'){
+                header("Location: ../user_hod/hod_approval.php");
+                exit();
+            }elseif($user['role'] == 'assistant director'){
+                header("Location: ../user_hod/hod_approval.php");
+                exit();
             } else {
                 echo "Invalid password.";
             }

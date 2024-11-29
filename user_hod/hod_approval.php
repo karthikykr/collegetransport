@@ -20,8 +20,34 @@ include('../db.php');
 // }SS
 
 // Display pending booking requests
+$role=$_SESSION['role'];
+$id=$_SESSION['user_id'];
 
-$sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.user_id = users.id WHERE booking_status='pending'"  ;
+echo $role;
+
+$query="SELECT `department` FROM `users` WHERE `id`='$id'";
+$dept=$conn->query($query);
+
+$row=$dept->fetch_array();
+
+if($role=='hod'){
+$sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.user_id = users.id WHERE booking_status='pending' AND `department`='$row[0]'";
+}else{
+
+    if($role=='principal'){
+        $status='hod_approved';
+    }else if($role=='assistant_director'){
+        $status='p_approved';
+    }else if($role=='director'){
+        $status='a_d_approved';
+    }else{
+        $status='d_approved';
+    }
+
+    $sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.user_id = users.id WHERE booking_status='$status'";
+}
+
+
 $result = $conn->query($sql);
 ?>
 
