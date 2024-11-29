@@ -41,12 +41,20 @@ include('../db.php');
                         <p><?php  echo "purpose: " . $row['purpose'] ;?></p>
                         <h3><?php   if($row['booking_status']==='d_approved'){ 
                                         echo"approved by director";
+                                    }else if($row['booking_status']==='d_rejected'){ 
+                                        echo"Rejected by Director";    
                                     }else if($row['booking_status']==='a_d_approved'){ 
                                         echo"approved by assistent director";
+                                    }else if($row['booking_status']==='a_d_rejected'){ 
+                                        echo"Rejected by Assistent director";
                                     }else if($row['booking_status']==='p_approved'){ 
                                         echo"approved by principal";
+                                    }else if($row['booking_status']==='p_rejected'){ 
+                                        echo"Rejected By Principal";
                                     }else if($row['booking_status']==='hod_approved'){ 
                                         echo"approved by HOD";
+                                    }else if($row['booking_status']==='hod_rejected'){ 
+                                        echo"Rejected by HOD";
                                     }else{
                                         echo"pending";
                                     }

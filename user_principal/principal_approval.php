@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'], $_POST[
     }
     $stmt->close();
 }
-
+    
 // Display pending booking requests
 $sql = "SELECT * FROM bookings WHERE booking_status = 'a_dir_approved'";
 $result = $conn->query($sql);

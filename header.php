@@ -65,7 +65,7 @@ session_start();
             <?php
             $user_role=$_SESSION['role'];
             if (!in_array($user_role, ['faculty'])) {
-            echo '<li><a href="approval_request.php"><i class="fa fa-check-circle"></i> Approval Request</a></li>';
+            echo '<li><a href="hod_approval.php"><i class="fa fa-check-circle"></i> Approval Request</a></li>';
             }?>
 
             <!-- <li><a href="../user_hod/hod_approval.php"><i class="fa fa-check-circle"></i> <span>Approval Requests</a></li> -->
