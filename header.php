@@ -51,7 +51,7 @@ session_start();
         <ul class="sidebar-links">
         
         <!-- Admin Dashboard changes -->
-        <?php if ($current_page == 'admin_home.php' || $current_page == 'add_user.php' || $current_page == 'add_vehicle.php' || $current_page == 'vehicle_detail.php'):?>
+        <?php if ($current_page == 'admin_home.php' || $current_page == 'add_user.php' || $current_page == 'add_vehicle.php' || $current_page == 'admin/vehicle_detail.php'):?>
             <li><a href="../admin/admin_home.php" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
             <li><a href="../admin/add_user.php"><i class="fa fa-user-plus"></i> <span>Add User</a></li>
             <li><a href="../admin/add_vehicle.php"><i class="fa fa-car">+</i><span>Add Vehicle</a></li>
@@ -69,8 +69,8 @@ session_start();
             }?>
 
             <!-- <li><a href="../user_hod/hod_approval.php"><i class="fa fa-check-circle"></i> <span>Approval Requests</a></li> -->
-            <li><a href="#"><i class="fa fa-tasks"></i> <span>Status</span></a></li>
-            <li><a href="#"><i class="fa fa-calendar"></i> <span>My Bookings</span></a></li>
+            <!-- <li><a href="#"><i class="fa fa-tasks"></i> <span>Status</span></a></li> -->
+            <li><a href="faculty/my_bookings.php"><i class="fa fa-calendar"></i> <span>My Bookings</span></a></li>
         <?php endif; ?>
         </ul>
     </div>
