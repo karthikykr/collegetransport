@@ -1,5 +1,5 @@
 <?php
-    include('db.php');
+    include('../db.php');
 
     session_start();
     $role=$_SESSION['role'];
@@ -11,7 +11,7 @@
 
         if($role=='director'){
             $new_status = ($action === 'approve') ? 'd_approved' : 'd_rejected';
-        }else if($role=='assistant_director'){
+        }else if($role=='assistant director'){
             $new_status = ($action === 'approve') ? 'a_d_approved' : 'a_d_rejected';
         }elseif($role=='principal'){
             $new_status = ($action === 'approve') ? 'p_approved' : 'p_rejected';
@@ -25,11 +25,11 @@
 
         if ($stmt->execute()) {
             echo "<script>alert('Booking status updated successfully.');
-            location.href='user_hod/hod_approval.php';
+            location.href='approval.php';
             </script>";
         } else {
             echo "<script>alert('unable to update booking status');
-            location.href='user_hod/hod_approval.php';
+            location.href='approval.php';
             </script>";
         }
         $stmt->close();
