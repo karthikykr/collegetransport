@@ -30,8 +30,10 @@ body {
 
 .logo {
     height: 100px;
-    width: 100px;
+    width: auto; /* Maintain aspect ratio */
     padding: 8px;
+    object-fit: contain; /* Ensure the logo fits inside without distortion */
+    transition: height 0.3s ease, width 0.3s ease; /* Smooth resizing */
 }
 
 .profile-section .profile {
@@ -41,6 +43,14 @@ body {
     background-color: #fff;
     padding: 4px;
     margin-right: 15px;
+}
+
+.profile {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fits inside the container without distortion */
+    transition: height 0.3s ease, width 0.3s ease; /* Smooth resizing */
 }
 
 .nav-icon {
@@ -71,9 +81,10 @@ body {
 
 .sidebar.collapsed {
     width: 80px;
+    margin: 130px 0 0 0;
 }
 
-.sidebar.sidebar.collapsed.active{
+.sidebar.sidebar.collapsed.active {
     background-color: white;
 }
 
@@ -84,7 +95,7 @@ body {
     gap: 4px;
     margin: 10px;
     padding: 12px;
-    justify-content: center ;
+    justify-content: center;
 }
 
 .sidebar-toggle .bar {
@@ -147,37 +158,52 @@ body {
     margin-bottom: 100px;
 }
 
-.logoutbtn{
+.logoutbtn {
     display: flex;
     justify-content: center;
-    /* margin: 10px; */
-    gap: 10px; 
+    gap: 10px;
 }
 
 .logout-btn {
     background-color: #ff1c1c;
     border-radius: 12px;
-    width: 100px;
+    width: auto;
     height: 40px;
     color: white;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease, all 0.3s ease;
+}
+
+.logout-btn i {
+    font-size: 1.2rem;
 }
 
 .logout-btn:hover {
-    /* background-color: #fd4040; */
     background-color: #df0101;
 }
 
-.divgrp{
+.divgrp {
     display: flex;
     padding: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+    .logo {
+        height: 80px;
+    }
+
+    .profile {
+        height: 80px;
+    }
+
     .sidebar {
         width: 220px;
     }
@@ -204,48 +230,73 @@ body {
         font-size: 0.9rem;
     }
 
-    .topbar .logo {
-        height: 80px;
-        width: 80px;
+    .logo {
+        height: 60px;
+    }
+
+    .profile {
+        height: 60px;
     }
 }
 
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
+        width: 120px;
     }
 
     .sidebar.visible {
         transform: translateX(0);
     }
 
+    .sidebar.collapsed {
+        width: 80px;
+        margin: 130px 0 0 0;
+    }
+
     .nav-icon {
         display: block;
     }
 
-    .sidebar {
-        width: 160px;
+    .logo {
+        height: 50px;
+    }
+
+    .profile {
+        height: 50px;
     }
 
     .main-content {
-        margin-left: 0;
+        margin: 0;
     }
 
     .sidebar-links li a {
         font-size: 0.85rem;
     }
+
+    .logout-btn {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .logout-btn .logout-text {
+        display: none;
+    }
+
+    .logout-btn i {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 576px) {
     .topbar {
-        /* flex-direction: column; */
         padding: 0.5em;
         font-size: 10px;
+        width: 50px;
     }
-    
+
     .sidebar {
         width: 100%;
-        /* margin-top: 60px; */
     }
 
     .sidebar-links li a {
@@ -253,8 +304,11 @@ body {
     }
 
     .logo {
-        height: 60px;
-        width: 60px;
+        height: 40px;
+    }
+
+    .profile {
+        height: 40px;
     }
 
     .profile-section .profile {
@@ -269,13 +323,27 @@ body {
 
 @media (max-width: 480px) {
     .topbar {
-        align-items: flex-start;
+        width: 100%;
+        height: 100px;
     }
 
     .sidebar {
         width: 100%;
         padding: 5px;
-        margin-top: 50px;
+        margin: 100px 0 0 0;
+    }
+
+    .sidebar-toggle {
+        height: 40px;
+    }
+
+    .search-bar {
+        font-size: 7px;
+    }
+
+    .sidebar.collapsed {
+        width: 80px;
+        margin: 100px 0 0 0;
     }
 
     .sidebar-links li a {
@@ -287,11 +355,28 @@ body {
     }
 
     .logo {
-        height: 50px;
-        width: 50px;
+        height: 40px;
     }
 
-    .logout-btn{
+    .profile-section {
+        height: 30px;
+    }
+
+    .logout-btn {
+        border-radius: 12px;
         padding: 4px;
     }
+
+    .logout-btn i {
+        font-size: 1.1rem;
+    }
+}
+
+/* Accessibility Improvements */
+.sidebar-toggle {
+    aria-label: "Toggle Sidebar"; /* Adds an aria-label for accessibility */
+}
+
+.sidebar-links li a {
+    aria-label: "Navigate to [link name]"; /* Adds aria-label for navigation links */
 }
