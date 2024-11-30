@@ -50,18 +50,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-links">
-
-        <!--  Navigation links for other users-->
-        <?php else: ?>
-            <li><a href="../faculty/user_home.php" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
-            <li><a href="../faculty/booking_vehicle.php"><i class="fa fa-book"></i> <span>Book Vehicle</span></a></li>
-        
-            <!-- Approval request is hidden for faculty -->
-            <?php
-            $user_role=$_SESSION['role'];
-            if (!in_array($user_role, ['faculty'])) {
-            echo '<li><a href="approval.php"><i class="fa fa-check-circle"></i> Approval Request</a></li>';
-            }?>
+            <!-- Admin Dashboard Links -->
+            <?php if ($current_page == 'admin_home.php' || $current_page == 'add_user.php' || $current_page == 'add_vehicle.php' || $current_page == 'admin/vehicle_detail.php'): ?>
+                <li><a href="../admin/admin_home.php" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                <li><a href="../admin/add_user.php"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
+                <li><a href="../admin/add_vehicle.php"><i class="fa fa-car">+</i><span>Add Vehicle</span></a></li>
 
             <!-- Faculty and Other User Links -->
             <?php else: ?>
@@ -100,3 +93,4 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </script>
 </body>
 
+</html>
