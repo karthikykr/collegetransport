@@ -146,12 +146,16 @@ html, body {
 @media (max-width: 480px) {
     .grid-container {
         width: 100%;
+        padding:10px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        margin:20px -5px 5px 10px;
     }
 
     .grid-item {
         font-size: 1rem;
         height: 180px; /* Adjust height for small screens */
         padding: 20px;
+        margin:0 auto ;
     }
 
     .grid-item h3 {

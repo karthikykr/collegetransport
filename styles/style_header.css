@@ -194,6 +194,10 @@ body {
     padding: 10px;
 }
 
+.search-bar, .topbar, .logoutbtn{
+    transition: margin-left 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .logo {
@@ -317,7 +321,8 @@ body {
     }
 
     .main-content {
-        padding: 15px;
+        margin-top: -450px;
+        margin-left: 0;
     }
 }
 

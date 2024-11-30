@@ -58,18 +58,18 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
             <!-- Faculty and Other User Links -->
             <?php else: ?>
-                <li><a href="../faculty/user_home.php" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
-                <li><a href="../faculty/booking_vehicle.php"><i class="fa fa-book"></i> <span>Book Vehicle</span></a></li>
+                <li><a href="../user_faculty/user_home.php" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+                <li><a href="../user_faculty/booking_vehicle.php"><i class="fa fa-book"></i> <span>Book Vehicle</span></a></li>
 
                 <!-- Approval Request Link for roles other than 'faculty' -->
                 <?php
                 $user_role = $_SESSION['role'];
                 if (!in_array($user_role, ['faculty'])) {
-                    echo '<li><a href="approval.php"><i class="fa fa-check-circle"></i> Approval Request</a></li>';
+                    echo '<li><a href="approval.php"><i class="fa fa-check-circle"></i> <span>Approval Request</span></a></li>';
                 }
                 ?>
 
-                <li><a href="faculty/my_bookings.php"><i class="fa fa-calendar"></i> <span>My Bookings</span></a></li>
+                <li><a href="my_bookings.php"><i class="fa fa-calendar"></i> <span>My Bookings</span></a></li>
             <?php endif; ?>
         </ul>
     </div>
