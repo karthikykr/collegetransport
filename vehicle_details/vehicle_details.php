@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 
     $row = $result->fetch_assoc();
     ?>
-        <link rel="stylesheet" href="../styles/booking_vehicle.css" >
+    <link rel="stylesheet" href="../styles/vehicle_details.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
     </head>
     <h1>Vehicle details</h1>

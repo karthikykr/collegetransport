@@ -50,8 +50,8 @@ html, body {
 
 /* State when the sidebar is hidden */
 .grid-container.sidebar-collapsed {
-    margin-left: 200px; /* Adjust margin for collapsed sidebar */ 
-    width: calc(100% - 200px); /* Adjust width accordingly */
+    margin-left: 150px; /* Adjust margin for collapsed sidebar */
+    width: calc(100% - 150px); 
 }
 
 /* Grid Item */
@@ -97,20 +97,20 @@ html, body {
     color: #555;
 }
 
-/* Resposnsive design */
+/* Responsive design */
 @media (max-width: 2288px) {
     .grid-container {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         justify-content: center;
         align-items: center;
     }
-}  
+}
 
 @media (max-width: 1500px) {
     .grid-container {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
-} 
+}
 
 @media (max-width: 768px) {
     .grid-container {
@@ -121,7 +121,7 @@ html, body {
         height: 200px; /* Adjust height */
         padding: 20px;
     }
-    
+
     .grid-item h3 {
         font-size: 1.3rem; /* Adjust font size */
     }
@@ -146,16 +146,27 @@ html, body {
 @media (max-width: 480px) {
     .grid-container {
         width: 100%;
-        padding:10px;
+        padding: 10px;
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        margin:20px -5px 5px 10px;
+        margin: 10px -5px 5px 10px;
     }
-
+    .board-header {
+        margin-top: 220px;
+        font-size: 1.5em;
+    }
+    .grid-container.sidebar-collapsed {
+        width: 100%;
+        padding: 20px 10px 10px -0px;
+        margin: 10px 10px -100px 10px;
+    }
+    .board-header{
+        margin:270px 0px 0px 0px;
+    }
     .grid-item {
         font-size: 1rem;
         height: 180px; /* Adjust height for small screens */
         padding: 20px;
-        margin:0 auto ;
+        margin: 0 auto;
     }
 
     .grid-item h3 {

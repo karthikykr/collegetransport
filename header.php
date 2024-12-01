@@ -51,7 +51,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-links">
             <!-- Admin Dashboard Links -->
-            <?php if ($current_page == 'admin_home.php' || $current_page == 'add_user.php' || $current_page == 'add_vehicle.php' || $current_page == 'vehicle_detail.php'): ?>
+            <?php if ($current_page == 'admin_home.php' || $current_page == 'add_user.php' || $current_page == 'vehicle_detail.php' || $current_page == 'add_vehicle.php'): ?>
                 <li><a href="../admin/admin_home.php" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
                 <li><a href="../admin/add_user.php"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
                 <li><a href="../admin/add_vehicle.php"><i class="fa fa-car">+</i><span>Add Vehicle</span></a></li>
@@ -64,7 +64,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <!-- Approval Request Link for roles other than 'faculty' -->
                 <?php
                 $user_role = $_SESSION['role'];
-                if (!in_array($user_role, ['faculty'])) {
+                if (!in_array($user_role, ['faculty','admin'])) {
                     echo '<li><a href="approval.php"><i class="fa fa-check-circle"></i> <span>Approval Request</span></a></li>';
                 }
                 ?>

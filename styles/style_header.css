@@ -84,10 +84,6 @@ body {
     margin: 130px 0 0 0;
 }
 
-.sidebar.sidebar.collapsed.active {
-    background-color: white;
-}
-
 .sidebar-toggle {
     cursor: pointer;
     display: flex;
@@ -96,6 +92,7 @@ body {
     margin: 10px;
     padding: 12px;
     justify-content: center;
+    aria-label: "Toggle Sidebar"; /* Adds an aria-label for accessibility */
 }
 
 .sidebar-toggle .bar {
@@ -124,6 +121,7 @@ body {
     transition: background-color 0.3s ease;
     font-size: 1rem;
     font-weight: bold;
+    aria-label: "Navigate to [link name]"; /* Adds aria-label for navigation links */
 }
 
 .sidebar-links li a i {
@@ -162,6 +160,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin: 0 10px;
 }
 
 .logout-btn {
@@ -194,7 +193,7 @@ body {
     padding: 10px;
 }
 
-.search-bar, .topbar, .logoutbtn{
+.search-bar, .topbar, .logoutbtn {
     transition: margin-left 0.3s ease;
 }
 
@@ -375,13 +374,4 @@ body {
     .logout-btn i {
         font-size: 1.1rem;
     }
-}
-
-/* Accessibility Improvements */
-.sidebar-toggle {
-    aria-label: "Toggle Sidebar"; /* Adds an aria-label for accessibility */
-}
-
-.sidebar-links li a {
-    aria-label: "Navigate to [link name]"; /* Adds aria-label for navigation links */
 }

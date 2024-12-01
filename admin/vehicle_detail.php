@@ -3,7 +3,6 @@ include('../db.php');
 include('../header.php');
 
 $v_id = $_GET['v_id'];
-include('../db.php');
 $sql="SELECT * FROM `add_vehicle` WHERE `v_id`='$v_id'";
 $result = $conn->query($sql);
 
