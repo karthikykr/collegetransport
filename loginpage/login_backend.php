@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../user_home/home.php");
                 exit();
             }elseif($user['role'] == 'faculty'){
-                header("Location: ../user_faculty/user_home.php");
+                header("Location: ../user_home/home.php");
                 exit();
             }elseif($user['role'] == 'principal'){
                 header("Location: ../user_home/home.php");

@@ -51,15 +51,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-links">
             <!-- Admin Dashboard Links -->
-            <?php if ($current_page == 'admin_home.php' || $current_page == 'add_user.php' || $current_page == 'add_vehicle.php' || $current_page == 'admin/vehicle_detail.php'): ?>
+            <?php if ($current_page == 'admin_home.php' || $current_page == 'add_user.php' || $current_page == 'add_vehicle.php' || $current_page == 'vehicle_detail.php'): ?>
                 <li><a href="../admin/admin_home.php" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
                 <li><a href="../admin/add_user.php"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
                 <li><a href="../admin/add_vehicle.php"><i class="fa fa-car">+</i><span>Add Vehicle</span></a></li>
 
             <!-- Faculty and Other User Links -->
             <?php else: ?>
-                <li><a href="../user_faculty/user_home.php" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
-                <li><a href="../user_faculty/booking_vehicle.php"><i class="fa fa-book"></i> <span>Book Vehicle</span></a></li>
+                <li><a href="../user_home/home.php" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+                <li><a href="../user_home/booking_vehicle.php"><i class="fa fa-book"></i> <span>Book Vehicle</span></a></li>
 
                 <!-- Approval Request Link for roles other than 'faculty' -->
                 <?php
