@@ -11,12 +11,13 @@ $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     ?>
     <link rel="stylesheet" href="../styles/vehicle_details.css">
+        <link rel="stylesheet" href="../styles/vehicle_details.css" >
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
     </head>
     <h1>Vehicle details</h1>
     <body>
         <form action="update_vehicle.php" method="POST">
-        <table class="table table-hover" border="1">
+        <table class="table table-striped" >
         <input type="hidden" name="v_id" value="<?php echo $row['v_id']; ?>">
             <tr>
                 <th>Vehicle Type</th>

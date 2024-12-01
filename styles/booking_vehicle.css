@@ -18,7 +18,7 @@ body {
     width: fit-content;
 } */
 
-.container{
+.container {
     background-color: rgb(250, 251, 249);
     border-radius: 12px;
     width: fit-content;
@@ -37,7 +37,7 @@ table {
     border-collapse: collapse;
     margin: 0 auto;
     /* margin-left: 20px; */
-    padding: 20px;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
@@ -50,7 +50,8 @@ table {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.booking-details th, .booking-details td {
+.booking-details th,
+.booking-details td {
     padding: 12px;
     text-align: left;
     border: 1px solid #ddd;
@@ -115,7 +116,12 @@ label {
 }
 
 /* Input, textarea and Select Style */
-input[type="text"], input[type="number"], input[type="date"], input[type="time"], select, textarea {
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -125,7 +131,8 @@ input[type="text"], input[type="number"], input[type="date"], input[type="time"]
 }
 
 textarea {
-    width: 100%; /* Full Width for Purpose Field */
+    width: 100%;
+    /* Full Width for Purpose Field */
     height: 80px;
 }
 
