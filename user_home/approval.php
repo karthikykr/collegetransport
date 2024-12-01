@@ -32,8 +32,9 @@ if($role=='hod'){
 $query="SELECT `department` FROM `users` WHERE `id`='$id'";
 $dept=$conn->query($query);
 
-$row=$dept->fetch_array();
-$sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.user_id = users.id WHERE booking_status='pending' AND `department`='$row[0]'";
+$row=$dept->fetch_assoc();
+$department=$row['department'];
+$sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.user_id = users.id WHERE bookings.booking_status='pending' AND users.department='$department'";
 }else{
 
     if($role=='principal'){
