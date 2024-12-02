@@ -53,26 +53,26 @@ $sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.use
 
 $result = $conn->query($sql);
 ?>
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style_approval.css">
 <?php include('../header.php'); ?>
-    <section class="board">
+<section class="board">
+        <div id="main" class="main">
         <div class="board-header">
-            <h3>Booking Requests for Approval</h3>
+            <h6>Booking Requests for Approval</h6>
         </div>
         <div class="grid-container">
             <?php if ($result->num_rows > 0): ?>
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <div class="grid-item">
-                        <h4>Booking ID: <?= htmlspecialchars($row['id']) ?></h4>
-                        <h4>Booking ID: <?= htmlspecialchars($row['bookid']) ?></h4>
+                        <p>Name: <?= htmlspecialchars($row['name']) ?></p>
                         <p>Vehicle: <?= htmlspecialchars($row['vehicle']) ?></p>
                         <p>Travel Date: <?= htmlspecialchars($row['travel_date']) ?></p>
-                        <p>Purpose: <?= htmlspecialchars($row['purpose']) ?></p>
-                        <p>name: <?= htmlspecialchars($row['name']) ?></p>
-                        <form action="approve_backend.php" method="POST">
+                        <form action="#" method="POST">
                             <input type="hidden" name="booking_id" value="<?= htmlspecialchars($row['bookid']) ?>">
-                            <button type="submit" name="action" value="approve">Approve</button>
-                            <button type="submit" name="action" value="reject">Reject</button>
+                            <div class="btn-con">
+                            <button type="submit" name="action" value="approve" class="view-btn">View</button>
+                            <!-- <button type="submit" name="action" value="reject" class="reject-btn">Reject</button> -->
+                            </div>
                         </form>
                     </div>
                 <?php endwhile; ?>
