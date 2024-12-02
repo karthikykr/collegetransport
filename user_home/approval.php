@@ -53,15 +53,8 @@ $sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.use
 
 $result = $conn->query($sql);
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOD Approval</title>
-</head>
-<body>
+<link rel="stylesheet" href="../styles/style.css">
+<?php include('../header.php'); ?>
     <section class="board">
         <div class="board-header">
             <h3>Booking Requests for Approval</h3>
