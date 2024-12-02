@@ -9,6 +9,8 @@
         $booking_id = $_POST['booking_id'];
         $action = $_POST['action'];
 
+            echo $booking_id;
+
         if($role=='director'){
             $new_status = ($action === 'approve') ? 'd_approved' : 'd_rejected';
         }else if($role=='assistant director'){

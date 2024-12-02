@@ -23,7 +23,6 @@ include('../db.php');
 $role=$_SESSION['role'];
 $id=$_SESSION['user_id'];
 
-echo $role; 
 
 
 
@@ -67,10 +66,28 @@ $result = $conn->query($sql);
                         <p>Name: <?= htmlspecialchars($row['name']) ?></p>
                         <p>Vehicle: <?= htmlspecialchars($row['vehicle']) ?></p>
                         <p>Travel Date: <?= htmlspecialchars($row['travel_date']) ?></p>
-                        <form action="#" method="POST">
+                        <?php echo $role; ?>
+                        <form action="booking_details.php" method="POST">
                             <input type="hidden" name="booking_id" value="<?= htmlspecialchars($row['bookid']) ?>">
+                            <input type="hidden" name="user_id" value="<?= htmlspecialchars($row['id']) ?>">
+                            <input type="hidden" name="vehicle" value="<?= htmlspecialchars($row['vehicle']) ?>">
+                            <input type="hidden" name="t_date" value="<?= htmlspecialchars($row['travel_date']) ?>">
+                            <input type="hidden" name="purpose" value="<?= htmlspecialchars($row['purpose']) ?>">
+                            <input type="hidden" name="n_people" value="<?= htmlspecialchars($row['num_people']) ?>">
+                            <input type="hidden" name="n_days" value="<?= htmlspecialchars($row['num_days']) ?>">
+                            <input type="hidden" name="from" value="<?= htmlspecialchars($row['pickup_from']) ?>">
+                            <input type="hidden" name="p_time" value="<?= htmlspecialchars($row['pickup_time']) ?>">
+                            <input type="hidden" name="to" value="<?= htmlspecialchars($row['drop_to']) ?>">
+                            <input type="hidden" name="drop_time" value="<?= htmlspecialchars($row['drop_time']) ?>">
+                            <input type="hidden" name="status" value="<?= htmlspecialchars($row['booking_status']) ?>">
+                            <input type="hidden" name="time" value="<?= htmlspecialchars($row['created_at']) ?>">
+                            <input type="hidden" name="name" value="<?= htmlspecialchars($row['name']) ?>">
+                            <input type="hidden" name="role" value="<?= htmlspecialchars($row['role']) ?>">
+                            <input type="hidden" name="department" value="<?= htmlspecialchars($row['department']) ?>">
+
+
                             <div class="btn-con">
-                            <button type="submit" name="action" value="approve" class="view-btn">View</button>
+                            <button type="submit" name="submit"  class="view-btn">View</button>
                             <!-- <button type="submit" name="action" value="reject" class="reject-btn">Reject</button> -->
                             </div>
                         </form>
