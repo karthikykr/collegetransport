@@ -9,9 +9,10 @@ $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     ?>
     
-        <link rel="stylesheet" href="../styles/booking_vehicle.css" >
-    <h1>Vehicle details</h1>
+        <link rel="stylesheet" href="../styles/vehicle_details.css" >
+        <h1>Vehicle details</h1>
     <body>
+    <div class="container">
         <form action="update_vehicle.php" method="POST">
         <table class="table table-hover">
         <input type="hidden" name="v_id" value="<?php echo $row['v_id']; ?>">
@@ -39,14 +40,14 @@ $result = $conn->query($sql);
                 <th><input type="date" name="v_emission_valid" value="<?php echo $row['v_emission_valid']; ?>" required></th>
 
             </tr>
-            <tr>
-            <div class="btn-con">
-                <td><input type="submit" name="updatebtn" value="Update"></td>
-                <td><button type=button onclick="confirmDelete()" name="deletebtn">Delete</button></td>
-
-            </tr>
-        </table> 
-</form>
+            
+        </table>  
+        <div class="btn-con">
+                <td><button type="submit" name="updatebtn"  class="update-btn">Update</button></td>
+                <td><button type=button onclick="confirmDelete()" name="deletebtn" class="delete-btn">Delete</button></td>
+        </div>
+    </form>
+    </div>
 <script>
         function confirmDelete() {
             const userConfirmed = confirm("Are you sure you want to delete this record?");

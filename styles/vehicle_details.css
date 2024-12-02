@@ -14,10 +14,8 @@ h1 {
 }
 
 table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background-color: red;
 }
 
 th, td {
@@ -34,42 +32,80 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-@media (max-width: 600px) {
-    table, th, td {
-        display: block;
-        width: 100%;
-    }
-
-    th {
-        background-color: #f2f2f2;
-        border: none;
-    }
-
-    td {
-        margin-bottom: 10px;
-        border: none;
-    }
-
-    td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
-    }
-}
-
-input[type="submit"], button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Input, textarea and Select Style */
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-input[type="submit"]:hover, button:hover {
-    background-color: #0056b3;
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #3e3eee;
+    outline: none;
+}
+
+.btn-con {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 50px;
+}
+.update-btn {
+    background-color: #020267;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: #04931e;
+}
+
+.delete-btn {
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #020267;
+    width: 100px;
+    height: 40px;
+    color: #020267;
+    font-size: 16px;
+    /* border: none; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #b11a1a;
+    border: none;
+    color:white;
+}
+
+@media (max-width: 480px){
+    .container {
+        margin: 10px 10px 5px 10px;
+    }
+    table{
+        width: 100%;
+        padding:0px 10px 0px 10px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 5px;
+        border: 1px solid #ddd;
+    }
+    h1{
+        margin-top: 540px;
+        font-size: 1.2rem;
+    }
 }
