@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    /* Ensure full page height */
+}
+
+:root {
+    --sidebar-width: 300px;
+    --topbar-width: 100px;
+}
+
+/* Dashboard Section */
+.main {
+    margin-top: var(--topbar-width);
+}
+
+.board {
+    margin-top: 30px;
+}
+
+.board-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 40px;
+    color: rgb(31, 30, 30);
+    border-radius: 8px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive columns */
+    grid-gap: 20px;
+    /* Space between grid items */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    /* Center the grid */
+}
+
+
+/* State when the sidebar is hidden */
+.grid-container.sidebar-collapsed {
+    margin-left: 150px;
+    /* Adjust margin for collapsed sidebar */
+    width: calc(100% - 150px);
+}
+
+/* Grid Item */
+.grid-container a {
+    text-decoration: none;
+}
+
+.grid-item {
+    background-color: #fff;
+    color: #333;
+    height: 300px;
+    width: 100%;
+    /* Allow items to take full column width */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-item:focus {
+    outline: 2px solid #0823ed;
+    outline-offset: 4px;
+}
+
+.grid-item:hover {
+    background-color: rgb(245, 245, 245);
+    /* Slight change for hover effect */
+    transform: scale(1.05);
+}
+
+.grid-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.grid-item h6 {
+    font-size: 1rem;
+    color: #555;
+}
+
+.details-link {
+    text-decoration: none;
+    width: 100%;
+    /* Ensure the link spans the grid item */
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+.step-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+.step-label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.step-line {
+    height: 4px;
+    flex: 1;
+    background-color: #ddd;
+    z-index: 1;
+    margin: 0 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Completed Step */
+.step-indicator.completed .step-circle {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+}
+
+.step-line.active {
+    background-color: #4caf50;
+}

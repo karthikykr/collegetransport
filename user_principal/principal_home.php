@@ -1,1 +1,0 @@
-<?php include('../user_home/home.php'); ?>
