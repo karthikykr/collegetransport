@@ -66,7 +66,6 @@ $result = $conn->query($sql);
                         <p>Name: <?= htmlspecialchars($row['name']) ?></p>
                         <p>Vehicle: <?= htmlspecialchars($row['vehicle']) ?></p>
                         <p>Travel Date: <?= htmlspecialchars($row['travel_date']) ?></p>
-                        <?php echo $role; ?>
                         <form action="booking_details.php" method="POST">
                             <input type="hidden" name="booking_id" value="<?= htmlspecialchars($row['bookid']) ?>">
                             <input type="hidden" name="user_id" value="<?= htmlspecialchars($row['id']) ?>">

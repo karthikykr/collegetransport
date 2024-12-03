@@ -1,6 +1,6 @@
 <?php  
 include('../db.php');
-include('../header.php');
+include('admin_header.php');
 
 $v_id = $_GET['v_id'];
 $sql="SELECT * FROM `add_vehicle` WHERE `v_id`='$v_id'";

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2024 at 07:37 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Dec 03, 2024 at 11:27 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -50,13 +50,15 @@ CREATE TABLE `bookings` (
 INSERT INTO `bookings` (`id`, `vehicle`, `travel_date`, `purpose`, `num_people`, `num_days`, `pickup_from`, `pickup_time`, `drop_to`, `drop_time`, `booking_status`, `user_id`, `created_at`) VALUES
 (1, 'Car', '2024-11-21', 'c c ccc  c', 44, 0, 'eeee', '02:34:00', 'bddj', '04:37:00', '', NULL, '2024-11-12 06:54:45'),
 (2, 'Tempo Traveller', '2024-11-25', 'mnsmnmsnmnsmmssns', 34, 0, 'sjec', '07:44:00', 'mangalore', '07:41:00', 'hod_approved', NULL, '2024-11-12 09:15:51'),
-(3, 'Car', '2024-11-18', 'grvb', 4, 0, 'hfhgdhd', '13:09:00', 'rrgfbgfg', '00:12:00', 'hod_approved', 2, '2024-11-13 04:40:28'),
+(3, 'Car', '2024-11-18', 'grvb', 4, 0, 'hfhgdhd', '13:09:00', 'rrgfbgfg', '00:12:00', 'a_d_approved', 2, '2024-11-13 04:40:28'),
 (4, 'Bus', '2024-11-13', 'dghbnbn gfnh', 5, 0, 'zfbb', '22:55:00', 'ncbvnb ', '14:55:00', '', NULL, '2024-11-19 05:22:54'),
 (5, 'Bus', '2024-11-30', '4rfegdffdgf', 4, 3, 'zfbb', '08:33:00', 'rrgfbgfg', '20:33:00', 'hod_approved', NULL, '2024-11-24 03:33:13'),
 (6, 'Bus', '2024-11-30', '4rfegdffdgf', 4, 3, 'zfbb', '08:33:00', 'rrgfbgfg', '20:33:00', 'hod_approved', NULL, '2024-11-24 03:33:52'),
 (7, 'Car', '2024-11-30', '4rfegdffdgf', 4, 3, 'zfbb', '08:33:00', 'rrgfbgfg', '20:33:00', 'hod_approved', NULL, '2024-11-24 03:48:45'),
 (10, 'Car', '2024-11-12', 'eghhfgfgg', 10, 10, 'jkhjk', '21:54:00', 'rrgfbgfg', '21:55:00', 'pending', NULL, '2024-11-25 16:20:39'),
-(11, 'Car', '2024-11-14', 'dsfgdgfgfgfg', 10, 10, 'hfhgdhd', '13:53:00', 'ncbvnb ', '21:59:00', 'pending', 2, '2024-11-25 16:23:58');
+(11, 'Car', '2024-11-14', 'dsfgdgfgfgfg', 10, 10, 'hfhgdhd', '13:53:00', 'ncbvnb ', '21:59:00', 'p_approved', 2, '2024-11-25 16:23:58'),
+(12, 'Car', '2024-12-17', 'hjefjjjs', 100, 1, 'sjec', '09:54:00', 'mangalore', '12:50:00', '', 5, '2024-12-03 10:19:36'),
+(13, 'Bus', '2024-12-23', 'aaadaaddddad', 100, 1, 'sjec', '22:58:00', 'mangalore', '21:58:00', 'hod_approved', 6, '2024-12-03 10:22:39');
 
 --
 -- Indexes for dumped tables
@@ -77,7 +79,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables

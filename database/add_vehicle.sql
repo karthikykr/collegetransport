@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2024 at 07:21 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Dec 03, 2024 at 11:27 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,16 +41,12 @@ CREATE TABLE `add_vehicle` (
 --
 
 INSERT INTO `add_vehicle` (`v_id`, `vehicle_type`, `v_reg_no`, `v_insurance_no`, `v_insurance_valid`, `v_emission_valid`) VALUES
-(1, 'truck', 'djvhcd', '..kksdnkd', '2024-11-15', '2024-11-19'),
-(2, 'car', 'rgrttt', 'ththbh', '2024-11-08', '2024-11-19'),
-(3, 'bus', 'rgrttt', '54533fe4', '2024-11-13', '2024-11-20'),
-(4, 'bus', 'daafdf', 'dsfgdfg', '2024-11-21', '2024-11-13'),
-(5, 'car', 'dfgfgf', 'ffgfdg', '2024-11-27', '2024-11-08'),
-(6, 'bus', '53455554', '6476434', '2024-11-11', '2024-11-16'),
-(7, 'bus', '53455554', '6476434', '2024-11-11', '2024-11-16'),
-(8, 'bus', '53455554', '6476434', '2024-11-11', '2024-11-16'),
-(9, 'car', '53455554', '6476434', '2024-11-29', '2024-11-21'),
-(10, 'car', 'dvsfdd', '6476434', '2024-11-27', '2024-11-22');
+(2, 'Car', 'KA 19 MD 9876', 'ththbh', '2024-11-08', '2024-11-19'),
+(3, 'Bus', 'KA 19 AE 1432', '54533fe4', '2024-11-13', '2024-11-20'),
+(4, 'Bus', 'KA 19 AA 1143\r\n', 'ds9027918ws', '2024-11-21', '2024-11-13'),
+(5, 'Car', 'KA 19 MF 5834', 'ffgfdg3w22', '2024-11-27', '2024-11-08'),
+(6, 'Bus', 'KA 19 A 5762', '6476434', '2024-11-11', '2024-11-16'),
+(7, 'Bus', 'KA 19 D 9812', '6476434', '2024-11-11', '2024-11-16');
 
 --
 -- Indexes for dumped tables

@@ -53,7 +53,7 @@ input[type="date"]:focus {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    gap: 50px;
+    gap: 25px;
 }
 .update-btn {
     background-color: #020267;

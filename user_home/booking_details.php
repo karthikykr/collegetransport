@@ -33,28 +33,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $department = $_POST['department'];//
 ?>
     <link rel="stylesheet" href="../styles/vehicle_details.css">
-        <link rel="stylesheet" href="../styles/vehicle_details.css" >
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
     </head>
     <h1>Bookings detail</h1>
     <body>
+        <div class="container">
     <table class="table table-hover" border="1">
-            <tr>
-                <th>Vehicle Type</th>
-                <td><?php echo htmlspecialchars($vehicle); ?></td>
-                <td><?php echo htmlspecialchars($b_id); ?></td>
-            </tr>
-            <tr>
-                <th>Purpose</th>
+    <tr>
+                <th>Name</th>
                 <td><?php echo htmlspecialchars($name); ?></td>
             </tr>
             <tr>
-                <th>Purpose</th>
+                <th>Department</th>
                 <td><?php echo htmlspecialchars($department); ?></td>
             </tr>
             <tr>
-                <th>Purpose</th>
+                <th>Designation</th>
                 <td><?php echo htmlspecialchars($role); ?></td>
+            </tr>
+            <tr>
+                <th>Vehicle Type</th>
+                <td><?php echo htmlspecialchars($vehicle); ?></td>
             </tr>
             <tr>
                 <th>Travel Date</th>
@@ -85,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <td><?php echo htmlspecialchars($drop_time); ?></td>
             </tr>
             <tr>
-                <th>Purpose</th>
+                <th>Booked On</th>
                 <td><?php echo htmlspecialchars($time); ?></td>
             </tr>
             <tr>
@@ -94,12 +93,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </tr>
             </center>
             </table>
-
+            
         <form action="approve_backend.php" method="POST">
             <input type="hidden" name="booking_id" value="<?php echo $b_id; ?>">
-            <button type="submit" name="action" value="approve">Approve</button>
-            <button type="submit" name="action" value="reject">Reject</button>
+            <div class="btn-con">
+            <button type="submit" name="action" value="approve" class="update-btn">Approve</button>
+            <button type="submit" name="action" value="reject" class="delete-btn">Reject</button>
+            </div>
         </form>
+        </div>
 <?php  
 }else{
     echo"invallid method";

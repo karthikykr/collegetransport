@@ -156,6 +156,12 @@ body {
     margin-bottom: 100px;
 }
 
+.user-info{
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    margin:5px 0px 0px 400px;
+}
 .logoutbtn {
     display: flex;
     justify-content: center;

@@ -160,6 +160,41 @@ textarea {
     background-color: #4d4de6;
 }
 
+.approve-btn {
+    background-color: #020267;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.approve-btn:hover {
+    background-color: #04931e;
+}
+
+.reject-btn {
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #020267;
+    width: 100px;
+    height: 40px;
+    color: #020267;
+    font-size: 16px;
+    /* border: none; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reject-btn:hover {
+    background-color: #b11a1a;
+    border: none;
+    color:white;
+}
+
 /* Responsive Styles */
 @media (max-width: 800px) {
     .row {
