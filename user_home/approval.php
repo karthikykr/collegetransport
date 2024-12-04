@@ -1,5 +1,6 @@
+
 <?php
-session_start();
+ include('../session.php');
 include('../db.php');
 
 // Handle booking status updates

@@ -1,5 +1,5 @@
 <?php
-session_start();
+ include('../session.php');
 // Database connection (replace with your actual credentials)
 include('../db.php');
 
@@ -20,7 +20,7 @@ if (isset($_POST['confirm'])) {
     $user_id=$_SESSION['user_id'];
 
     if($role==='faculty'){
-        $status === 'pending';
+        $status = 'pending';
     }else if($role==='hod'){
         $status='hod_approved';
     }else if($role==='principal'){

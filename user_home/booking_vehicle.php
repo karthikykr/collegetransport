@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+ include('../session.php');
 include('../header.php');?>
     <link rel="stylesheet" href="../styles/booking_vehicle.css">
     <!-- <link rel="stylesheet" href="../styles/style_header.css"> -->
