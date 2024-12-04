@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 // Get the current script name to dynamically show/hide links
 $current_page = basename($_SERVER['PHP_SELF']);
 // Database inclusion (if needed)
@@ -39,7 +39,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <img src="../Assets/image.png" class="profile" alt="Profile">
             </div>
             <div class="logoutbtn">
-                <button class="logout-btn" onclick="location.href='../loginpage/login.php'">
+                <button class="logout-btn" onclick="location.href='../logout.php'">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span class="logout-text">Logout</span>
                 </button>

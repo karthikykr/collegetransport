@@ -1,5 +1,5 @@
 <?php 
-session_start();
+ include('../session.php');
 include('../db.php');
 include('../header.php');
 ?>
@@ -27,7 +27,7 @@ include('../header.php');
             }
             
             ?>
-            <a  href="vehicle_detail.php ?v_id=<?php echo $row['id']; ?>">
+            <!-- <a  href="vehicle_detail.php ?v_id=<?php echo $row['id']; ?>"> -->
                 <div class="grid-item">
                     <h3><?php echo $row['vehicle']; ?></h3>
                     <h3><?php echo "Travel Date: " . $row['travel_date']; ?></h3>

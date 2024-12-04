@@ -1,5 +1,5 @@
 <?php 
- session_start();   //starting session 
+ include('../session.php');
 include('../header.php');
 include('../selecting_vehicle.php');
  $user_id= $_SESSION['user_id'];

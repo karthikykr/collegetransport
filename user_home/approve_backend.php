@@ -1,7 +1,6 @@
 <?php
     include('../db.php');
-
-    session_start();
+    include('../session.php');
     $role=$_SESSION['role'];
 
     // Handle booking status updates
