@@ -1,8 +1,12 @@
 <?php 
+include('../db.php');
+
+$sql="SELECT * FROM `add_vehicle`";
+
+$result = $conn->query($sql);
 
 
-
-include('../header.php');?>
+include('admin_header.php');?>
     <link rel="stylesheet" href="../styles/style.css">
 
 <body>
