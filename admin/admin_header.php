@@ -35,7 +35,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <center><h3>AN AUTONOMOUS INSTITUTION</H3><center>
         </div>
         <div class="divgrp">
-            <div class="profile-section" onclick="toggleUserInfo()">
+            <div class="profile-section" id="userInfoToggle">
                 <img src="../Assets/image.png" class="profile" alt="Profile">
             </div>
         </div>
@@ -60,7 +60,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
     <!-- Main Content Area -->
     <main class="main-content">
-    <div class="user-info">
+    <div id="user-info" class="hidden">
         <center>
             <div class="profile-section">
                 <img src="../Assets/image.png" class="profile" alt="Profile">
@@ -73,7 +73,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
             </center>
                 <div class="logoutbtn">
-                <button class="change-password" onclick="location.href='#">
+                <button class="change-password" onclick="location.href='change_pass_admin.php'">
                     <i class="fa-solid fa-key"></i>
                     <span class="logout-text">Change Password</span>
                 </button>
@@ -89,18 +89,21 @@ $current_page = basename($_SERVER['PHP_SELF']);
         document.addEventListener("DOMContentLoaded", () => {
             const sidebarToggle = document.getElementById("sidebarToggle");
             const sidebar = document.getElementById("sidebar");
+            const userInfoToggle = document.getElementById("userInfoToggle");
+            const userInfo = document.getElementById("user-info");
 
             // Toggle sidebar on sidebar toggle click
             sidebarToggle.addEventListener("click", () => {
                 sidebar.classList.toggle("collapsed");
                 sidebar.classList.toggle("visible");
             });
+            userInfoToggle.addEventListener("click", () => {
+            userInfo.classList.toggle("hidden");
+            userInfo.classList.toggle("visible");
+        });
         });
 
-    function toggleUserInfo() {
-    const userInfo = document.querySelector("user-info");
-    userInfo.classList.toggle("visible");
-}
+    
     </script>
 </body>
 

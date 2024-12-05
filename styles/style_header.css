@@ -149,6 +149,117 @@ body {
     background-color: #c4cbff;
 }
 
+#user-info {
+    width: 25%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    right: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* Hidden state */
+#user-info.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* Visible state */
+#user-info.visible {
+    max-height: 300px; /* Adjust as per content */
+    opacity: 1;
+}
+
+.user-details{
+    /* background-color: red; */
+    flex-direction: column;
+    display: flex;
+    margin:8px 0px 15px 0px;
+    /* gap: 10px; */
+    row-gap: 20px;
+    font-size: 1.2rem;
+    justify-content: space-evenly;
+}
+
+.line{
+    width: 100%;
+    border:1px solid black;
+}
+
+.logoutbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    /* margin: 0 10px; */
+}
+
+.logout-btn {
+    background-color:#f5f2f2 ;
+    border-radius:  0px 20px 20px 0px;
+    width: auto;
+    height: 50px;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px 10px 0px 20px;
+    transition: background-color 0.3s ease, all 0.3s ease;
+}
+
+.logout-btn i {
+    font-size: 1.3rem;
+}
+
+.logout-btn:hover {
+    background-color:#e2eff1;
+}
+
+/* .change-password {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 10px;
+} */
+
+.change-password {
+    background-color:#f5f2f2 ;
+    border-radius:  20px 0px 0px 20px;
+    width: 100%;
+    height: 50px;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px 10px 0px 30px;
+    transition: background-color 0.3s ease, all 0.3s ease;
+}
+
+.change-password i {
+    font-size: 1.3rem;
+}
+
+.change-password:hover {
+    background-color:#e2eff1;lor: #f5f2f2;
+}
+
 /* Main Content */
 .main-content {
     margin-left: 270px;
