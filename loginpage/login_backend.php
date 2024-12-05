@@ -66,6 +66,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }elseif($user['role'] == 'assistant director'){
                 header("Location: ../user_home/home.php");
                 exit();
+            }elseif($user['role'] == 'director'){
+                header("Location: ../user_home/home.php");
+                exit();
             } else {
                 echo "Invalid password.";
             }
