@@ -1,4 +1,4 @@
-<?php include('../header.php');?>
+<?php include('admin_header.php');?>
 <link rel="stylesheet" href="../styles/add_user.css"> 
  
         <!-- Form to Add User -->
@@ -43,7 +43,9 @@
                     <input type="hidden" id="role" name="role" value="user">
 
                     <!-- Submit Button -->
-                    <input type="submit" value="Add User" class="btnAdd"><br>
+                     <div class="btn-con">
+                    <button type="submit" value="Add User" class="btnAdd">Add User<br>
+                    </div>
                 </form>
                 <script>
         function displayDepartment() {

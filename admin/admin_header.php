@@ -32,20 +32,22 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <div class="search-bar">
-            <h2>St Joseph Engineering College, Vamanjoor - Mangalore</h2>
+            <h2>ST JOSEPH ENGINEERING COLLEGE MANGALORE</h2><br>
+            <center><h3>AN AUTONOMOUS INSTITUTION</H3><center>
         </div>
         <div class="divgrp">
-            <div class="profile-section">
+            <div class="profile-section" onclick="toggleUserInfo()">
                 <img src="../Assets/image.png" class="profile" alt="Profile">
-            </div>
-            <div class="logoutbtn">
-                <button class="logout-btn" onclick="location.href='../loginpage/login.php'">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="logout-text">Logout</span>
-                </button>
             </div>
         </div>
     </div>
+
+    <!-- User Info
+    <div class="user-info" id="userInfo">
+        <h1>Name</h1>
+        <h2>Department</h2>
+        <h2>Role</h2>
+    </div> -->
 
     <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
@@ -59,7 +61,29 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
     <!-- Main Content Area -->
     <main class="main-content">
-        <!-- Your content goes here -->
+    <div class="user-info">
+        <center>
+            <div class="profile-section">
+                <img src="../Assets/image.png" class="profile" alt="Profile">
+            </div>
+            <div class="line"></div>
+            <div class="user-details">
+                <h4>Name</h4>
+                <h4>Department</h4>
+                <h4>Role</h4>
+            </div>
+            </center>
+                <div class="logoutbtn">
+                <button class="change-password" onclick="location.href='#">
+                    <i class="fa-solid fa-key"></i>
+                    <span class="logout-text">Change Password</span>
+                </button>
+                <button class="logout-btn" onclick="location.href='../loginpage/login.php'">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="logout-text">Logout</span>
+                </button>
+            </div>
+    </div>
     </main>
 
     <script>
@@ -73,6 +97,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 sidebar.classList.toggle("visible");
             });
         });
+
+    function toggleUserInfo() {
+    const userInfo = document.querySelector("user-info");
+    userInfo.classList.toggle("visible");
+}
     </script>
 </body>
 

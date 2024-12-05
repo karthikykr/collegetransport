@@ -1,9 +1,5 @@
 <?php 
-include('../db.php');
 
-$sql="SELECT * FROM `add_vehicle`";
-
-$result = $conn->query($sql);
 
 
 include('admin_header.php');?>
@@ -13,15 +9,11 @@ include('admin_header.php');?>
         <!-- Dashboard Section -->
         <section class="board">
         <div id="main" class="main">
-        <div class="user-info">
-            <h1>Name</h1>
-            <h2>Role</h2>
-        </div>
         <div class="board-header">
-            <h6>Vehicle Information</h6>
+                <h6>Vehicle Information</h6>
         </div>
-            <div class="grid-container">
-            <?php 
+        <div class="grid-container">
+        <?php 
 
 include('../selecting_vehicle.php');
 

@@ -156,44 +156,6 @@ body {
     margin-bottom: 100px;
 }
 
-.user-info{
-    background-color: red;
-    justify-content: center;
-    align-items: center;
-    margin:5px 0px 0px 400px;
-}
-.logoutbtn {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 0 10px;
-}
-
-.logout-btn {
-    background-color: #ff1c1c;
-    border-radius: 12px;
-    width: auto;
-    height: 40px;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    transition: background-color 0.3s ease, all 0.3s ease;
-}
-
-.logout-btn i {
-    font-size: 1.2rem;
-}
-
-.logout-btn:hover {
-    background-color: #df0101;
-}
-
 .divgrp {
     display: flex;
     padding: 10px;
