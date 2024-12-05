@@ -1,5 +1,7 @@
 <?php 
-include('../header.php');?>
+include('admin_header.php');
+include('../selecting_vehicle.php');
+?>
     <link rel="stylesheet" href="../styles/style.css">
 
 <body>
@@ -16,7 +18,7 @@ include('../header.php');?>
         <div class="grid-container">
         <?php 
 
-include('../selecting_vehicle.php');
+
 
 if ($result->num_rows > 0) {
     // Loop through the results and display them
