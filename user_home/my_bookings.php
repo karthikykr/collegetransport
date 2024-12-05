@@ -11,8 +11,8 @@ include('../header.php');
 
     <div class="grid-container">
     <?php
-        $id=$_SESSION['user_id'];
-        $sql = "SELECT * FROM `bookings` WHERE `user_id` = '$id';";
+      
+        $sql = "SELECT * FROM `bookings` WHERE `user_id` = '$u_id';";
         $result = $conn->query($sql);
     if ($result->num_rows > 0) 
       // Loop through the results and display them

@@ -3,7 +3,7 @@
 // Database connection (replace with your actual credentials)
 include('../db.php');
 
-$role=$_SESSION['role'];
+// $role=$_SESSION['role'];
 
 echo $role;
 // Retrieve the form data
@@ -17,7 +17,7 @@ if (isset($_POST['confirm'])) {
     $pickup_time = $_POST['pickup_time'];
     $drop_to = $_POST['drop_to'];
     $drop_time = $_POST['drop_time'];
-    $user_id=$_SESSION['user_id'];
+    // $user_id=$_SESSION['user_id'];
 
     if($role==='faculty'){
         $status = 'pending';
@@ -35,7 +35,7 @@ if (isset($_POST['confirm'])) {
     }
 
 
-    $query = "INSERT INTO `bookings` (`vehicle`, `travel_date`, `purpose`, `num_people`, `num_days`,`pickup_from`,`pickup_time`,`drop_to`,`drop_time`,`booking_status`,`user_id`) VALUES ('$vehicle','$travel_date','$purpose','$num_people','$num_days','$pickup_from','$pickup_time','$drop_to','$drop_time','$status','$user_id')";
+    $query = "INSERT INTO `bookings` (`vehicle`, `travel_date`, `purpose`, `num_people`, `num_days`,`pickup_from`,`pickup_time`,`drop_to`,`drop_time`,`booking_status`,`user_id`) VALUES ('$vehicle','$travel_date','$purpose','$num_people','$num_days','$pickup_from','$pickup_time','$drop_to','$drop_time','$status','$u_id')";
            
     if($conn->query($query)){
         echo"<script>alert('Booking confirmed! ');</script>";

@@ -1,8 +1,7 @@
 <?php
-    include('../db.php');
     include('../session.php');
-    $role=$_SESSION['role'];
-
+    include('../db.php');
+   
     // Handle booking status updates
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'], $_POST['action'])) {
         $booking_id = $_POST['booking_id'];

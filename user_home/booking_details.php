@@ -1,18 +1,9 @@
 <?php  
 include('../session.php');
-// include('../db.php');
+include('../db.php');
 include('../header.php');
 
 
-// $b_id = $_POST['booking_id'];
-// $u_id = $_POST['user_id'];
-
-
-
-// $sql = "SELECT * FROM bookings JOIN users ON bookings.user_id = users.id WHERE bookings.id='$b_id'";
-// $result = $conn->query($sql);
-
-//     $row = $result->fetch_assoc();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve POST data

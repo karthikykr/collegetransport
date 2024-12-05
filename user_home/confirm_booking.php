@@ -1,6 +1,7 @@
 <?php
 // Assuming data is passed from the booking form
-include('../session.php');
+include('../session.php'); 
+include('../db.php'); 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve POST data
     $vehicle = $_POST['vehicle'];

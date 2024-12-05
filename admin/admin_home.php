@@ -1,5 +1,8 @@
 <?php 
-include('../header.php');?>
+include('../session.php');
+include('../db.php');
+include('admin_header.php');
+?>
     <link rel="stylesheet" href="../styles/style.css">
 
 <body>
@@ -7,8 +10,8 @@ include('../header.php');?>
         <section class="board">
         <div id="main" class="main">
         <div class="user-info">
-            <h1>Name</h1>
-            <h2>Role</h2>
+            <h1>Name: <?php echo $role; ?></h1>
+            <h2>Role: <?php echo $role; ?></h2>
         </div>
         <div class="board-header">
             <h6>Vehicle Information</h6>

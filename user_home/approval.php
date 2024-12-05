@@ -3,33 +3,9 @@
  include('../session.php');
 include('../db.php');
 
-// Handle booking status updates
-// if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'], $_POST['action'])) {
-//     $booking_id = $_POST['booking_id'];
-//     $action = $_POST['action'];
-//     $new_status = ($action === 'approve') ? 'hod_approved' : 'hod_rejected';
-
-//     $stmt = $conn->prepare("UPDATE bookings SET booking_status = ? WHERE id = ?");
-//     $stmt->bind_param("si", $new_status, $booking_id);
-
-//     if ($stmt->execute()) {
-//         echo "<script>alert('Booking status updated successfully.');</script>";
-//     } else {
-//         echo "<script>alert('Booking status updated.');</script>" . $stmt->error;
-//     }
-//     $stmt->close();
-// }SS
-
-// Display pending booking requests
-$role=$_SESSION['role'];
-$id=$_SESSION['user_id'];
-
-
-
-
 if($role=='hod'){
    
-$query="SELECT `department` FROM `users` WHERE `id`='$id'";
+$query="SELECT `department` FROM `users` WHERE `id`='$u_id'";
 $dept=$conn->query($query);
 
 $row=$dept->fetch_assoc();

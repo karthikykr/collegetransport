@@ -1,5 +1,4 @@
 <?php
-session_start();
 // Get the current script name to dynamically show/hide links
 $current_page = basename($_SERVER['PHP_SELF']);
 // Database inclusion (if needed)

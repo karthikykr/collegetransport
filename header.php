@@ -1,9 +1,11 @@
 <?php
-// session_start();
-// Get the current script name to dynamically show/hide links
+
+$sql="SELECT * FROM `users` WHERE 'id'='$'" ;
+$result = $conn->query($sql);
+
+
 $current_page = basename($_SERVER['PHP_SELF']);
-// Database inclusion (if needed)
-// include('.../db.php');
+
 ?>
 
 <!DOCTYPE html>
