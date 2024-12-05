@@ -1,9 +1,16 @@
 <?php 
  include('../session.php');
+
+
+
+
 include('../header.php');
 include('../selecting_vehicle.php');
  $user_id= $_SESSION['user_id'];
  $user_role=$_SESSION['role'];
+
+
+
 ?>
 <link rel="stylesheet" href="../styles/style.css">
     <!-- Dashboard Section -->

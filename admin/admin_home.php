@@ -1,4 +1,11 @@
 <?php 
+
+$sql="SELECT * FROM `users` WHERE `id`='$user_id' ";
+
+ 
+$result = $conn->query($sql);
+
+$row = $result->fetch_assoc();
 include('../header.php');?>
     <link rel="stylesheet" href="../styles/style.css">
 
