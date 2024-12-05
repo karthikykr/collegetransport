@@ -8,10 +8,6 @@ include('../selecting_vehicle.php');
         <!-- Dashboard Section -->
         <section class="board">
         <div id="main" class="main">
-        <div class="user-info">
-            <h1>Name</h1>
-            <h2>Role</h2>
-        </div>
         <div class="board-header">
                 <h6>Vehicle Information</h6>
         </div>
