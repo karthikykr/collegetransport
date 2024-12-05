@@ -3,7 +3,7 @@
 // Database connection (replace with your actual credentials)
 include('../db.php');
 
-// $role=$_SESSION['role'];
+
 
 echo $role;
 // Retrieve the form data

@@ -1,11 +1,12 @@
 <?php
 
-$sql="SELECT * FROM `users` WHERE 'id'='$'" ;
+$sql="SELECT * FROM `users` WHERE 'id'='$u_id'" ;
 $result = $conn->query($sql);
 
+$row = $result->fetch_assoc()
 
 $current_page = basename($_SERVER['PHP_SELF']);
-
+git 
 ?>
 
 <!DOCTYPE html>
