@@ -6,16 +6,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Sidebar Styling */
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #f5f5f7;
-    padding: 20px;
-    position: fixed;
-    justify-items: center;
-}
-
 /*
 .sidebar-header .logo {
     font-size: 24px;
@@ -151,6 +141,13 @@ label {
 }
 
 /* Button Styling */
+.btn-con {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+
 .btnAdd {
     background-color: #020267;
     border-radius: 20px;
@@ -164,7 +161,7 @@ label {
 }
 
 .btnAdd:hover {
-    background-color: #52528b;
+    background-color: #6262fa;
 }
 
 /* Hover effect for select fields */

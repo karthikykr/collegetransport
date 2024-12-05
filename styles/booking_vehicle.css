@@ -18,7 +18,7 @@ body {
     width: fit-content;
 } */
 
-.container {
+/* .container {
     background-color: rgb(250, 251, 249);
     border-radius: 12px;
     width: fit-content;
@@ -26,8 +26,17 @@ body {
     margin: 0 auto;
     /* margin-left: 20px; */
     /* max-width: 800px; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */ 
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 table {
