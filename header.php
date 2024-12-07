@@ -5,7 +5,7 @@ $result = $conn->query($sql);
 
 $row = $result->fetch_assoc()
 
-$current_page = basename($_SERVER['PHP_SELF']);
+// $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +33,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <img src="../Assets/SJECLogo.png" alt="College Logo" class="logo">
             </div>
         </div>
-        <div class="search-bar">
-            <h2>St Joseph Engineering College, Vamanjoor - Mangalore</h2>
+        <div class="college-name">
+            <h1>St Joseph Engineering College, Vamanjoor - Mangalore</h1>
         </div>
         <div class="divgrp">
             <div class="profile-section">

@@ -13,6 +13,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
     <link rel="stylesheet" href="../styles/style_header.css">
+    <link rel="stylesheet" href="../styles/user_profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- Font Awesome for icons -->
 </head>
 
@@ -61,28 +62,29 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <!-- Main Content Area -->
     <main class="main-content">
     <div id="user-info" class="hidden">
-        <center>
-            <div class="profile-section">
-                <img src="../Assets/image.png" class="profile" alt="Profile">
-            </div>
-            <div class="line"></div>
-            <div class="user-details">
-                <h4>Name</h4>
-                <h4>Department</h4>
-                <h4>Role</h4>
-            </div>
-            </center>
-                <div class="logoutbtn">
-                <button class="change-password" onclick="location.href='change_pass_admin.php'">
-                    <i class="fa-solid fa-key"></i>
-                    <span class="logout-text">Change Password</span>
-                </button>
-                <button class="logout-btn" onclick="location.href='../loginpage/login.php'">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="logout-text">Logout</span>
-                </button>
-            </div>
+    <div class="user-profile-section">
+        <img src="../Assets/image.png" class="user-profile" alt="Profile">
+        <h3 class="user-name">John Doe</h3>
+        <p class="user-email">john.doe@example.com</p>
     </div>
+    <div class="line"></div>
+    <div class="user-details">
+        <p><strong>Department:</strong> IT</p>
+        <p><strong>Role:</strong> Administrator</p>
+    </div>
+    <div class="line"></div>
+    <div class="logoutbtn">
+        <button class="change-password" onclick="location.href='change_pass_admin.php'">
+            <i class="fa-solid fa-key"></i>
+            <span class="logout-text">Change Password</span>
+        </button>
+        <button class="logout-btn" onclick="location.href='../loginpage/login.php'">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span class="logout-text">Logout</span>
+        </button>
+    </div>
+</div>
+
     </main>
 
     <script>
