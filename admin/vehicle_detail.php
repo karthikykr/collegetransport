@@ -36,9 +36,12 @@ $result = $conn->query($sql);
 
             </tr>
             <tr>
+                <th>Emission Test Date</th>
+                <th><input type="date" name="v_emission_test_date" value="<?php echo $row['v_emission_test_date']; ?>" required></th>
+            </tr>
+            <tr>
                 <th>Emission Valid Date</th>
                 <th><input type="date" name="v_emission_valid" value="<?php echo $row['v_emission_valid']; ?>" required></th>
-
             </tr>
             
         </table>  

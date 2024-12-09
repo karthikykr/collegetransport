@@ -1,81 +1,68 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/*
-.sidebar-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #4d4de6;
-}
-*/
-
-.logo img {
-    height: 100px;
-    width: 100px;
-
-}
-
-.nav-links {
-    list-style-type: none;
-    padding-top: 30px;
-
-}
-
-.nav-links li:hover {
-    background-color: #dfe8fc;
-}
-
-.nav-links li {
-    padding: 10px 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    display: block;
-}
-
-.active {
-    color: #4d4de6;
-}
-
-/* Main Content */
-.main-content {
-    margin-left: 270px;
-    padding: 20px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header img {
-    height: 50px;
-    width: 50px;
-}
-
-/* Dashboard Section */
-.board {
-    margin-top: 30px;
-}
-
-.board-header {
+h1 {
     text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #4d4de6;
-    color: white;
+    margin: 10px 20px 0px 0px;
+    color: #444;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
+/* Input, textarea and Select Style */
+input[type="text"],
+input[type="date"], 
+input[type="select"],
+#designation,
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #3e3eee;
+    outline: none;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0px 7px 0px;
+    color: #0c0c0c;
+}
+
+.btn-con {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 25px;
+}
+.add-btn {
+    background-color: #020267;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #04931e;
+}
 
 @media (max-width: 768px) {
     .grid-container {
@@ -84,7 +71,7 @@
     }
 }
 
-.add_user_container {
+/* .add_user_container {
 
     background-color: #cbcbf9;
     color: black;
@@ -99,9 +86,9 @@
 .add_user_container h2 {
     text-align: center;
     margin-bottom: 20px;
-}
+}*/
 
-#designation {
+/* #designation {
     background-color: rgb(247, 250, 255);
     width: 100%;
     padding: 10px;
@@ -109,8 +96,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
-}
-
+} */
+/*
 #department {
     display: none;
 
@@ -121,7 +108,7 @@
 }
 
 
-input[type="text"],
+/* input[type="text"],
 input[type="date"],
 input[type="password"],
 input[type="email"] {
@@ -131,16 +118,14 @@ input[type="email"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
-}
+} */
 
-/* Label Styling */
+/* Label Styling
 label {
     font-size: 16px;
     margin-bottom: 5px;
     display: block;
-}
-
-/* Button Styling */
+} 
 .btn-con {
     display: flex;
     justify-content: center;
@@ -162,14 +147,14 @@ label {
 
 .btnAdd:hover {
     background-color: #6262fa;
-}
+}*/
 
-/* Hover effect for select fields */
+
 select:focus,
 input:focus {
     outline: none;
     border-color: #4d4de6;
-}
+} 
 
 /* Responsive Design */
 @media (max-width: 768px) {

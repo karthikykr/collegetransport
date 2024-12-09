@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="../styles/add_user.css"> 
  
         <!-- Form to Add User -->
-        <div class="add_user_container">
             <div class="add_user">
-                <h2>Add User</h2>
+            <div class="container">
+            <h1>Add User</h1>
                 <form id="userForm" action="add_user_backend.php" method="POST">
 
                     <!-- Name -->
@@ -44,7 +44,7 @@
 
                     <!-- Submit Button -->
                      <div class="btn-con">
-                    <button type="submit" value="Add User" class="btnAdd">Add User<br>
+                    <button type="submit" value="Add User" class="add-btn">Add<br>
                     </div>
                 </form>
                 <script>

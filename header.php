@@ -15,6 +15,7 @@ $row = $result->fetch_assoc()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
+    <link href="Assets/image.png" rel="icon">
     <link rel="stylesheet" href="../styles/style_header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- Font Awesome for icons -->
 </head>

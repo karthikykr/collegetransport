@@ -1,83 +1,16 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
 }
-
-/* General Body Style */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    /* padding: 20px; */
-}
-
-/* .table{
-    background-color: rgb(139, 160, 160);
-    width: fit-content;
-} */
 
 .container {
-    background-color: rgb(250, 251, 249);
-    border-radius: 12px;
-    width: fit-content;
-    padding: 20px;
-    margin: 0 auto;
-    /* margin-left: 20px; */
-    /* max-width: 800px; */
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.booking-details {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.booking-details th,
-.booking-details td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.booking-details th {
-    background-color: #f4f4f6;
-    color: #333;
-    font-weight: bold;
-}
-
-.booking-details tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.booking-details tr:hover {
-    background-color: #e1e1f9;
-}
-
-.booking-details td {
-    background-color: #fff;
-}
-
-.booking-details td:last-child {
-    font-weight: bold;
-}
-
-/* Form Container */
-.form-container {
-    background-color: #dde1fd;
-    /* background-color: #0a25f6; */
     max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    margin: auto;
     padding: 20px;
-    border-radius: 8px;
+    background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Row for Two-Column Layout */
@@ -100,7 +33,7 @@ label {
     display: block;
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin: 15px 0px 7px 0px;
     color: #0c0c0c;
 }
 
@@ -109,8 +42,7 @@ input[type="text"],
 input[type="number"],
 input[type="date"],
 input[type="time"],
-select,
-textarea {
+select {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -119,24 +51,24 @@ textarea {
     background-color: #f9f9f9;
 }
 
-textarea {
-    width: 100%;
-    /* Full Width for Purpose Field */
-    height: 80px;
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #3e3eee;
+    outline: none;
 }
 
 .btn-con {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    gap: 10px;
+    gap: 25px;
 }
-
-/* Button Style */
-.btnAdd {
+.add-btn {
     background-color: #020267;
     border-radius: 20px;
-    width: 200px;
+    width: 100px;
     height: 40px;
     color: white;
     font-size: 16px;
@@ -145,9 +77,10 @@ textarea {
     transition: background-color 0.3s ease;
 }
 
-.btnAdd:hover {
-    background-color: #4d4de6;
+.add-btn:hover {
+    background-color: #04931e;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 800px) {

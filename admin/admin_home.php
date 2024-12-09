@@ -3,7 +3,7 @@ include('admin_header.php');
 include('../selecting_vehicle.php');
 ?>
     <link rel="stylesheet" href="../styles/style.css">
-
+    <link href="Assets/image.png" rel="icon">
 <body>
         <!-- Dashboard Section -->
         <section class="board">
