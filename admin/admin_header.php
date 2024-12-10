@@ -2,7 +2,11 @@
 // Get the current script name to dynamically show/hide links
 $current_page = basename($_SERVER['PHP_SELF']);
 // Database inclusion (if needed)
-// include('.../db.php');
+include('../db.php');
+include('../session.php');
+// $sql="SELECT * FROM `users` WHERE" ;
+
+    // $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +35,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <img src="../Assets/SJECLogo.png" alt="College Logo" class="logo">
             </div>
         </div>
-        <div class="search-bar">
-            <h2>ST JOSEPH ENGINEERING COLLEGE MANGALORE</h2><br>
-            <center><h3>AN AUTONOMOUS INSTITUTION</H3><center>
+        <div class="college-name">
+            <h1>ST JOSEPH ENGINEERING COLLEGE MANGALORE</h1><br>
+            <h2>AN AUTONOMOUS INSTITUTION</h2>
         </div>
         <div class="divgrp">
             <div class="profile-section" id="userInfoToggle">
@@ -64,13 +68,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div id="user-info" class="hidden">
     <div class="user-profile-section">
         <img src="../Assets/image.png" class="user-profile" alt="Profile">
-        <h3 class="user-name">John Doe</h3>
-        <p class="user-email">john.doe@example.com</p>
+        <h3 class="user-name">USER NAME</h3>
+        <p class="user-email">user@example.com</p>
     </div>
     <div class="line"></div>
     <div class="user-details">
         <p><strong>Department:</strong> IT</p>
-        <p><strong>Role:</strong> Administrator</p>
+        <p><strong>Role:</strong> <?php echo "$role"?></p>
     </div>
     <div class="line"></div>
     <div class="logoutbtn">

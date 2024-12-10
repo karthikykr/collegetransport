@@ -113,9 +113,9 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     #user-info {
-        width: 90%; /* Expand to fit smaller screens */
-        right: 5%;
-        top: 60px;
+        width: 50%; /* Expand to fit smaller screens */
+        right: 2%;
+        top: 120px;
     }
 
     .user-profile {
@@ -139,9 +139,11 @@
 
 @media (max-width: 480px) {
     #user-info {
-        width: 100%; /* Full width for very small screens */
-        top: 50px;
-        right: 0;
+        width: 60%;
+        margin:30px -10px 0px 0px;
+        /* top: 70px;
+        right: 0; */
+        padding: 10px;
         border-radius: 0; /* Remove rounded corners */
     }
 
@@ -149,4 +151,9 @@
         font-size: 12px;
         height: 35px;
     }
+    /* #user-info.visible{
+        margin:32px 5px 5px 5px;
+        width:60%;
+        padding:10px;
+    } */
 }

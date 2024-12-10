@@ -23,8 +23,15 @@ body {
     z-index: 1000;
 }
 
-.college-name h1 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.college-name {
+    display: grid;
+}
+
+.college-name h1{
+    text-align: center;
+}
+.college-name h2{
+    text-align: center;
 }
 .logo-section {
     display: flex;
@@ -214,6 +221,19 @@ body {
 }
 
 @media (max-width: 768px) {
+    .topbar{
+        height:120px;
+    }
+
+    .college-name h1{
+        font-size:1.6rem;
+        color:white;
+        margin:0px;
+    }
+
+    .college-name h2{
+        font-size:1.2rem;
+    }
     .sidebar {
         transform: translateX(-100%);
         width: 120px;
@@ -222,10 +242,14 @@ body {
     .sidebar.visible {
         transform: translateX(0);
     }
+    .sidebar-toggle{
+        height:60px;
+        width:60px;
+    }
 
     .sidebar.collapsed {
-        width: 80px;
-        margin: 130px 0 0 0;
+        width: 120px;
+        margin: 120px 0 0 0;
     }
 
     .nav-icon {
@@ -286,13 +310,13 @@ body {
 @media (max-width: 480px) {
     .topbar {
         width: 100%;
-        height: 100px;
+        height: 80px;
     }
 
     .sidebar {
         width: 100%;
         padding: 5px;
-        margin: 100px 0 0 0;
+        margin: 85px 0px 0px 0px;
     }
 
     .sidebar-toggle {
@@ -300,12 +324,12 @@ body {
     }
 
     .college-name {
-        font-size: 7px;
+        font-size: 5px;
     }
 
     .sidebar.collapsed {
         width: 80px;
-        margin: 100px 0 0 0;
+        margin: 85px 0px 0px 0px;
     }
 
     .sidebar-links li a {
@@ -323,6 +347,5 @@ body {
     .profile-section {
         height: 30px;
     }
-
 }
 
