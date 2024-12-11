@@ -17,7 +17,6 @@ include('session.php');
     <title>Transport</title>
     <link href="Assets/image.png" rel="icon">
     <link rel="stylesheet" href="../styles/style_header.css">
-    <link rel="stylesheet" href="../styles/user_profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- Font Awesome for icons -->
 </head>
 
@@ -73,30 +72,7 @@ include('session.php');
     </div>
      <!-- Main Content Area -->
      <main class="main-content">
-    <div id="user-info" class="hidden">
-    <div class="user-profile-section">
-        <img src="../Assets/image.png" class="user-profile" alt="Profile">
-        <h3 class="user-name"><?php echo "$name"?></h3>
-        <p class="user-email"><?php echo "$email"?></p>
-    </div>
-    <div class="line"></div>
-    <div class="user-details">
-        <p><strong>Department:</strong> <?php echo "$department"?></p>
-        <p><strong>Role:</strong> <?php echo "$role"?></p>
-    </div>
-    <div class="line"></div>
-    <div class="logoutbtn">
-        <button class="change-password" onclick="location.href='change_pass_admin.php'">
-            <i class="fa-solid fa-key"></i>
-            <span class="logout-text">Change Password</span>
-        </button>
-        <button class="logout-btn" onclick="location.href='../loginpage/login.php'">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span class="logout-text">Logout</span>
-        </button>
-    </div>
-</div>
-
+        <?php include('user_profile.php');?>
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", () => {

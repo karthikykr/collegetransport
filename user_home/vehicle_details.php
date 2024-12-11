@@ -1,24 +1,23 @@
 <?php  
- include('../session.php');
 include('../db.php');
 include('../header.php');
 
-
 $v_id = $_GET['v_id'];
-
 $sql="SELECT * FROM `add_vehicle` WHERE `v_id`='$v_id'";
 $result = $conn->query($sql);
 
     $row = $result->fetch_assoc();
     ?>
-    <link rel="stylesheet" href="../styles/vehicle_details.css">
+    
         <link rel="stylesheet" href="../styles/vehicle_details.css" >
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
-    </head>
-    <h1>Vehicle details</h1>
-    <body>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+        <div class="board-header">
+            <h1>Vehicle Information</h1>
+        </div>
+    <div class="container">
         <form action="update_vehicle.php" method="POST">
-        <table class="table table-striped" >
+        <table class="table table-hover">
         <input type="hidden" name="v_id" value="<?php echo $row['v_id']; ?>">
             <tr>
                 <th>Vehicle Type</th>
