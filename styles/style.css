@@ -98,7 +98,11 @@ html, body {
     font-size: 1rem;
     color: #555;
 }
-
+.board-header h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+}
 /* Responsive design */
 @media (max-width: 2288px) {
     .grid-container {

@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="../styles/add_user.css"> 
  
         <!-- Form to Add User -->
-            <div class="add_user">
-            <div class="container">
+            <div class="board-header">
             <h1>Add User</h1>
+            </div>
+            <div class="container">
                 <form id="userForm" action="add_user_backend.php" method="POST">
 
                     <!-- Name -->
@@ -64,8 +65,7 @@
         }
     </script>
 
-            </div>
-        </div>
+    </div>
     </body>
 
     </html>

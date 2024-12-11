@@ -49,7 +49,6 @@ if ($result->num_rows > 0) {
          
         </div>
         </section>
-    </main>
 
     <!-- <script>
         const sidebar = document.querySelector('.sidebar-toggle'); // Sidebar element
@@ -73,6 +72,3 @@ document.querySelector('.sidebar-toggle').addEventListener('click', () => {
         gridContainer.classList.toggle('sidebar-collapsed');
 });
     </script>
-</body>
-
-</html>

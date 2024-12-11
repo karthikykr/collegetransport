@@ -1,6 +1,6 @@
-h1 {
+.board-header h1 {
     text-align: center;
-    margin: 10px 20px 0px 0px;
+    margin: 10px 20px 20px 0px;
     color: #444;
 }
 
@@ -49,13 +49,13 @@ label {
     gap: 25px;
 }
 .add-btn {
-    background-color: #020267;
-    border-radius: 20px;
+    background-color: #3636c8;
+    border-radius: 8px;
     width: 100px;
     height: 40px;
     color: white;
     font-size: 16px;
-    border: none;
+    border: #0404bb;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -70,91 +70,6 @@ label {
         /* Adjust for smaller screens */
     }
 }
-
-/* .add_user_container {
-
-    background-color: #cbcbf9;
-    color: black;
-    padding: 20px 30px 30px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 65%;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-.add_user_container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}*/
-
-/* #designation {
-    background-color: rgb(247, 250, 255);
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-} */
-/*
-#department {
-    display: none;
-
-}
-
-#department_lbl {
-    display: none;
-}
-
-
-/* input[type="text"],
-input[type="date"],
-input[type="password"],
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-} */
-
-/* Label Styling
-label {
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: block;
-} 
-.btn-con {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 10px;
-}
-
-.btnAdd {
-    background-color: #020267;
-    border-radius: 20px;
-    width: 200px;
-    height: 40px;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btnAdd:hover {
-    background-color: #6262fa;
-}*/
-
-
-select:focus,
-input:focus {
-    outline: none;
-    border-color: #4d4de6;
-} 
 
 /* Responsive Design */
 @media (max-width: 768px) {

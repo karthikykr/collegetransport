@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Query to check if the user exists
-    $sql = "SELECT `id`, `password`, `role` FROM `users` WHERE `email` = '$email'";
+    $sql = "SELECT `id`, `name`, `department`,`email`,`password`, `role` FROM `users` WHERE `email` = '$email'";
     $result = $conn->query($sql);
 
      
@@ -49,6 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Set session variables
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['role'] = $user['role'];
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['department'] = $user['department'];
+            $_SESSION['email'] = $user['email'];
 
             // Redirect based on role
             if ($user['role'] == 'admin') {

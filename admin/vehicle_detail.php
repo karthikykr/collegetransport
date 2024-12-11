@@ -10,8 +10,9 @@ $result = $conn->query($sql);
     ?>
     
         <link rel="stylesheet" href="../styles/vehicle_details.css" >
-        <h1>Vehicle details</h1>
-    <body>
+        <div class="board-header">
+            <h1>Vehicle Information</h1>
+        </div>
     <div class="container">
         <form action="update_vehicle.php" method="POST">
         <table class="table table-hover">

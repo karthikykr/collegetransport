@@ -174,7 +174,6 @@ body {
 .college-name, .topbar, .logoutbtn {
     transition: margin-left 0.3s ease;
 }
-
 /* Responsive Design */
 @media (max-width: 1024px) {
     .logo {

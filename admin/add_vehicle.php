@@ -1,10 +1,11 @@
-
 <?php include('admin_header.php');?>
-<link rel="stylesheet" href="../styles/add_vehicle1.css"> 
+<link rel="stylesheet" href="../styles/add_vehicle.css"> 
     
 <!-- Form to Add Vehicle -->
+ <div class="board-header">
+ <h1>Add Vehicle</h1>
+ </div>
     <div class="container" >
-    <h1>Add Vehicle</h1>
     <form id="vehicleForm" action="add_vehicle_backend.php" method="POST" >  <!--redirect to add_vehicle_backend --> 
          
                 <div class="row">

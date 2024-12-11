@@ -6,7 +6,9 @@
 ?>
     <link rel="stylesheet" href="../styles/change_password.css">
     <div>
+        <div class="board-header">
         <h1>Change Password</h1>
+        </div>
         <div class="container">
         <form method="POST" action="#">
             <div class="form-group">
