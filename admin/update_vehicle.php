@@ -1,5 +1,5 @@
 <?php 
-
+include('../session.php');
 include('../db.php');
 
 $vid=$_POST['v_id'];

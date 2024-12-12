@@ -2,8 +2,7 @@
 // Get the current script name to dynamically show/hide links
 $current_page = basename($_SERVER['PHP_SELF']);
 // Database inclusion (if needed)
-include('../db.php');
-include('../session.php');
+
 // $sql="SELECT * FROM `users` where $_SESSION['user_id']=`id`";
 // $result = $conn->query($sql);
 ?>

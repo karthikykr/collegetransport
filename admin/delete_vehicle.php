@@ -1,4 +1,5 @@
 <?php 
+include('../session.php');
 include('../db.php');
 
 $vid=$_GET['vid'];

@@ -11,11 +11,12 @@ include('session.php');
     <div class="line"></div>
     <div class="user-details">
     <?php
-                $user_role = $_SESSION['role'];
-                if (in_array($user_role, ['faculty','hod'])) {
-                    echo '<p><strong>Department:</strong> <?php echo "$department"?></p>';
+               
+                if ($role==='faculty' || $role==='hod' ) {
+                    ?><p><strong>Department:</strong>
+                    <?php echo "$department";
                 }
-                ?>
+                ?></p>
         <p><strong>Role:</strong> <?php echo "$role"?></p>
     </div>
     <div class="line"></div>
@@ -24,7 +25,7 @@ include('session.php');
             <i class="fa-solid fa-key"></i>
             <span class="logout-text">Change Password</span>
         </button>
-        <button class="logout-btn" onclick="location.href='../loginpage/login.php'">
+        <button class="logout-btn" onclick="location.href='../logout.php'">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span class="logout-text">Logout</span>
         </button>

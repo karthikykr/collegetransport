@@ -1,7 +1,6 @@
 <?php 
-    // include('session.php');
-    include('../db.php');
     include('../session.php');
+    include('../db.php');
     include('admin_header.php');
 ?>
     <link rel="stylesheet" href="../styles/change_password.css">

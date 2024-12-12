@@ -1,4 +1,6 @@
 <?php 
+include('../session.php');
+include('../db.php');
 include('admin_header.php');
 include('../selecting_vehicle.php');
 ?>

@@ -39,9 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         // Fetch user data
         $user = $result->fetch_assoc();
-
-        echo $user['password'];
-        echo $email,$user['id'];
         // Verify password
         // Use password_verify() if the password is hashed
         // if (password_verify($password, $user['password']))
@@ -73,11 +70,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../user_home/home.php");
                 exit();
             } else {
-                echo "Invalid password.";
+                echo " <script>alert('Invalid...');</script>";
+                echo"<script>location.href='login.php';</script>";
             }
     } else {
-        echo "No user found with that email.";
+        echo " <script>alert('Invalid Password.');</script>";
+        echo"<script>location.href='login.php';</script>";
     }
+} else {
+    echo " <script>alert('No user found with that email.');</script>";
+    echo"<script>location.href='login.php';</script>";
+
 }
 
 }

@@ -1,4 +1,7 @@
-<?php include('admin_header.php');?>
+<?php 
+include('../session.php');
+include('../db.php');
+include('admin_header.php');?>
 <link rel="stylesheet" href="../styles/add_vehicle.css"> 
     
 <!-- Form to Add Vehicle -->
