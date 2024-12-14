@@ -1,6 +1,4 @@
-<?php
-include('session.php');
-?>
+
 <link rel="stylesheet" href="../styles/user_profile.css">
 <div id="user-info" class="hidden">
     <div class="user-profile-section">

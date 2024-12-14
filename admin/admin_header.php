@@ -56,9 +56,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-links">
             <!-- Admin Dashboard Links -->
-                <li><a href="../admin/admin_home.php" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                <li><a href="../admin/add_user.php"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
-                <li><a href="../admin/add_vehicle.php"><i class="fa fa-car"><span class="h5">+</span></i><span>Add Vehicle</span></a></li>
+                <li><a href="../admin/admin_home.php" class="<?php if($current_page==='admin_home.php')echo"active";?>"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                <li><a href="../admin/add_user.php" class="<?php if($current_page==='add_user.php')echo"active";?>"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
+                <li><a href="../admin/add_vehicle.php" class="<?php if($current_page==='add_vehicle.php')echo"active";?>"><i class="fa fa-car"><span class="h5">+</span></i><span>Add Vehicle</span></a></li>
         </ul>
     </div>
 
