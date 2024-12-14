@@ -23,6 +23,7 @@ body {
 
 .board {
     margin-top: 30px;
+    margin-left: 220px;
 }
 
 .board-header {
@@ -44,6 +45,8 @@ body {
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
+    margin-left: var(--sidebar-width);
+
 
     /* Center the grid */
 }

@@ -19,8 +19,10 @@ $sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.use
         $status='p_approved';
     }else if($role=='director'){
         $status='a_d_approved';
-    }else{
+    }else if($role=='transport'){
         $status='d_approved';
+    }else{
+        $status='t_approved';
     }
 
     $sql = "SELECT *, bookings.id AS bookid FROM bookings JOIN users ON bookings.user_id = users.id WHERE booking_status='$status'";

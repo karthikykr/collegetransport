@@ -7,13 +7,13 @@
         $booking_id = $_POST['booking_id'];
         $action = $_POST['action'];
 
-            echo $booking_id;
-
-        if($role=='director'){
+        if($role=='transport'){
+            $new_status = ($action === 'approve') ? 't_approved' : 't_rejected'
+        }else if($role=='director'){
             $new_status = ($action === 'approve') ? 'd_approved' : 'd_rejected';
         }else if($role=='assistant director'){
             $new_status = ($action === 'approve') ? 'a_d_approved' : 'a_d_rejected';
-        }elseif($role=='principal'){
+        }else if($role=='principal'){
             $new_status = ($action === 'approve') ? 'p_approved' : 'p_rejected';
         }else if($role=='hod'){
             $new_status = ($action === 'approve') ? 'hod_approved' : 'hod_rejected';

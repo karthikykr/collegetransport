@@ -1,12 +1,31 @@
-.board-header h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #444;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
 }
 
+/* Header */
+.board-header {
+    margin:0 auto; /* Centers the header horizontally */
+    text-align: center; /* Centers text inside the header */
+    flex-grow: 1; /* Allows the header to take available space */
+    color: rgb(31, 30, 30);
+    padding: 10px;
+}
+
+.board-header h1 {
+    margin: 0; /* Removes default margins */
+    color: #444;
+    font-size: 24px;
+    word-wrap: break-word; /* Ensures long text wraps correctly */
+}
+
+/* Centering the Form */
 .container {
     max-width: 800px;
-    margin: auto;
+    margin: 40px auto 20px; /* Added margin-top to avoid overlap with fixed topbar */
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -37,7 +56,7 @@ label {
     color: #0c0c0c;
 }
 
-/* Input, textarea and Select Style */
+/* Input, Textarea, and Select Style */
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -51,7 +70,6 @@ select {
     background-color: #f9f9f9;
 }
 
-
 input[type="text"]:focus,
 input[type="date"]:focus,
 select:focus {
@@ -59,12 +77,14 @@ select:focus {
     outline: none;
 }
 
+/* Buttons */
 .btn-con {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
     gap: 25px;
 }
+
 .add-btn {
     background-color: #3636c8;
     border-radius: 8px;
@@ -81,15 +101,90 @@ select:focus {
     background-color: #080880;
 }
 
-
-/* Responsive Styles */
-@media (max-width: 800px) {
-    .row {
-        flex-direction: column;
+/* Extra Small Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+    .board-header h1 {
+        font-size: 18px;
+        padding: 5px;
     }
 
+    .container {
+        max-width: 90%;
+        background-color:black;
+        padding: 5px;
+        margin-top: 100px; /* Adjust for small screen */
+    }
+}
+
+/* Small Devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .container {
+        max-width: 95%;
+        padding: 15px;
+        margin-top: 120px; /* Adjust for small screen */
+    }
+
+    .board-header h1 {
+        font-size: 20px;
+    }
+
+    .btn-con {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .add-btn {
+        width: 100%;
+        font-size: 14px;
+        height: 36px;
+    }
+}
+
+/* Medium Devices (up to 1024px) */
+/* @media only screen and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+        margin-top: 10px; 
+    }
+
+    .board-header h1 {
+        font-size: 22px;
+        margin:30px 0 0 0;
+    }
+    
+    .add-btn {
+        width: 100%;
+        font-size: 16px;
+        height: 40px;
+    }
+}
+ */
+
+/* Extra Large Devices (1281px and above) */
+/* @media only screen and (min-width: 1281px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .board-header h1 {
+        font-size: 28px;
+    }
+
+    .add-btn {
+        width: 150px;
+        height: 45px;
+    }
+} */
+
+
+@media (max-width: 800px) {
     .form-container {
         width: 100%;
         padding: 45px;
+    }
+    .board-header h1 {
+        font-size: 24px;
+        margin:30px auto;
     }
 }
