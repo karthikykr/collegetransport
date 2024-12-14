@@ -1,24 +1,26 @@
 <?php
 // Assuming data is passed from the booking form
-include('../session.php'); 
+// include('../session.php'); 
 include('../db.php'); 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Retrieve POST data
-    $vehicle = $_POST['vehicle'];
-    $travel_date = $_POST['travel_date'];
-    $purpose = $_POST['purpose'];
-    $num_people = $_POST['num_people'];
-    $num_days = $_POST['num_days'];
-    $pickup_from = $_POST['pickup_from'];
-    $pickup_time = $_POST['pickup_time'];
-    $drop_to = $_POST['drop_to'];
-    $drop_time = $_POST['drop_time'];
+// include('../header.php');
 
-    // Convert 24-hour time to 12-hour AM/PM format
-    $pickup_time_formatted = date("g:i A", strtotime($pickup_time)); // 12-hour format with AM/PM
-    $drop_time_formatted = date("g:i A", strtotime($drop_time));     // 12-hour format with AM/PM
-}
-    include('../header.php');?>
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+//     // Retrieve POST data
+//     $vehicle = $_POST['vehicle'];
+//     $travel_date = $_POST['travel_date'];
+//     $purpose = $_POST['purpose'];
+//     $num_people = $_POST['num_people'];
+//     $num_days = $_POST['num_days'];
+//     $pickup_from = $_POST['pickup_from'];
+//     $pickup_time = $_POST['pickup_time'];
+//     $drop_to = $_POST['drop_to'];
+//     $drop_time = $_POST['drop_time'];
+
+//     // Convert 24-hour time to 12-hour AM/PM format
+//     $pickup_time_formatted = date("g:i A", strtotime($pickup_time)); // 12-hour format with AM/PM
+//     $drop_time_formatted = date("g:i A", strtotime($drop_time));     // 12-hour format with AM/PM
+// }
+?>
     <link rel="stylesheet" href="../styles/booking_vehicle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <body>
@@ -65,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </center>
             </table>
             
-        <form action="store_booking.php" method="POST">
+        <form action="#" method="POST">
             <input type="hidden" name="vehicle" value="<?php echo htmlspecialchars($vehicle); ?>">
             <input type="hidden" name="travel_date" value="<?php echo htmlspecialchars($travel_date); ?>">
             <input type="hidden" name="purpose" value="<?php echo htmlspecialchars($purpose); ?>">

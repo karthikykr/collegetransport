@@ -4,13 +4,13 @@ include('../db.php');
 include('../header.php');
 ?>
 <link rel="stylesheet" href="../styles/my_booking.css">
-    <section class="board">
-        <div class="board-header">
-            <h3>My Bookings</h3>
-        </div>
+<section style="margin-left: 220px;" class=" board">
+    <div class="board-header">
+        <h3>My Bookings</h3>
+    </div>
 
     <div class="grid-container">
-    <?php
+        <?php
       
         $sql = "SELECT * FROM `bookings` WHERE `user_id` = '$u_id';";
         $result = $conn->query($sql);
@@ -27,51 +27,55 @@ include('../header.php');
             }
             
             ?>
-            <!-- <a  href="vehicle_detail.php ?v_id=<?php echo $row['id']; ?>"> -->
-                <div class="grid-item">
-                    <h3><?php echo $row['vehicle']; ?></h3>
-                    <h3><?php echo "Travel Date: " . $row['travel_date']; ?></h3>
-                    <h6><?php echo "Number of people: " . $row['num_people']; ?></h6>
-                    <h6><?php echo "Number of days: " . $row['num_days']; ?></h6>
+        <!-- <a  href="vehicle_detail.php ?v_id=<?php echo $row['id']; ?>"> -->
+        <div class="grid-item">
+            <h3><?php echo $row['vehicle']; ?></h3>
+            <h3><?php echo "Travel Date: " . $row['travel_date']; ?></h3>
+            <h6><?php echo "Number of people: " . $row['num_people']; ?></h6>
+            <h6><?php echo "Number of days: " . $row['num_days']; ?></h6>
 
-<div class="step-progress">
-    <div class="step-indicator ">
-        <span class="step-circle <?php echo ($progress >= 25) ? 'approved' : ''; echo ($row['booking_status'] == 'hod_rejected') ? 'rejected' : ''; ?>">
+            <div class="step-progress">
+                <div class="step-indicator ">
+                    <span
+                        class="step-circle <?php echo ($progress >= 25) ? 'approved' : ''; echo ($row['booking_status'] == 'hod_rejected') ? 'rejected' : ''; ?>">
 
-            <?php echo ($progress >= 25) ? '✔' : ''; echo ($row['booking_status'] == 'hod_rejected' ) ? '✘' : '';?></span>  
-        <span class="step-label">HOD</span>
-    </div>
+                        <?php echo ($progress >= 25) ? '✔' : ''; echo ($row['booking_status'] == 'hod_rejected' ) ? '✘' : '';?></span>
+                    <span class="step-label">HOD</span>
+                </div>
 
-    <div class="step-line <?php echo ($progress >= 50) ? 'active' : ''; ?>"></div>
+                <div class="step-line <?php echo ($progress >= 50) ? 'active' : ''; ?>"></div>
 
-        <div class="step-indicator <?php echo ($progress >= 50) ? 'completed' : ''; ?>">
-            <span class="step-circle <?php echo ($progress >= 50) ? 'approved' : ''; echo ($row['booking_status'] == 'p_rejected') ? 'rejected' : ''; ?>">
-            
-            <?php echo ($progress >= 50) ? '✔' : ''; echo ($row['booking_status'] == 'p_rejected' ) ? '✘' : '';?></span>
-            <span class="step-label">Principal</span>
-        </div>
+                <div class="step-indicator <?php echo ($progress >= 50) ? 'completed' : ''; ?>">
+                    <span
+                        class="step-circle <?php echo ($progress >= 50) ? 'approved' : ''; echo ($row['booking_status'] == 'p_rejected') ? 'rejected' : ''; ?>">
 
-    <div class="step-line <?php echo ($progress >= 75) ? 'active' : ''; ?>"></div>
+                        <?php echo ($progress >= 50) ? '✔' : ''; echo ($row['booking_status'] == 'p_rejected' ) ? '✘' : '';?></span>
+                    <span class="step-label">Principal</span>
+                </div>
 
-    <div class="step-indicator <?php echo ($progress >= 75) ? 'completed' : ''; ?>">
-    <span class="step-circle <?php echo ($progress >= 75) ? 'approved' : ''; echo ($row['booking_status'] == 'a_d_rejected') ? 'rejected' : ''; ?>">
-            
-            <?php echo ($progress >= 75) ? '✔' : ''; echo ($row['booking_status'] == 'a_d_rejected' ) ? '✘' : '';?></span>
-            <span class="step-label">Assistant Director</span>
-        </div>
+                <div class="step-line <?php echo ($progress >= 75) ? 'active' : ''; ?>"></div>
 
-    <div class="step-line <?php echo ($progress == 100) ? 'active' : ''; ?>"></div>
+                <div class="step-indicator <?php echo ($progress >= 75) ? 'completed' : ''; ?>">
+                    <span
+                        class="step-circle <?php echo ($progress >= 75) ? 'approved' : ''; echo ($row['booking_status'] == 'a_d_rejected') ? 'rejected' : ''; ?>">
 
-    <div class="step-indicator <?php echo ($progress == 100) ? 'completed' : ''; ?>">
-    <span class="step-circle <?php echo ($progress >= 100) ? 'approved' : ''; echo ($row['booking_status'] == 'd_rejected') ? 'rejected' : ''; ?>">
-            
-            <?php echo ($progress >= 100) ? '✔' : ''; echo ($row['booking_status'] == 'd_rejected' ) ? '✘' : '';?></span>
-            <span class="step-label">Director</span>
-        </div>
-</div>
-                    
-                    <h3>
-                        <?php 
+                        <?php echo ($progress >= 75) ? '✔' : ''; echo ($row['booking_status'] == 'a_d_rejected' ) ? '✘' : '';?></span>
+                    <span class="step-label">Assistant Director</span>
+                </div>
+
+                <div class="step-line <?php echo ($progress == 100) ? 'active' : ''; ?>"></div>
+
+                <div class="step-indicator <?php echo ($progress == 100) ? 'completed' : ''; ?>">
+                    <span
+                        class="step-circle <?php echo ($progress >= 100) ? 'approved' : ''; echo ($row['booking_status'] == 'd_rejected') ? 'rejected' : ''; ?>">
+
+                        <?php echo ($progress >= 100) ? '✔' : ''; echo ($row['booking_status'] == 'd_rejected' ) ? '✘' : '';?></span>
+                    <span class="step-label">Director</span>
+                </div>
+            </div>
+
+            <h3>
+                <?php 
                             // Check and display booking status
                             switch ($row['booking_status']) {
                                 case 'd_approved': echo "Approved by Director"; break;
@@ -85,18 +89,19 @@ include('../header.php');
                                 default: echo "Pending"; break;
                             }
                         ?>
-                    </h3>
-                </div>
-            </a>
+            </h3>
+        </div>
+        </a>
         <?php } else {
             echo "No Bookings...";
         }
         $conn->close()
         ?>
 
-        </div>
-    </section>
+    </div>
+</section>
 </body>
+
 </html>
 
 <!-- echo"booking status:".$row['booking_status']; -->

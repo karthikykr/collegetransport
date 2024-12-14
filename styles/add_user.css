@@ -1,21 +1,49 @@
-.board-header h1 {
-    text-align: center;
-    margin: 10px 20px 20px 0px;
-    color: #444;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
 }
 
+.board-header {
+    display: flex; /* Ensures proper alignment */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    text-align: center; /* Centers text inside the header */
+    margin: auto; /* Ensures horizontal centering */
+    flex-grow: 1; /* Allows it to take available space */
+    color: rgb(31, 30, 30);
+    padding: 10px; /* Adds spacing for smaller screens */
+    z-index: 10; /* Ensures the header is on top */
+    position: relative; /* Makes it relative to the page layout */
+}
+
+.board-header h1 {
+    margin: 0; /* Removes default margins */
+    color: #444;
+    font-size: clamp(16px, 5vw, 28px);
+    word-wrap: break-word; /* Ensures long text wraps correctly */
+}
+
+/* Centering the Form */
 .container {
-    max-width: 650px;
-    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Input, textarea and Select Style */
+/* Input, Textarea, and Select Style */
 input[type="text"],
-input[type="date"], 
+input[type="date"],
 input[type="select"],
 #designation,
 input[type="email"],
@@ -42,12 +70,14 @@ label {
     color: #0c0c0c;
 }
 
+/* Buttons */
 .btn-con {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     gap: 25px;
 }
+
 .add-btn {
     background-color: #3636c8;
     border-radius: 8px;
@@ -64,27 +94,93 @@ label {
     background-color: #0404bb;
 }
 
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        /* Adjust for smaller screens */
+/* Responsive Design */
+@media(max-width:350px){
+    .container{
+    margin:auto -10px 0px 0px;
+    }
+}
+/* Extra Small Devices (up to 576px) */
+@media (max-width: 576px) {
+    .container {
+        max-width: 90%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .btn-con {
+        flex-direction: column;
+        gap: 15px;
+        align-items:center;
+    }
+
+    .add-btn {
+        width: 100%;
+        font-size: 14px;
+        height: 36px;
     }
 }
 
-/* Responsive Design */
+/* Small Devices (up to 768px) */
 @media (max-width: 768px) {
-    .main-content {
-        margin-left: 0;
-        padding: 10px;
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+    .board-header h1 {
+        font-size: 18px;
     }
 
-    .add_vehicles {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .header {
+    .btn-con {
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
+    }
+
+    .add-btn {
+        width: 100%;
+        font-size: 14px;
+        height: 36px;
+    }
+}
+
+/* Medium Devices (up to 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .board-header h1 {
+        font-size: 20px;
+    }
+
+    .add-btn {
+        width: 150px;
+    }
+}
+
+/* Large Devices (up to 1280px) */
+@media (max-width: 1280px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .board-header h1 {
+        font-size: 24px;
+    }
+
+    .add-btn {
+        width: 120px;
+    }
+}
+
+/* Extra Large Devices (min-width: 1281px) */
+@media (min-width: 1281px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .board-header h1 {
+        font-size: 28px;
     }
 }

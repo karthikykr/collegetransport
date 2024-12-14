@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2024 at 11:27 AM
+-- Generation Time: Dec 14, 2024 at 04:54 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,12 +42,14 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `role`, `department`, `email`, `password`) VALUES
 (2, 'charan', 'faculty', 'mca', 'user@test.com', '1234'),
-(3, 'karthik ', 'admin', 'admin', 'admin@test.com', '1234'),
+(3, 'karthik ', 'admin', 'admin', 'admin@test.com', '1234l'),
 (4, 'karthik', 'faculty', 'MCA', 'faculty@mca.com', '1234'),
 (5, 'Charanraj', 'faculty', 'MCA', 'faculty@test.com', '1234'),
 (6, 'Charanraj', 'hod', 'MCA', 'hod@test.com', '1234'),
 (7, 'Charanraj', 'assistant director', '', 'ad@test.com', '1234'),
-(8, 'CHARANRAJ', 'principal', '', 'principal@test.com', '1234');
+(8, 'CHARANRAJ', 'principal', '', 'principal@test.com', '1234'),
+(9, 'ut0rut', 'hod', '594-t840', '23ca043.kaushik@sjec.ac.in', 'nithesh'),
+(10, 'Charanraj', 'transport', '', 'transport@test.com', '1234');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +70,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

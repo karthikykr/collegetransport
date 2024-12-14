@@ -89,31 +89,9 @@ input[type="date"]:focus {
     border: none;
     color:white;
 }
-@media (max-width: 1280px){
-    .board-header h1{
-        margin:100px 0px 0px 0px;
-    }
-    .college-name h1{
-        margin-top: 10px;
-        font-size: 1.8rem;
-        color:white;
-    }
-    .college-name h2{
-        margin-top: -16px;
-        font-size: 1.4rem;
-        color:white;
-    }
-    
-}
-@media (max-width: 780px){
-  .container {
-        margin: 10px 10px 5px 10px;
-    }
-    .board-header h1{
-        margin:100px 0px 0px 0px;
-    }
-}
-@media (max-width: 480px){
+
+/* Extra small devices (phones, portrait mode) */
+@media only screen and (max-width: 480px) {
     .container {
         margin: 10px 10px 5px 10px;
     }
@@ -131,14 +109,41 @@ input[type="date"]:focus {
         margin-top: 540px;
         font-size: 1.2rem;
     }
-    /* .college-name h1{
+  }
+  
+  /* Small devices (phones, landscape mode) */
+  @media only screen and (max-width: 767px) {
+    .container {
+        margin: 10px 10px 5px 10px;
+    }
+    .board-header h1{
+        margin:100px 0px 0px 0px;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media only screen and (max-width: 1024px) {
+    /* Styles for tablets */
+  }
+  
+  /* Large devices (laptops) */
+  @media only screen and (max-width: 1280px) {
+    .board-header h1{
+        margin:100px 0px 0px 0px;
+    }
+    .college-name h1{
         margin-top: 10px;
-        font-size: 0.5rem;
+        font-size: 1.8rem;
         color:white;
     }
     .college-name h2{
         margin-top: -16px;
-        font-size: 0.4rem;
+        font-size: 1.4rem;
         color:white;
-    } */
-}
+    }
+  }
+  
+  /* Extra large devices (desktops and larger) */
+  @media only screen and (min-width: 1281px) {
+    /* Styles for large desktops */
+  }

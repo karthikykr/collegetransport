@@ -39,11 +39,11 @@ html, body {
     display: grid;
     /* background-color: rgb(255, 255, 255); */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
-    margin-left: var(--sidebar-width);
+    max-width: 1300px;
+    left: var(--sidebar-width);
     margin-bottom: 10px;
     transition: margin-left 0.3s ease, width 0.3s ease;
     padding: 20px;
@@ -53,7 +53,8 @@ html, body {
 /* State when the sidebar is hidden */
 .grid-container.sidebar-collapsed {
     margin-left: 150px; /* Adjust margin for collapsed sidebar */
-    width: calc(100% - 150px); 
+    width: calc(100% - 150px);
+    max-width:1500px; 
 }
 
 /* Grid Item */
@@ -77,6 +78,7 @@ html, body {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     outline: none; /* Remove default outline */
+    
 }
 
 .grid-item:focus {
@@ -150,24 +152,21 @@ html, body {
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
     .grid-container {
         width: 100%;
         padding: 10px;
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         margin: 10px -5px 5px 10px;
     }
-    .board-header {
-        margin-top: 220px;
+    .board-header{
+        margin:170px 0px 0px 0px;
         font-size: 1.5em;
     }
     .grid-container.sidebar-collapsed {
         width: 100%;
         padding: 20px 10px 10px -0px;
         margin: 10px 10px -100px 10px;
-    }
-    .board-header{
-        margin:270px 0px 0px 0px;
     }
     .grid-item {
         font-size: 1rem;
