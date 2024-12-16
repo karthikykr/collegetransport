@@ -10,11 +10,11 @@ include('session.php');
     </div>
     <div class="line"></div>
     <div class="user-details">
-    <?php
+        <?php
                
                 if ($role==='faculty' || $role==='hod' ) {
                     ?><p><strong>Department:</strong>
-                    <?php echo "$department";
+            <?php echo "$department";
                 }
                 ?></p>
         <p><strong>Role:</strong> <?php echo "$role"?></p>

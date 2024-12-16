@@ -76,6 +76,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         const sidebar = document.getElementById("sidebar");
         const userInfoToggle = document.getElementById("userInfoToggle");
         const userInfo = document.getElementById("user-info");
+        const main = document.getElementById("main");
 
         // Toggle sidebar on sidebar toggle click
         sidebarToggle.addEventListener("click", () => {
@@ -88,10 +89,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
         });
 
 
-        document.body.addEventListener('click', () => {
+        main.addEventListener('click', () => {
             console.log("Body")
             userInfo.classList.toggle("hidden");
-            userInfo.classList.toggle("visible");
+            // userInfo.classList.oncli("visible");
         })
     });
     </script>

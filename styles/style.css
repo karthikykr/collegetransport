@@ -42,18 +42,20 @@ html, body {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    max-width: 1300px;
-    left: var(--sidebar-width);
+    max-width: 1200px;
+    margin-left: var(--sidebar-width);
     margin-bottom: 10px;
     transition: margin-left 0.3s ease, width 0.3s ease;
     padding: 20px;
+
+    
     /* box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.19); */
 }
 
 /* State when the sidebar is hidden */
 .grid-container.sidebar-collapsed {
-    margin-left: 150px; /* Adjust margin for collapsed sidebar */
-    width: calc(100% - 150px);
+    margin-left: 130px;
+    width: calc(100% - 100px);
     max-width:1500px; 
 }
 
