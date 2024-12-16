@@ -1,6 +1,12 @@
+.board-header {
+    margin: 130px 0px 20px 0px; /* Centers the header horizontally */
+    text-align: center; /* Centers text inside the header */
+    color: rgb(31, 30, 30);
+}
+
 .board-header h1 {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0px 0px 0px;
     color: #444;
 }
 
@@ -127,7 +133,7 @@ input[type="date"]:focus {
   }
   
   /* Large devices (laptops) */
-  @media only screen and (max-width: 1280px) {
+  /* @media only screen and (max-width: 1280px) {
     .board-header h1{
         margin:100px 0px 0px 0px;
     }
@@ -141,7 +147,7 @@ input[type="date"]:focus {
         font-size: 1.4rem;
         color:white;
     }
-  }
+  } */
   
   /* Extra large devices (desktops and larger) */
   @media only screen and (min-width: 1281px) {

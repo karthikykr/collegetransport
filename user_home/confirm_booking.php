@@ -19,52 +19,56 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $drop_time_formatted = date("g:i A", strtotime($drop_time));     // 12-hour format with AM/PM
 }
     include('../header.php');?>
-    <link rel="stylesheet" href="../styles/booking_vehicle.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="../styles/booking_vehicle.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 <body>
-    <div class="container">
-    <center>
+    <div class="board-header">
         <h2>Confirm Vehicle Booking</h2>
-        <table class="table table-hover" border="1">
-            <tr>
-                <th>Vehicle Type</th>
-                <td><?php echo htmlspecialchars($vehicle); ?></td>
-            </tr>
-            <tr>
-                <th>Number of People</th>
-                <td><?php echo htmlspecialchars($num_people); ?></td>
-            </tr>
-            <tr>
-                <th>Number of Days</th>
-                <td><?php echo htmlspecialchars($num_days); ?></td>
-            </tr>
-            <tr>
-                <th>Travel Date</th>
-                <td><?php echo htmlspecialchars($travel_date); ?></td>
-            </tr>
-            <tr>
-                <th>Pick-up Location</th>
-                <td><?php echo htmlspecialchars($pickup_from); ?></td>
-            </tr>
-            <tr>
-                <th>Drop Location</th>
-                <td><?php echo htmlspecialchars($drop_to); ?></td>
-            </tr>
-            <tr>
-                <th>Pick-up Time</th>
-                <td><?php echo htmlspecialchars($pickup_time_formatted); ?></td>
-            </tr>
-            <tr>
-                <th>Drop Time</th>
-                <td><?php echo htmlspecialchars($drop_time_formatted); ?></td>
-            </tr>
-            <tr>
-                <th>Purpose</th>
-                <td><?php echo htmlspecialchars($purpose); ?></td>
-            </tr>
-            </center>
-            </table>
-            
+    </div>
+    <div class="confirm-container">
+        <center>
+            <table class="table table-hover" border="1">
+                <tr>
+                    <th>Vehicle Type</th>
+                    <td><?php echo htmlspecialchars($vehicle); ?></td>
+                </tr>
+                <tr>
+                    <th>Number of People</th>
+                    <td><?php echo htmlspecialchars($num_people); ?></td>
+                </tr>
+                <tr>
+                    <th>Number of Days</th>
+                    <td><?php echo htmlspecialchars($num_days); ?></td>
+                </tr>
+                <tr>
+                    <th>Travel Date</th>
+                    <td><?php echo htmlspecialchars($travel_date); ?></td>
+                </tr>
+                <tr>
+                    <th>Pick-up Location</th>
+                    <td><?php echo htmlspecialchars($pickup_from); ?></td>
+                </tr>
+                <tr>
+                    <th>Drop Location</th>
+                    <td><?php echo htmlspecialchars($drop_to); ?></td>
+                </tr>
+                <tr>
+                    <th>Pick-up Time</th>
+                    <td><?php echo htmlspecialchars($pickup_time_formatted); ?></td>
+                </tr>
+                <tr>
+                    <th>Drop Time</th>
+                    <td><?php echo htmlspecialchars($drop_time_formatted); ?></td>
+                </tr>
+                <tr>
+                    <th>Purpose</th>
+                    <td><?php echo htmlspecialchars($purpose); ?></td>
+                </tr>
+        </center>
+        </table>
+
         <form action="store_booking.php" method="POST">
             <input type="hidden" name="vehicle" value="<?php echo htmlspecialchars($vehicle); ?>">
             <input type="hidden" name="travel_date" value="<?php echo htmlspecialchars($travel_date); ?>">
@@ -76,8 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="hidden" name="drop_to" value="<?php echo htmlspecialchars($drop_to); ?>">
             <input type="hidden" name="drop_time" value="<?php echo htmlspecialchars($drop_time); ?>">
             <div class="btn-con">
-                <button type="submit" name="confirm" class="submit-btn">Confirm</button>
-                <button  name="cancel" class="submit-btn" href="booking_vehicle.php">Cancel</button>
+                <button type="submit" name="confirm" class="confirm-btn">Confirm</button>
+                <button name="cancel" class="cancel-btn" href="booking_vehicle.php">Cancel</button>
             </div>
         </form>
     </div>

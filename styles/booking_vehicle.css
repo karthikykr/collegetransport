@@ -13,22 +13,19 @@ body {
     /* padding: 20px; */
 }
 
-/* .table{
-    background-color: rgb(139, 160, 160);
-    width: fit-content;
-} */
+.board-header {
+    margin: 130px 0px 20px 0px; /* Centers the header horizontally */
+    text-align: center; /* Centers text inside the header */
+    color: rgb(31, 30, 30);
+    font-size: 20px;
+}
 
-/* .container {
-    background-color: rgb(250, 251, 249);
-    border-radius: 12px;
-    width: fit-content;
-    padding: 20px;
-    margin: 0 auto;
-    /* margin-left: 20px; */
-    /* max-width: 800px; */
-    /* margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */ 
+.board-header h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+    /* background-color: black; */
+} 
 
 .container {
     max-width: 800px;
@@ -39,19 +36,29 @@ body {
     border-radius: 8px;
 }
 
-table {
+.confirm-container{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* background-color: black; */
+}
+
+/* table {
     background-color: #def6fa;
     width: 100%;
     max-width: 800px;
     border-collapse: collapse;
     margin: 0 auto;
-    /* margin-left: 20px; */
+    /* margin-left: 20px; 
     padding: 50px;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-}
+} */
 
-.booking-details {
+/* .booking-details {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -86,22 +93,22 @@ table {
 
 .booking-details td:last-child {
     font-weight: bold;
-}
+} */
 
 /* Form Container */
-.form-container {
+/* .form-container {
     background-color: #dde1fd;
-    /* background-color: #0a25f6; */
+    /* background-color: #0a25f6; 
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 10px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Row for Two-Column Layout */
-.row {
+/* .row {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
@@ -113,7 +120,7 @@ table {
 
 .form-group.full-width {
     flex: 100%;
-}
+} */
 
 /* Label Style */
 label {
@@ -169,7 +176,7 @@ textarea {
     background-color: #4d4de6;
 }
 
-.approve-btn {
+.confirm-btn {
     background-color: #020267;
     border-radius: 20px;
     width: 100px;
@@ -181,11 +188,11 @@ textarea {
     transition: background-color 0.3s ease;
 }
 
-.approve-btn:hover {
+.confirm-btn:hover {
     background-color: #04931e;
 }
 
-.reject-btn {
+.cancel-btn {
     background-color: white;
     border-radius: 20px;
     border: 2px solid #020267;
@@ -198,7 +205,7 @@ textarea {
     transition: background-color 0.3s ease;
 }
 
-.reject-btn:hover {
+.cancel-btn:hover {
     background-color: #b11a1a;
     border: none;
     color:white;

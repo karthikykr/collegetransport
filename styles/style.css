@@ -20,19 +20,19 @@ html, body {
     margin-top: var(--topbar-width);
 }
 
-.board {
-    margin-top: 30px;
-}
-
 .board-header {
-    margin: 0 auto; /* Centers the header horizontally */
+    margin: 130px 0px 20px 0px; /* Centers the header horizontally */
     text-align: center; /* Centers text inside the header */
-    flex-grow: 1; /* Allows the header to take available space */
-    font-size: 40px;
     color: rgb(31, 30, 30);
+    font-size: 40px;
 }
 
-
+.board-header h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+    /* background-color: black; */
+}
 
 /* Grid Layout */
 .grid-container {
@@ -102,11 +102,7 @@ html, body {
     font-size: 1rem;
     color: #555;
 }
-.board-header h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #444;
-}
+
 /* Responsive design */
 @media (max-width: 2288px) {
     .grid-container {

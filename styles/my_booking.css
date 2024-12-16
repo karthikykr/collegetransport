@@ -12,7 +12,7 @@ body {
 }
 
 :root {
-    --sidebar-width: 300px;
+    --sidebar-width: 200px;
     --topbar-width: 100px;
 }
 
@@ -21,19 +21,19 @@ body {
     margin-top: var(--topbar-width);
 }
 
-.board {
-    margin-top: 30px;
-    margin-left: 220px;
+.board-header {
+    margin: 130px 0px 20px 0px; /* Centers the header horizontally */
+    text-align: center; /* Centers text inside the header */
+    color: rgb(31, 30, 30);
+    font-size: 30px;
 }
 
-.board-header {
+.board-header h1 {
     text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 40px;
-    color: rgb(31, 30, 30);
-    border-radius: 8px;
-}
+    margin: 20px 0;
+    color: #444;
+    /* background-color: black; */
+} 
 
 /* Grid Layout */
 .grid-container {
@@ -46,7 +46,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     margin-left: var(--sidebar-width);
-
+    /* background-color: black; */
 
     /* Center the grid */
 }
@@ -54,9 +54,9 @@ body {
 
 /* State when the sidebar is hidden */
 .grid-container.sidebar-collapsed {
-    margin-left: 150px;
-    /* Adjust margin for collapsed sidebar */
-    width: calc(100% - 150px);
+    margin-left: 140px;
+    width: calc(100% - 100px);
+    max-width:1500px; 
 }
 
 /* Grid Item */

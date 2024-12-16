@@ -2,18 +2,21 @@
  include('../session.php');
  include('../db.php');
 include('../header.php');?>
-    <link rel="stylesheet" href="../styles/booking_vehicle.css">
-    <!-- <link rel="stylesheet" href="../styles/style_header.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
-    <title>Vehicle Booking Form</title>
+<link rel="stylesheet" href="../styles/booking_vehicle.css">
+<!-- <link rel="stylesheet" href="../styles/style_header.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
+<title>Vehicle Booking Form</title>
 </head>
+
 <body>
     <main>
+        <div class="board-header">
+            <h2>Vehicle Booking Form</h2>
+        </div>
         <!-- Vehicle Booking Form -->
-        <div class="form-container">
-            <center><h2>Vehicle Booking Form</h2></center><br>
+        <div class="container">
             <form action="confirm_booking.php" method="POST">
-                
+
                 <div class="row">
                     <div class="form-group">
                         <label for="vehicle">Type of Vehicle:</label>
@@ -26,25 +29,28 @@ include('../header.php');?>
 
                     <div class="form-group">
                         <label for="num_people">Number of People:</label>
-                        <input type="number" id="num_people" name="num_people" min="1" placeholder="Enter number of people" required>
+                        <input type="number" id="num_people" name="num_people" min="1"
+                            placeholder="Enter number of people" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group">
                         <label for="num_days">Number of Days:</label>
-                        <input type="number" id="num_days" name="num_days" min="1" placeholder="Enter number of days" required>
+                        <input type="number" id="num_days" name="num_days" min="1" placeholder="Enter number of days"
+                            required>
                     </div>
-                <div class="form-group">
-                    <label for="travel_date">Travel Date:</label>
-                    <input type="date" id="travel_date" name="travel_date" required>
-                </div>
+                    <div class="form-group">
+                        <label for="travel_date">Travel Date:</label>
+                        <input type="date" id="travel_date" name="travel_date" required>
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group">
                         <label for="pickup_from">Pick-up Location:</label>
-                        <input type="text" id="pickup_from" name="pickup_from" placeholder="Enter pick-up location" required>
+                        <input type="text" id="pickup_from" name="pickup_from" placeholder="Enter pick-up location"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="drop_to">Drop Location:</label>
@@ -66,7 +72,8 @@ include('../header.php');?>
 
                 <div class="form-group">
                     <label for="purpose">Purpose:</label>
-                    <textarea rows="4" cols="50" id="purpose" name="purpose" placeholder="Enter purpose of travel" required></textarea>
+                    <textarea rows="4" cols="50" id="purpose" name="purpose" placeholder="Enter purpose of travel"
+                        required></textarea>
                 </div>
                 <div class="btn-con">
                     <button type="submit" class="submit-btn">Submit</button>
@@ -75,4 +82,5 @@ include('../header.php');?>
         </div>
     </main>
 </body>
+
 </html>
