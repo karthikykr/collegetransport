@@ -57,19 +57,19 @@ include('session.php');
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-links">
             <!-- Faculty and Other User Links -->
-            <li><a href="../user_home/home.php" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+            <li><a href="../user_home/home.php" class="<?php if($current_page==='home.php')echo"active";?>"><i class="fa-solid fa-house"></i> <span>Home</span></a>
             </li>
-            <li><a href="../user_home/booking_vehicle.php"><i class="fa fa-book"></i> <span>Book Vehicle</span></a></li>
+            <li><a href="../user_home/booking_vehicle.php" class="<?php if($current_page==='booking_vehicle.php')echo"active";?>"><i class="fa fa-book"></i> <span>Book Vehicle</span></a></li>
 
             <!-- Approval Request Link for roles other than 'faculty' -->
             <?php
                 $user_role = $_SESSION['role'];
                 if (!in_array($user_role, ['faculty','admin'])) {
-                    echo '<li><a href="approval.php"><i class="fa fa-check-circle"></i> <span>Approval Request</span></a></li>';
-                }
+                    ?> <li><a href="approval.php" class="<?php if($current_page==='approval.php')echo"active";?>"><i class="fa fa-check-circle"></i> <span>Approval Request</span></a></li>
+               <?php }
                 ?>
 
-            <li><a href="my_bookings.php"><i class="fa fa-calendar"></i> <span>My Bookings</span></a></li>
+            <li><a href="my_bookings.php" class="<?php if($current_page==='my_bookings.php')echo"active";?>"><i class="fa fa-calendar"></i> <span>My Bookings</span></a></li>
         </ul>
     </div>
     <!-- Main Content Area -->
