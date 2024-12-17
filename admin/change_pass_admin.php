@@ -3,28 +3,31 @@
     include('../db.php');
     include('admin_header.php');
 ?>
-    <link rel="stylesheet" href="../styles/change_password.css">
-    <div>
-        <div class="board-header">
-        <h1>Change Password</h1>
-        </div>
-        <div class="container">
-        <form method="POST" action="#">
-            <div class="form-group">
-                <label for="old_pass">Old Password</label>
-                <input type="password" id="old_pass" name="old_pass"  placeholder="Old password" required>
+<link rel="stylesheet" href="../styles/change_password.css">
+
+<body>
+    <!-- Dashboard Section -->
+    <section class="board">
+        <div id="main" class="main">
+            <div class="board-header">
+                <h6>Change Password</h6>
             </div>
-            <div class="form-group">
-                <label for="new_pass">New Password</label>
-                <input type="password" id="new_pass" name="new_pass"  placeholder="New password" required>
+            <div class="container">
+                <form method="POST" action="#">
+                    <div class="form-group">
+                        <label for="old_pass">Old Password</label>
+                        <input type="password" id="old_pass" name="old_pass" placeholder="Old password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_pass">New Password</label>
+                        <input type="password" id="new_pass" name="new_pass" placeholder="New password" required>
+                    </div>
+                    <div class="btn-con">
+                        <button type="submit" class="submit-btn" name="submit">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="btn-con">
-                <button type="submit" class="submit-btn" name="submit">Submit</button>
-            </div>
-        </form>
-        </div>
-    </div>
-    <?php 
+            <?php 
 
         $sql="SELECT * FROM `users` WHERE `id`='$u_id'";
         $result = $conn->query($sql);
@@ -49,4 +52,5 @@
 
     ?>
 </body>
+
 </html>

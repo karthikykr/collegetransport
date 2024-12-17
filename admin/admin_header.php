@@ -56,9 +56,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-links">
             <!-- Admin Dashboard Links -->
-                <li><a href="../admin/admin_home.php" class="<?php if($current_page==='admin_home.php')echo"active";?>"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                <li><a href="../admin/add_user.php" class="<?php if($current_page==='add_user.php')echo"active";?>"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
-                <li><a href="../admin/add_vehicle.php" class="<?php if($current_page==='add_vehicle.php')echo"active";?>"><i class="fa fa-car"><span class="h5">+</span></i><span>Add Vehicle</span></a></li>
+            <li><a href="../admin/admin_home.php" class="<?php if($current_page==='admin_home.php')echo"active";?>"><i
+                        class="fa fa-home"></i> <span>Home</span></a></li>
+            <li><a href="../admin/add_user.php" class="<?php if($current_page==='add_user.php')echo"active";?>"><i
+                        class="fa fa-user-plus"></i> <span>Add User</span></a></li>
+            <li><a href="../admin/add_vehicle.php" class="<?php if($current_page==='add_vehicle.php')echo"active";?>"><i
+                        class="fa fa-car"><span class="h5">+</span></i><span>Add Vehicle</span></a></li>
         </ul>
     </div>
 
@@ -67,31 +70,31 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <?php 
     include('../user_profile.php');
     ?>
-    </main>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const sidebarToggle = document.getElementById("sidebarToggle");
-        const sidebar = document.getElementById("sidebar");
-        const userInfoToggle = document.getElementById("userInfoToggle");
-        const userInfo = document.getElementById("user-info");
-        const main = document.getElementById("main");
 
-        // Toggle sidebar on sidebar toggle click
-        sidebarToggle.addEventListener("click", () => {
-            sidebar.classList.toggle("collapsed");
-            sidebar.classList.toggle("visible");
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebarToggle = document.getElementById("sidebarToggle");
+            const sidebar = document.getElementById("sidebar");
+            const userInfoToggle = document.getElementById("userInfoToggle");
+            const userInfo = document.getElementById("user-info");
+            const main = document.getElementById("main");
+
+            // Toggle sidebar on sidebar toggle click
+            sidebarToggle.addEventListener("click", () => {
+                sidebar.classList.toggle("collapsed");
+                sidebar.classList.toggle("visible");
+            });
+            userInfoToggle.addEventListener("click", () => {
+                userInfo.classList.toggle("hidden");
+                userInfo.classList.toggle("visible");
+            });
+
+
+            main.addEventListener('click', () => {
+                console.log("Body")
+                userInfo.classList.toggle("hidden");
+                // userInfo.classList.oncli("visible");
+            })
         });
-        userInfoToggle.addEventListener("click", () => {
-            userInfo.classList.toggle("hidden");
-            userInfo.classList.toggle("visible");
-        });
-
-
-        main.addEventListener('click', () => {
-            console.log("Body")
-            userInfo.classList.toggle("hidden");
-            // userInfo.classList.oncli("visible");
-        })
-    });
-    </script>
+        </script>

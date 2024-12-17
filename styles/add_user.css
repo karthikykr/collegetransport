@@ -6,31 +6,49 @@ body {
     background-color: #f4f4f9;
 }
 
-.board-header {
-    display: flex; /* Ensures proper alignment */
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    text-align: center; /* Centers text inside the header */
-    margin: auto; /* Ensures horizontal centering */
-    flex-grow: 1; /* Allows it to take available space */
+/* .board-header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    margin: auto; 
+    flex-grow: 1;
     color: rgb(31, 30, 30);
-    padding: 10px; /* Adds spacing for smaller screens */
-    z-index: 10; /* Ensures the header is on top */
-    position: relative; /* Makes it relative to the page layout */
+    padding: 10px;
+    z-index: 10; 
+    position: relative; 
 }
 
 .board-header h1 {
-    margin: 0; /* Removes default margins */
+    margin: 0; 
     color: #444;
     font-size: clamp(16px, 5vw, 28px);
-    word-wrap: break-word; /* Ensures long text wraps correctly */
+    word-wrap: break-word; 
+} */
+
+.main {
+    margin-top: var(--topbar-width);
+}
+
+.board-header {
+    margin: 130px 0px 20px -150px; 
+    text-align: center; /* Centers text inside the header */
+    color: rgb(31, 30, 30);
+    font-size: 40px;
+}
+
+.board-header h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+    /* background-color: black; */
 }
 
 /* Centering the Form */
 .container {
     max-width: 600px;
     width: 100%;
-    margin: 40px auto;
+    margin: 0 0 0 50px;
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -39,6 +57,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index:-1;
 }
 
 /* Input, Textarea, and Select Style */
@@ -101,13 +120,20 @@ label {
     }
 }
 /* Extra Small Devices (up to 576px) */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .container {
+        padding:0px;
         max-width: 90%;
         padding: 10px;
-        margin-top: 10px;
     }
 
+    .board-header{
+        margin:580px 0 0px -150px;
+        padding:0 0 0 10px;
+    }
+    .board-header h6{
+        font-size:18px;
+    }
     .btn-con {
         flex-direction: column;
         gap: 15px;
@@ -126,9 +152,11 @@ label {
     .container {
         max-width: 95%;
         padding: 15px;
+        margin:80px 0;
     }
-    .board-header h1 {
-        font-size: 18px;
+    .board-header h6 {
+        font-size: 20px;
+        padding:0 0 0 150px;
     }
 
     .btn-con {
@@ -159,7 +187,7 @@ label {
     }
 }
 
-/* Large Devices (up to 1280px) */
+/* Large Devices (up to 1280px)
 @media (max-width: 1280px) {
     .container {
         max-width: 600px;
@@ -174,7 +202,7 @@ label {
     }
 }
 
-/* Extra Large Devices (min-width: 1281px) */
+/* Extra Large Devices (min-width: 1281px) 
 @media (min-width: 1281px) {
     .container {
         max-width: 800px;
@@ -183,4 +211,4 @@ label {
     .board-header h1 {
         font-size: 28px;
     }
-}
+} */

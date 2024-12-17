@@ -11,7 +11,7 @@ html, body {
 }
 
 :root {
-    --sidebar-width: 300px;
+    --sidebar-width: 80px;
     --topbar-width: 100px;
 }
 
@@ -21,7 +21,7 @@ html, body {
 }
 
 .board-header {
-    margin: 130px 0px 20px 0px; /* Centers the header horizontally */
+    margin: 130px 0px 20px -150px; 
     text-align: center; /* Centers text inside the header */
     color: rgb(31, 30, 30);
     font-size: 40px;
@@ -54,9 +54,9 @@ html, body {
 
 /* State when the sidebar is hidden */
 .grid-container.sidebar-collapsed {
-    margin-left: 130px;
-    width: calc(100% - 100px);
-    max-width:1500px; 
+    margin-left: -100px;
+    width: calc(100% - 10px);
+    max-width:1600px; 
 }
 
 /* Grid Item */
@@ -120,7 +120,7 @@ html, body {
 
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         margin-left:0px;
     }
 
@@ -131,6 +131,19 @@ html, body {
 
     .grid-item h3 {
         font-size: 1.3rem; /* Adjust font size */
+    }
+    .board-header {
+        text-align:center;
+        margin-left:100px;
+    }
+    .board-header h6{
+        text-align:center;
+    }
+    .grid-container.sidebar-collapsed {
+        max-width:80%;
+        width: 100%;
+        padding: 20px 10px 10px -0px;
+        margin: 10px 10px -100px 120px;
     }
 }
 
@@ -151,6 +164,9 @@ html, body {
 }
 
 @media (max-width: 480px) {
+.main {
+    margin-top: 300px;
+}
     .grid-container {
         width: 100%;
         padding: 10px;
@@ -163,8 +179,8 @@ html, body {
     }
     .grid-container.sidebar-collapsed {
         width: 100%;
-        padding: 20px 10px 10px -0px;
-        margin: 10px 10px -100px 10px;
+        padding: 10px;
+        margin: 10px 10px 10px 50px;
     }
     .grid-item {
         font-size: 1rem;
@@ -179,5 +195,12 @@ html, body {
 
     .grid-item h6 {
         font-size: 0.9rem;
+    }
+}
+@media(max-width:380px){
+    .grid-container.sidebar-collapsed {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 10px 10px 60px;
     }
 }
