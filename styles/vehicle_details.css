@@ -153,3 +153,108 @@ input[type="date"]:focus {
   @media only screen and (min-width: 1281px) {
     /* Styles for large desktops */
   }
+  
+
+
+
+
+
+
+  .popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Popup content */
+  .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Close button */
+    .close-btn {
+      color: #aaa;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    
+    /* Button styling */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    /* Textarea for input */
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+
+
+    /* Responsive Design */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 80%; /* Make the popup smaller on tablets and mobile */
+        padding: 15px; /* Reduce padding */
+    }
+    
+    .close-btn {
+        font-size: 25px; /* Smaller close button on smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Smaller buttons on mobile */
+    }
+
+    textarea {
+        padding: 8px; /* Smaller padding for textarea */
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        width: 90%; /* Even smaller width on mobile */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .close-btn {
+        font-size: 20px; /* Even smaller close button */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text */
+    }
+
+    textarea {
+        font-size: 14px; /* Smaller font size for textarea */
+        padding: 8px; /* Smaller padding */
+    }
+}
+    
