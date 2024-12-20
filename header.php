@@ -60,21 +60,32 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li><a href="../user_home/home.php" class="<?php if($current_page==='home.php')echo"active";?>"><i
                         class="fa-solid fa-house"></i> <span>Home</span></a>
             </li>
+
+
+            <?php  
+                if($role='transport'){ ?>
+                <li><a href="add_driver.php" class="<?php if($current_page==='add_driver.php')echo"active";?>"><i class="fa fa-user-plus"></i> <span>Add Driver</span></a></li>
+            <?php } ?>
+
+            <?php  
+                if($role!='transport'){ ?>
             <li><a href="../user_home/booking_vehicle.php"
                     class="<?php if($current_page==='booking_vehicle.php')echo"active";?>"><i class="fa fa-book"></i>
                     <span>Book Vehicle</span></a></li>
+           <?php } ?>
 
             <!-- Approval Request Link for roles other than 'faculty' -->
             <?php
-                $user_role = $_SESSION['role'];
-                if (!in_array($user_role, ['faculty','admin'])) {
+                
+                if (!in_array($role, ['faculty','admin'])) {
                     ?> <li><a href="approval.php" class="<?php if($current_page==='approval.php')echo"active";?>"><i
                         class="fa fa-check-circle"></i> <span>Approval Request</span></a></li>
             <?php }
                 ?>
-
+            <?php   if($role!='transport'){ ?>
             <li><a href="my_bookings.php" class="<?php if($current_page==='my_bookings.php')echo"active";?>"><i
                         class="fa fa-calendar"></i> <span>My Bookings</span></a></li>
+                        <?php } ?>
         </ul>
     </div>
     <!-- Main Content Area -->

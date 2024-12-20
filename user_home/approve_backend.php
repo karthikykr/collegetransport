@@ -8,7 +8,7 @@
         $action = $_POST['action'];
 
         if($role=='transport'){
-            $new_status = ($action === 'approve') ? 't_approved' : 't_rejected'
+            $new_status = ($action === 'approve') ? 't_approved' : 't_rejected';
         }else if($role=='director'){
             $new_status = ($action === 'approve') ? 'd_approved' : 'd_rejected';
         }else if($role=='assistant director'){
