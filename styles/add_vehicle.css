@@ -7,29 +7,38 @@ body {
 }
 
 /* Header */
+.main {
+    margin-top: var(--topbar-width);
+}
+
 .board-header {
-    margin:0 auto; /* Centers the header horizontally */
+    margin: 130px 0px 20px -150px; 
     text-align: center; /* Centers text inside the header */
-    flex-grow: 1; /* Allows the header to take available space */
     color: rgb(31, 30, 30);
-    padding: 10px;
+    font-size: 40px;
 }
 
 .board-header h1 {
-    margin: 0; /* Removes default margins */
+    text-align: center;
+    margin: 20px 0;
     color: #444;
-    font-size: 24px;
-    word-wrap: break-word; /* Ensures long text wraps correctly */
+    /* background-color: black; */
 }
 
 /* Centering the Form */
 .container {
     max-width: 800px;
-    margin: 40px auto 20px; /* Added margin-top to avoid overlap with fixed topbar */
+    width: 100%;
+    margin: 0 0 0 50px;
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:-1;
 }
 
 /* Row for Two-Column Layout */
@@ -101,42 +110,68 @@ select:focus {
     background-color: #080880;
 }
 
+@media(max-width:380px){
+    .board-header{
+        margin:10 auto;
+    }
+    .container{
+        height:fit-content;
+        display:grid;
+        max-width:90%;
+        margin-top:100px;
+        /* background-color:black; */
+    }
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    max-width:100%;
+    align-items:center;
+    justify-content:center;
+    padding:8px;
+}
+    .row {
+    display: grid;
+    gap: 10px;
+}
+    label {
+    font-size: 10px;
+    font-weight: bold;
+    /* margin: 10px 100px 7px 4px; */
+    color: #0c0c0c;
+}
+} 
+
 /* Extra Small Devices (up to 480px) */
 @media only screen and (max-width: 480px) {
-    .board-header h1 {
+    .board-header{
+         margin-top:530px;
+    }
+    .board-header h6 {
         font-size: 18px;
         padding: 5px;
     }
 
     .container {
-        max-width: 90%;
-        background-color:black;
-        padding: 5px;
-        margin-top: 100px; /* Adjust for small screen */
+        max-width: 60%;
+        /* background-color:black; */
+        padding: 15px;
+        margin: 10px 10px 0px 10px; /* Adjust for small screen */
     }
 }
 
 /* Small Devices (up to 767px) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .container {
         max-width: 95%;
         padding: 15px;
-        margin-top: 120px; /* Adjust for small screen */
+        margin: 40px 10px 0 -10px; /* Adjust for small screen */
     }
 
-    .board-header h1 {
+    .board-header h6 {
         font-size: 20px;
-    }
-
-    .btn-con {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .add-btn {
-        width: 100%;
-        font-size: 14px;
-        height: 36px;
+        padding:0 0 0 160px;
     }
 }
 
@@ -178,7 +213,7 @@ select:focus {
 } */
 
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     .form-container {
         width: 100%;
         padding: 45px;
@@ -187,4 +222,4 @@ select:focus {
         font-size: 24px;
         margin:30px auto;
     }
-}
+} */

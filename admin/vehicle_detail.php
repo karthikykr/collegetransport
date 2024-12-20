@@ -63,6 +63,7 @@ $result = $conn->query($sql);
                 alert("Deletion canceled.");
             }
         }
+        
     </script>
     </body>
     </html>

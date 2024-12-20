@@ -6,7 +6,7 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'], $_POST['action'])) {
         $booking_id = $_POST['booking_id'];
         $action = $_POST['action'];
-
+        $reason=$_POST['reason'];
         if($role=='transport'){
             $new_status = ($action === 'approve') ? 't_approved' : 't_rejected';
         }else if($role=='director'){
@@ -20,8 +20,8 @@
         }else{
             echo"designation not selected";
         }
-        $stmt = $conn->prepare("UPDATE bookings SET booking_status = ? WHERE id = ?");
-        $stmt->bind_param("si", $new_status, $booking_id);
+        $stmt = $conn->prepare("UPDATE bookings SET booking_status = ?,reason = ? WHERE id = ?");
+        $stmt->bind_param("ssi", $new_status,$reason, $booking_id);
 
         if ($stmt->execute()) {
             echo "<script>alert('Booking status updated successfully.');

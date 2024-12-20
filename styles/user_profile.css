@@ -139,12 +139,12 @@
 
 @media (max-width: 480px) {
     #user-info {
-        width: 60%;
-        margin:30px 5px 0px 0px;
+        width: 50%;
+        margin:30px 10px 0px 0px;
         top: 55px;
         right: 0;
         padding: 10px;
-        border-radius: 0; /* Remove rounded corners */
+        border-radius: 8px; /* Remove rounded corners */
     }
 
     .logout-btn, .change-password {
@@ -157,3 +157,28 @@
         padding:10px;
     } */
 }
+@media(max-width:400px){
+    #user-info {
+        width: 60%;
+        margin:30px 10px 0px 0px;
+        top: 55px;
+        right: 0;
+        padding: 10px;
+        border-radius: 8px; /* Remove rounded corners */
+    }
+}
+@media(max-width:320px){
+    #user-info {
+    width: 60%;
+    margin:30px 10px 0px 0px;
+    top: 55px;
+    right: 0;
+    padding: 10px;
+    border-radius: 5px; /* Remove rounded corners */
+}
+.logout-btn, .change-password {
+    font-size: 10px;
+    width:50%;
+    height: 40px;
+}
+}   

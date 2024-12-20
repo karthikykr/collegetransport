@@ -171,9 +171,9 @@ body {
     padding: 10px;
 }
 
-.college-name, .topbar, .logoutbtn {
+/* .college-name, .topbar, .logoutbtn {
     transition: margin-left 0.3s ease;
-}
+} */
 
 
 /* Responsive Design */
@@ -324,10 +324,6 @@ body {
         height: 40px;
     }
 
-    .college-name {
-        font-size: 5px;
-    }
-
     .sidebar.collapsed {
         width: 80px;
         margin: 85px 0px 0px 0px;
@@ -335,6 +331,9 @@ body {
 
     .sidebar-links li a {
         font-size: 0.75rem;
+    }
+    .college-name {
+        font-size: 5px;
     }
 
     .main-content {
@@ -366,7 +365,7 @@ body {
         padding: 5px;
         margin: 85px 0px 0px 0px;
         /* position:relative; */
-        /* z-index:1000; */
+        z-index:1;
     }
 
     .sidebar-toggle {

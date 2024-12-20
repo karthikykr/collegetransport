@@ -91,31 +91,27 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <!-- Main Content Area -->
     <main class="main-content">
         <?php include('user_profile.php');?>
-    </main>
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const sidebarToggle = document.getElementById("sidebarToggle");
-        const sidebar = document.getElementById("sidebar");
-        const userInfoToggle = document.getElementById("userInfoToggle");
-        const userInfo = document.getElementById("user-info");
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebarToggle = document.getElementById("sidebarToggle");
+            const sidebar = document.getElementById("sidebar");
+            const userInfoToggle = document.getElementById("userInfoToggle");
+            const userInfo = document.getElementById("user-info");
 
-        // Toggle sidebar on sidebar toggle click
-        sidebarToggle.addEventListener("click", () => {
-            sidebar.classList.toggle("collapsed");
-            sidebar.classList.toggle("visible");
+            // Toggle sidebar on sidebar toggle click
+            sidebarToggle.addEventListener("click", () => {
+                sidebar.classList.toggle("collapsed");
+                sidebar.classList.toggle("visible");
+            });
+            userInfoToggle.addEventListener("click", () => {
+                userInfo.classList.toggle("hidden");
+                userInfo.classList.toggle("visible");
+            });
+
+            document.querySelector('.board').addEventListener('click', (e) => {
+                userInfo.classList.add("hidden");
+                userInfo.classList.remove("visible");
+            })
+
         });
-        userInfoToggle.addEventListener("click", () => {
-            userInfo.classList.toggle("hidden");
-            userInfo.classList.toggle("visible");
-        });
-
-        document.querySelector('.board').addEventListener('click', (e) => {
-            userInfo.classList.add("hidden");
-            userInfo.classList.remove("visible");
-        })
-
-    });
-    </script>
-</body>
-
-</html>
+        </script>
