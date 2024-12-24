@@ -3,8 +3,6 @@ include('../session.php');
 include('../db.php');
 include('../header.php');
 
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve POST data
     $b_id = $_POST['booking_id'];
@@ -25,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $department = $_POST['department'];//
 ?>
     <link rel="stylesheet" href="../styles/vehicle_details.css">
+
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
     </head>
     <h1>Bookings detail</h1>
@@ -83,25 +82,51 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <th>Purpose</th>
                 <td><?php echo htmlspecialchars($purpose); ?></td>
             </tr>
-            </center>
             </table>
             
         <form action="approve_backend.php" method="POST">
             <input type="hidden" name="booking_id" value="<?php echo $b_id; ?>">
             <div class="btn-con">
-            <button type="submit" name="action" value="approve" class="update-btn">Approve</button>
-            <button type="submit" name="action" value="reject" class="delete-btn">Reject</button>
+                <button type="submit" name="action" value="approve" class="update-btn">Approve</button>
+                <button type="button" id="openPopupBtn">Reject</button>
+            </div>     
+            <!-- Popup Modal for Reason -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span id="closePopupBtn" class="close-btn">&times;</span>
+                    <h2>Enter Your Reason</h2>
+                    <label for="reason">Reason:</label>
+                    <textarea id="reason" name="reason" rows="4" cols="50" ></textarea>
+                    <br>
+                    <button type="submit" name="action" value="reject" class="delete-btn">Confirm</button>       
+                </div>
             </div>
         </form>
         </div>
 <?php  
 }else{
-    echo"invallid method";
+    echo"Invalid method";
 }
-
 ?>
-    </body>
-    </html>
-    
 
-      
+<script>
+// Get elements
+const openPopupBtn = document.getElementById('openPopupBtn');
+const closePopupBtn = document.getElementById('closePopupBtn');
+const popup = document.getElementById('popup');
+const reason = document.getElementById('reason');
+
+// Open the popup when the "Reject" button is clicked
+openPopupBtn.addEventListener('click', () => {
+  popup.style.display = 'flex'; // Show the popup
+  reason.setAttribute("required", "required");
+});
+
+// Close the popup when the "×" button is clicked
+closePopupBtn.addEventListener('click', () => {
+  popup.style.display = 'none'; // Hide the popup
+});
+
+</script>
+</body>
+</html>

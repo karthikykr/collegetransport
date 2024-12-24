@@ -49,9 +49,6 @@ include('admin_header.php');
                     <input type="password" id="password" name="password" class="user_input" placeholder="Enter password"
                         required><br>
 
-                    <!-- Role (Hidden by default) -->
-                    <input type="hidden" id="role" name="role" value="user">
-
                     <!-- Submit Button -->
                     <div class="btn-con">
                         <button type="submit" class="add-btn">Add User</button>

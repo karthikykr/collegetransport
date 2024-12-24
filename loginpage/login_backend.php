@@ -70,9 +70,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../user_home/home.php");
                 exit();
             }elseif($user['role'] == 'transport'){
-                header("Location: ../user_home/home.php");
-                exit();
-            } else {
+            header("Location: ../user_home/home.php");
+            exit();
+            }else {
                 echo " <script>alert('Invalid...');</script>";
                 echo"<script>location.href='login.php';</script>";
             }
