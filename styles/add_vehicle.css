@@ -110,7 +110,40 @@ select:focus {
     background-color: #080880;
 }
 
-@media(max-width:380px){
+@media(max-width:320px){
+    .board-header{
+        margin:20 auto;
+    }
+    .container{
+        height:fit-content;
+        display:grid;
+        max-width:70%;
+        margin-top:290px;
+        /* background-color:black; */
+    }  
+    input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    max-width:100%;
+    align-items:center;
+    justify-content:center;
+    padding:8px;
+}
+    .row {
+    display: grid;
+    gap: 10px;
+}
+    label {
+    font-size: 10px;
+    font-weight: bold;
+    /* margin: 10px 100px 7px 4px; */
+    color: #0c0c0c;
+}
+}
+
+@media(max-width:370px){
     .board-header{
         margin:10 auto;
     }
@@ -144,7 +177,7 @@ select {
 } 
 
 /* Extra Small Devices (up to 480px) */
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .board-header{
          margin-top:530px;
     }
@@ -154,19 +187,24 @@ select {
     }
 
     .container {
-        max-width: 60%;
+        max-width: 90%;
+        width: 60%;
         /* background-color:black; */
         padding: 15px;
-        margin: 10px 10px 0px 10px; /* Adjust for small screen */
+        margin: -10px 10px 0px 10px; /* Adjust for small screen */
+    }
+    #vehicleForm{
+        /* margin-left:10px; */
     }
 }
 
 /* Small Devices (up to 767px) */
-@media only screen and (max-width: 768px) {
+@media(max-width: 768px) {
     .container {
         max-width: 95%;
+        width: 90%;
         padding: 15px;
-        margin: 40px 10px 0 -10px; /* Adjust for small screen */
+        margin: 70px 15px 0 5px; /* Adjust for small screen */
     }
 
     .board-header h6 {

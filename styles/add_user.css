@@ -116,7 +116,11 @@ label {
 /* Responsive Design */
 @media(max-width:350px){
     .container{
-    margin:auto -10px 0px 0px;
+    margin:auto -10px 0px 0px;   
+    }
+    .board-header {
+        margin:50px 0 0px -150px;
+        padding:0 0 0 10px;
     }
 }
 /* Extra Small Devices (up to 576px) */
@@ -157,11 +161,6 @@ label {
     .board-header h6 {
         font-size: 20px;
         padding:0 0 0 150px;
-    }
-
-    .btn-con {
-        flex-direction: column;
-        gap: 15px;
     }
 
     .add-btn {

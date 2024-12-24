@@ -58,6 +58,8 @@ include('admin_header.php');?>
                     </div>
                 </form>
             </div>
+        </div>
+    </section>
 </body>
 
 </html>
