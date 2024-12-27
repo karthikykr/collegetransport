@@ -10,7 +10,7 @@ include('../header.php');
     <section class="board">
         <div id="main" class="main">
             <div class="board-header">
-                <h6>Add User</h6>
+                <h6>Add Driver</h6>
             </div>
             <div class="container">
                 <form id="userForm" action="add_driver_backend.php" method="POST">
@@ -26,8 +26,13 @@ include('../header.php');
                         required><br>
 
                     <!-- Password -->
-                    <label for="password">age</label>
+                    <label for="age">age</label>
                     <input type="number" id="age" name="age" class="user_input" placeholder="Enter Age"
+                        required><br>
+
+                         <!-- Contact -->
+                    <label for="Contact No">Contact No</label>
+                    <input type="number" id="contact_no" name="contact_no" class="user_input" placeholder="Enter phone number"
                         required><br>
 
                     <!-- Submit Button -->
