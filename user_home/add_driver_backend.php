@@ -7,6 +7,7 @@
             $name=$_POST['name'];
             $email= $_POST['email'];
             $age= $_POST['age'];
+            $contact= $_POST['contact_no'];
 
             $sql="SELECT * FROM `driver`";
             
@@ -20,7 +21,7 @@
                 }
             }
 
-            $query = "INSERT INTO `driver` (`name`,`email`, `age`) VALUES ('$name','$email','$age')";
+            $query = "INSERT INTO `driver` (`name`,`email`, `age`,`contact`) VALUES ('$name','$email','$age','$contact')";
             
             if($conn->query($query)){
                 echo"<script>alert('user added sucessfully');</script>";
