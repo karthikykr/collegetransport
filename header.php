@@ -88,7 +88,7 @@ $user_role = $_SESSION['role'];
             
             if($user_role =='transport'){
             ?>
-            <li><a href="../transport/add_driver.php"
+            <li><a href="../user_home/add_driver.php"
                     class="<?php if($current_page==='transport/add_driver.php')echo"active";?>"><i
                         class="fa fa-user-plus"></i>
                     <span>Add Driver</span></a></li>
