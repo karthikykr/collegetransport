@@ -1,88 +1,146 @@
-<?php
-// Assuming data is passed from the booking form
-// include('../session.php'); 
-include('../db.php'); 
-// include('../header.php');
+<?php 
+include('../session.php');
+include('../db.php');
+  
+$sql1="SELECT * FROM `add_vehicle`";
 
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     // Retrieve POST data
-//     $vehicle = $_POST['vehicle'];
-//     $travel_date = $_POST['travel_date'];
-//     $purpose = $_POST['purpose'];
-//     $num_people = $_POST['num_people'];
-//     $num_days = $_POST['num_days'];
-//     $pickup_from = $_POST['pickup_from'];
-//     $pickup_time = $_POST['pickup_time'];
-//     $drop_to = $_POST['drop_to'];
-//     $drop_time = $_POST['drop_time'];
+    $result1 = $conn->query($sql1);
 
-//     // Convert 24-hour time to 12-hour AM/PM format
-//     $pickup_time_formatted = date("g:i A", strtotime($pickup_time)); // 12-hour format with AM/PM
-//     $drop_time_formatted = date("g:i A", strtotime($drop_time));     // 12-hour format with AM/PM
-// }
+    // $sql2="SELECT * FROM `driver`";
+
+    // $result2 = $conn->query($sql2);
+
+
 ?>
-    <link rel="stylesheet" href="../styles/booking_vehicle.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Dropdown</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    .dropdown-container {
+        position: relative;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .search-box {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .dropdown {
+        width: 100%;
+        max-height: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow-y: auto;
+        background: #fff;
+        display: none;
+        /* Hidden initially */
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .dropdown-item {
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .dropdown-item:hover {
+        background: #f0f0f0;
+    }
+    </style>
+</head>
+
 <body>
-    <div class="container">
-    <center>
-        <h2>Confirm Vehicle Booking</h2>
-        <table class="table table-hover" border="1">
-            <tr>
-                <th>Vehicle Type</th>
-                <td><?php echo htmlspecialchars($vehicle); ?></td>
-            </tr>
-            <tr>
-                <th>Number of People</th>
-                <td><?php echo htmlspecialchars($num_people); ?></td>
-            </tr>
-            <tr>
-                <th>Number of Days</th>
-                <td><?php echo htmlspecialchars($num_days); ?></td>
-            </tr>
-            <tr>
-                <th>Travel Date</th>
-                <td><?php echo htmlspecialchars($travel_date); ?></td>
-            </tr>
-            <tr>
-                <th>Pick-up Location</th>
-                <td><?php echo htmlspecialchars($pickup_from); ?></td>
-            </tr>
-            <tr>
-                <th>Drop Location</th>
-                <td><?php echo htmlspecialchars($drop_to); ?></td>
-            </tr>
-            <tr>
-                <th>Pick-up Time</th>
-                <td><?php echo htmlspecialchars($pickup_time_formatted); ?></td>
-            </tr>
-            <tr>
-                <th>Drop Time</th>
-                <td><?php echo htmlspecialchars($drop_time_formatted); ?></td>
-            </tr>
-            <tr>
-                <th>Purpose</th>
-                <td><?php echo htmlspecialchars($purpose); ?></td>
-            </tr>
-            </center>
-            </table>
-            
-        <form action="#" method="POST">
-            <input type="hidden" name="vehicle" value="<?php echo htmlspecialchars($vehicle); ?>">
-            <input type="hidden" name="travel_date" value="<?php echo htmlspecialchars($travel_date); ?>">
-            <input type="hidden" name="purpose" value="<?php echo htmlspecialchars($purpose); ?>">
-            <input type="hidden" name="num_people" value="<?php echo htmlspecialchars($num_people); ?>">
-            <input type="hidden" name="num_days" value="<?php echo htmlspecialchars($num_days); ?>">
-            <input type="hidden" name="pickup_from" value="<?php echo htmlspecialchars($pickup_from); ?>">
-            <input type="hidden" name="pickup_time" value="<?php echo htmlspecialchars($pickup_time); ?>">
-            <input type="hidden" name="drop_to" value="<?php echo htmlspecialchars($drop_to); ?>">
-            <input type="hidden" name="drop_time" value="<?php echo htmlspecialchars($drop_time); ?>">
-            <div class="btn-con">
-                <button type="submit" name="confirm" class="submit-btn">Confirm</button>
-                <button  name="cancel" class="submit-btn" href="booking_vehicle.php">Cancel</button>
-            </div>
-        </form>
+
+    <?php  
+    echo($row1['v_reg_no']);
+    ?>
+    <h1>Searchable Dropdown Example</h1>
+
+    <div class="dropdown-container">
+        <input type="text" class="search-box" placeholder="Search driver..." onfocus="toggleDropdown(this, true)">
+        <div class="dropdown">
+            <?php 
+            if ($result1->num_rows > 0) {
+            // Loop through the results and display them
+            while ($row1 = $result1->fetch_assoc()) {
+                 ?>
+            <div class="dropdown-item"> <?php ech($row1['v_reg_no'])?> </div>
+            <?php
+        }
+            } 
+            ?>
+        </div>
     </div>
+
+
+
+
+    <div class="dropdown-container">
+        <input type="text" class="search-box" placeholder="Search driver..." onfocus="toggleDropdown(this, true)">
+        <div class="dropdown">
+            <div class="dropdown-item">Driver 6</div>
+            <div class="dropdown-item">Driver 7</div>
+            <div class="dropdown-item">Driver 8</div>
+            <div class="dropdown-item">Driver 9</div>
+            <div class="dropdown-item">Driver 10</div>
+        </div>
+    </div>
+
+    <script>
+    // Show/hide dropdown for a specific input box
+    function toggleDropdown(input, show) {
+        const dropdown = input.nextElementSibling;
+        dropdown.style.display = show ? 'block' : 'none';
+    }
+
+    // Filter dropdown items based on the corresponding input box
+    document.querySelectorAll('.search-box').forEach(searchBox => {
+        searchBox.addEventListener('input', function() {
+            const dropdown = this.nextElementSibling;
+            const filter = this.value.toLowerCase();
+            const items = dropdown.querySelectorAll('.dropdown-item');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(filter) ? '' : 'none';
+            });
+        });
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            if (!dropdown.parentElement.contains(e.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+    });
+
+    // Handle item selection for multiple dropdowns
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const dropdown = this.parentElement;
+            const searchBox = dropdown.previousElementSibling;
+            searchBox.value = this.textContent;
+            dropdown.style.display = 'none';
+        });
+    });
+    </script>
 </body>
 
 </html>
