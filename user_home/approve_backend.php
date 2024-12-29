@@ -24,9 +24,13 @@
         $stmt->bind_param("ssi", $new_status,$reason, $booking_id);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Booking status updated successfully.');
-            location.href='approval.php';
-            </script>";
+            echo "<script>alert('Booking status updated successfully.')</script>";
+              if($role==='transport'){
+               echo("<script> location.href='../transport/transport_approval.php'</script>");
+               exit;
+              }
+             echo("<script>location.href='approval.php'</script>");
+        
         } else {
             echo "<script>alert('unable to update booking status');
             location.href='approval.php';
