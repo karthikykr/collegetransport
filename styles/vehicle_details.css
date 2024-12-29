@@ -185,12 +185,12 @@ input[type="date"]:focus {
     
     /* Close button */
     .close-btn {
-      color: #aaa;
+      color: #dfdcdc;
       font-size: 30px;
       font-weight: bold;
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 170px;
+      right: 500px;
       cursor: pointer;
     }
     

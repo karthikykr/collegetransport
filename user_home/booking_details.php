@@ -124,6 +124,7 @@ openPopupBtn.addEventListener('click', () => {
 
 // Close the popup when the "×" button is clicked
 closePopupBtn.addEventListener('click', () => {
+   
   popup.style.display = 'none'; // Hide the popup
 });
 
