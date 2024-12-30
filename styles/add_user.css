@@ -48,7 +48,7 @@ body {
 .container {
     max-width: 600px;
     width: 100%;
-    margin: 0 0 0 50px;
+    margin: 40px 0 0 50px;
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -162,6 +162,7 @@ label {
     .board-header h6 {
         font-size: 20px;
         padding:0 0 0 150px;
+        margin:10px 0 0 0;
     }
 
     .add-btn {
@@ -174,12 +175,14 @@ label {
 /* Medium Devices (up to 1024px) */
 @media (max-width: 1024px) {
     .container {
-        max-width: 80%;
+        max-width: 70%;
         padding: 15px;
+        margin:80px 0 0 0;
     }
 
     .board-header h1 {
         font-size: 20px;
+        margin: 30px 0 0 0;
     }
 
     .add-btn {

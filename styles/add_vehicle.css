@@ -115,10 +115,11 @@ select:focus {
         margin:20 auto;
     }
     .container{
+        width:100%;
         height:fit-content;
         display:grid;
         max-width:70%;
-        margin-top:290px;
+        margin-top:350px;
         /* background-color:black; */
     }  
     input[type="text"],
@@ -146,12 +147,13 @@ select {
 @media(max-width:370px){
     .board-header{
         margin:10 auto;
+        padding-bottom: 10px;
     }
     .container{
         height:fit-content;
         display:grid;
         max-width:90%;
-        margin-top:100px;
+        margin-top:160px;
         /* background-color:black; */
     }
 input[type="text"],
@@ -202,9 +204,9 @@ select {
 @media(max-width: 768px) {
     .container {
         max-width: 95%;
-        width: 90%;
-        padding: 15px;
-        margin: 70px 15px 0 5px; /* Adjust for small screen */
+        width: 70%;
+        padding: 15px 10px 0px 0px;
+        margin: 100px 15px 0 5px; /* Adjust for small screen */
     }
 
     .board-header h6 {
@@ -213,12 +215,13 @@ select {
     }
 }
 
-/* Medium Devices (up to 1024px) */
-/* @media only screen and (max-width: 1024px) {
+/* Medium Devices (up to 1024px) */ 
+@media (max-width: 1024px) {
     .container {
         max-width: 90%;
         padding: 15px;
-        margin-top: 10px; 
+        margin-top: 100px; 
+        /* background-color: black; */
     }
 
     .board-header h1 {
@@ -232,7 +235,7 @@ select {
         height: 40px;
     }
 }
- */
+
 
 /* Extra Large Devices (1281px and above) */
 /* @media only screen and (min-width: 1281px) {
