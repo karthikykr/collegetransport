@@ -1,12 +1,15 @@
 <?php
     include('../session.php');
     include('../db.php');
-   
+  
+
     // Handle booking status updates
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'], $_POST['action'])) {
         $booking_id = $_POST['booking_id'];
         $action = $_POST['action'];
         $reason=$_POST['reason'];
+        $vehicle=$_POST['vehicle'];
+
         if($role=='transport'){
             $new_status = ($action === 'approve') ? 't_approved' : 't_rejected';
         }else if($role=='director'){
@@ -26,6 +29,7 @@
         if ($stmt->execute()) {
             echo "<script>alert('Booking status updated successfully.')</script>";
               if($role==='transport'){
+                  
                echo("<script> location.href='../transport/transport_approval.php'</script>");
                exit;
               }

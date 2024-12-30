@@ -25,7 +25,7 @@
             
             if($conn->query($query)){
                 echo"<script>alert('user added sucessfully');</script>";
-                echo"<script>location.href='home.php'</script>";
+                echo"<script>location.href='../user_home/home.php'</script>";
             }else{
                     echo"<script>alert('User not added');</script>";
                     echo"<script>location.href='add_driver.php';</script>";

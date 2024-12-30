@@ -82,10 +82,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <th>Purpose</th>
                 <td><?php echo htmlspecialchars($purpose); ?></td>
             </tr>
-            </table>
+            </table> 
             
         <form action="approve_backend.php" method="POST">
             <input type="hidden" name="booking_id" value="<?php echo $b_id; ?>">
+            <input type="hidden" name="vehicle" value="<?php echo $vehicle ?>">
             <div class="btn-con">
                 <button type="submit" name="action" value="approve" class="update-btn">Approve</button>
                 <button type="button" id="openPopupBtn">Reject</button>

@@ -6,11 +6,9 @@ $sql1="SELECT * FROM `add_vehicle`";
 
     $result1 = $conn->query($sql1);
 
-    // $sql2="SELECT * FROM `driver`";
+$sql2="SELECT * FROM `driver`";
 
-    // $result2 = $conn->query($sql2);
-
-
+    $result2 = $conn->query($sql2);
 ?>
 
 <!DOCTYPE html>
@@ -66,38 +64,43 @@ $sql1="SELECT * FROM `add_vehicle`";
 
 <body>
 
-    <?php  
-    echo($row1['v_reg_no']);
-    ?>
-    <h1>Searchable Dropdown Example</h1>
+ 
+    <h1>Assign vehicle and Driver</h1>
+
 
     <div class="dropdown-container">
         <input type="text" class="search-box" placeholder="Search driver..." onfocus="toggleDropdown(this, true)">
         <div class="dropdown">
-            <?php 
+
+        <?php  
             if ($result1->num_rows > 0) {
-            // Loop through the results and display them
-            while ($row1 = $result1->fetch_assoc()) {
-                 ?>
-            <div class="dropdown-item"> <?php ech($row1['v_reg_no'])?> </div>
-            <?php
-        }
-            } 
-            ?>
+                // Loop through the results and display them
+                while ($row1 = $result1->fetch_assoc()) {
+        ?>
+            <div class="dropdown-item"><?php echo($row1['v_reg_no']); ?></div>
+        <?php
+                }
+            }
+        ?>
         </div>
     </div>
 
 
-
-
     <div class="dropdown-container">
         <input type="text" class="search-box" placeholder="Search driver..." onfocus="toggleDropdown(this, true)">
         <div class="dropdown">
-            <div class="dropdown-item">Driver 6</div>
-            <div class="dropdown-item">Driver 7</div>
-            <div class="dropdown-item">Driver 8</div>
-            <div class="dropdown-item">Driver 9</div>
-            <div class="dropdown-item">Driver 10</div>
+        <?php  
+
+            if ($result2->num_rows > 0) {
+                // Loop through the results and display them
+                while ($row2 = $result2->fetch_assoc()) {
+        ?>
+            <div class="dropdown-item"><?php echo($row2['name']); ?></div>
+          
+            <?php
+                }
+            }
+        ?>
         </div>
     </div>
 
