@@ -29,7 +29,8 @@
         if ($stmt->execute()) {
             echo "<script>alert('Booking status updated successfully.')</script>";
               if($role==='transport'){
-                  
+                $_SESSION['book_id'] = $booking_id;
+                $_SESSION['vehicle']=$vehicle;
                echo("<script> location.href='../transport/transport_approval.php'</script>");
                exit;
               }

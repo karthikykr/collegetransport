@@ -2,6 +2,10 @@
 include('../session.php');
 include('../db.php');
   
+$book_id=$_SESSION['book_id'];
+$vehicle=$_SESSION['vehicle'];
+
+
 $sql1="SELECT * FROM `add_vehicle`";
 
     $result1 = $conn->query($sql1);
@@ -64,46 +68,67 @@ $sql2="SELECT * FROM `driver`";
 
 <body>
 
- 
+
     <h1>Assign vehicle and Driver</h1>
 
+    <form method="POST" action="confirm_backend.php">
+        <div class="dropdown-container">
+            <label for="search-v">Vehicle</label>
+            <input type="text" name="search-v" class="search-box" placeholder="Search vehicle..."
+                onfocus="toggleDropdown(this, true)">
+            <div class="dropdown">
 
-    <div class="dropdown-container">
-        <input type="text" class="search-box" placeholder="Search driver..." onfocus="toggleDropdown(this, true)">
-        <div class="dropdown">
-
-        <?php  
+                <?php  
             if ($result1->num_rows > 0) {
                 // Loop through the results and display them
                 while ($row1 = $result1->fetch_assoc()) {
         ?>
-            <div class="dropdown-item"><?php echo($row1['v_reg_no']); ?></div>
-        <?php
+                <div class="dropdown-item" value="<?php echo($row2['v_id']); ?>"><?php echo($row1['v_reg_no']); ?></div>
+                <?php
                 }
             }
         ?>
+            </div>
         </div>
-    </div>
 
 
-    <div class="dropdown-container">
-        <input type="text" class="search-box" placeholder="Search driver..." onfocus="toggleDropdown(this, true)">
-        <div class="dropdown">
-        <?php  
+        <div class="dropdown-container">
+            <label for="search-d">Driver</label>
+            <input type="text" class="search-box" name="search-d" placeholder="Search driver..."
+                onfocus="toggleDropdown(this, true)">
+            <div class="dropdown">
+                <?php  
 
             if ($result2->num_rows > 0) {
                 // Loop through the results and display them
                 while ($row2 = $result2->fetch_assoc()) {
         ?>
-            <div class="dropdown-item"><?php echo($row2['name']); ?></div>
-          
-            <?php
+                <div class="dropdown-item" value="<?php echo($row2['d_id']); ?>"><?php echo($row2['name']); ?></div>
+
+                <?php
                 }
             }
         ?>
+            </div>
         </div>
-    </div>
 
+        <div>
+            <label for="search-d">Opening KM</label><br>
+            <input type="text" name="opening_km">
+        </div>
+
+        <div>
+            <label for="search-d">Closing KM</label><br>
+            <input type="text" name="closing_km">
+        </div>
+        <div>
+            <input type="submit" name="confirm">
+        </div>
+
+        <input type="hidden" value="<?php echo $book_id; ?> " name="book_id">
+        <input type="hidden" value="<?php echo $vehicle; ?>" name="vehicle">
+
+    </form>
     <script>
     // Show/hide dropdown for a specific input box
     function toggleDropdown(input, show) {

@@ -36,8 +36,20 @@ html, body {
 /* Grid Layout */
 .grid-container {
     display: grid;
-    background-color: rgb(242, 250, 252);
+    background-color: rgb(255, 255, 255);
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    padding: 20px;
+
+    /* display: grid;
+    background-color: rgb(242, 250, 252);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     gap: 30px;
     align-items: center;
     justify-content: center;
@@ -45,7 +57,7 @@ html, body {
     margin-left: var(--sidebar-width);
     transition: margin-left 0.3s ease, width 0.3s ease;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 /* State when the sidebar is hidden */
