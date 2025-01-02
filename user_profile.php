@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="../styles/user_profile.css">
 <div id="user-info" class="hidden">
     <div class="user-profile-section">
@@ -19,7 +18,7 @@
     </div>
     <div class="line"></div>
     <div class="logoutbtn">
-        <button class="change-password" onclick="location.href='change_pass_admin.php'">
+        <button class="change-password" onclick="location.href='../change_pass.php'">
             <i class="fa-solid fa-key"></i>
             <span class="logout-text">Change Password</span>
         </button>

@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $book_id.$vehicle.$s_driver.$s_vehicle.$open_km.$close_km."\n";
     echo $v_id."\n".$d_id;
 
-    $stmt=$conn->prepare("INSERT INTO t_approval(book_id,vehicle_id,driver_id,open_km,close_km) VALUES(?,?,?,?,?)")
+    $stmt=$conn->prepare("INSERT INTO t_approval(book_id,vehicle_id,driver_id,open_km,close_km) VALUES(?,?,?,?,?)");
     $stmt->bind_param("iiiss",$book_id,$v_id,$d_id,$open_km,$close_km);
 
     if ($stmt->execute()) {
