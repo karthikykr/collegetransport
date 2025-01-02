@@ -18,10 +18,17 @@
     </div>
     <div class="line"></div>
     <div class="logoutbtn">
-        <button class="change-password" onclick="location.href='../change_pass.php'">
+        <?php if($role == 'admin'){ ?>
+        <button class="change-password" onclick="location.href='../admin/change_pass_admin.php'">
             <i class="fa-solid fa-key"></i>
             <span class="logout-text">Change Password</span>
         </button>
+        <?php } else{ ?>
+        <button class="change-password" onclick="location.href='../user_home/change_pass.php'">
+            <i class="fa-solid fa-key"></i>
+            <span class="logout-text">Change Password</span>
+        </button>
+        <?php } ?>
         <button class="logout-btn" onclick="location.href='../logout.php'">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span class="logout-text">Logout</span>

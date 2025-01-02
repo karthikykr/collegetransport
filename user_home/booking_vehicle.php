@@ -8,7 +8,7 @@ include('../header.php');?>
 
 <body>
     <div class="board-header">
-        <h2>Vehicle Booking Form</h2>
+        <h2>Vehicle Booking</h2>
     </div>
     <!-- Vehicle Booking Form -->
     <div class="container">

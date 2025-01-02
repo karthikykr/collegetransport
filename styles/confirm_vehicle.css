@@ -1,0 +1,126 @@
+.board-header {
+    margin: 130px 0px 20px 0px; /* Centers the header horizontally */
+    text-align: center; /* Centers text inside the header */
+    color: rgb(31, 30, 30);
+    font-size: 20px;
+}
+
+.board-header h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+    /* background-color: black; */
+} 
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.confirm-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin:10px auto;
+    font-family: Arial, sans-serif;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.confirm-details th,
+.confirm-details td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.confirm-details th {
+    background-color: #f4f4f6;
+    color: #333;
+    font-weight: bold;
+}
+
+.confirm-details tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.confirm-details tr:hover {
+    background-color: #e1e1f9;
+}
+
+.confirm-details td {
+    background-color: #fff;
+}
+
+.confirm-details td:last-child {
+    font-weight: bold;
+}
+.confirm-btn {
+    background-color: #020267;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background-color: #04931e;
+}
+
+.cancel-btn {
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #020267;
+    width: 100px;
+    height: 40px;
+    color: #020267;
+    font-size: 16px;
+    /* border: none; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #b11a1a;
+    border: none;
+    color:white;
+}
+/* Responsive Styles */
+@media(max-width: 320px){
+    .row {
+        flex-direction: column;
+    }
+    .board-header{
+        margin-top:530px;
+    }
+    .board-header h2{
+        font-size:1.2rem;
+    }
+}
+@media(max-width: 480px){
+     .row {
+        flex-direction: column;
+    }
+    .board-header {
+        margin-top: 530px;
+    }
+    .board-header h2{
+        font-size:1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    /* .row {
+        flex-direction: column;
+    } */
+
+    .form-container {
+        width: 100%;
+        padding: 45px;
+        background-color:black;
+    }
+}

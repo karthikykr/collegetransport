@@ -36,64 +36,15 @@ body {
     border-radius: 8px;
 }
 
-.confirm-container{
+/* .confirm-container{
     max-width: 800px;
     margin: auto;
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    /* background-color: black; */
-}
-
-/* table {
-    background-color: #def6fa;
-    width: 100%;
-    max-width: 800px;
-    border-collapse: collapse;
-    margin: 0 auto;
-    /* margin-left: 20px; 
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 } */
 
-/* .booking-details {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.booking-details th,
-.booking-details td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.booking-details th {
-    background-color: #f4f4f6;
-    color: #333;
-    font-weight: bold;
-}
-
-.booking-details tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.booking-details tr:hover {
-    background-color: #e1e1f9;
-}
-
-.booking-details td {
-    background-color: #fff;
-}
-
-.booking-details td:last-child {
-    font-weight: bold;
-} */
 
 /* Form Container */
 /* .form-container {
@@ -108,10 +59,10 @@ body {
 } */
 
 /* Row for Two-Column Layout */
-/* .row {
+.row {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .form-group {
@@ -120,7 +71,7 @@ body {
 
 .form-group.full-width {
     flex: 100%;
-} */
+}
 
 /* Label Style */
 label {
@@ -176,49 +127,37 @@ textarea {
     background-color: #4d4de6;
 }
 
-.confirm-btn {
-    background-color: #020267;
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.confirm-btn:hover {
-    background-color: #04931e;
-}
-
-.cancel-btn {
-    background-color: white;
-    border-radius: 20px;
-    border: 2px solid #020267;
-    width: 100px;
-    height: 40px;
-    color: #020267;
-    font-size: 16px;
-    /* border: none; */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cancel-btn:hover {
-    background-color: #b11a1a;
-    border: none;
-    color:white;
-}
-
 /* Responsive Styles */
-@media (max-width: 800px) {
+@media(max-width: 320px){
     .row {
         flex-direction: column;
     }
+    .board-header{
+        margin-top:530px;
+    }
+    .board-header h2{
+        font-size:1.2rem;
+    }
+}
+@media(max-width: 480px){
+     .row {
+        flex-direction: column;
+    }
+    .board-header {
+        margin-top: 530px;
+    }
+    .board-header h2{
+        font-size:1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    /* .row {
+        flex-direction: column;
+    } */
 
     .form-container {
         width: 100%;
         padding: 45px;
+        background-color:black;
     }
 }
