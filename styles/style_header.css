@@ -188,6 +188,7 @@ body {
 
     .sidebar {
         width: 220px;
+        margin: 105px 0 0 0;
     }
 
     .main-content {
@@ -196,6 +197,10 @@ body {
 
     .sidebar-links li a {
         font-size: 0.95rem;
+    }
+    .sidebar.collapsed {
+        width: 100px;
+        margin: 105px 0 0 0;
     }
 }
 

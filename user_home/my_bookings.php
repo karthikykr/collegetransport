@@ -1,13 +1,14 @@
 <?php 
  include('../session.php');
-include('../db.php');
-include('../header.php');
-?>
-<link rel="stylesheet" href="../styles/my_booking.css">
-<div class="board-header">
-    <h3>My Bookings</h3>
-</div>
+ include('../db.php');
+include('../header.php');?>
 
+<link rel="stylesheet" href="../styles/my_booking.css">
+<section class="board">
+    <div id="main" class="main">
+        <div class="board-header">
+            <h2>My Bookings</h2>
+        </div>
 <div class="grid-container">
     <?php
       
@@ -27,11 +28,28 @@ include('../header.php');
             
             ?>
     <div class="grid-item">
-        <h3><?php echo  $row['vehicle']; ?></h3>
-        <h3><?php echo  $row['travel_date']; ?></h3>
-        <h6><?php echo "Number of people " . $row['num_people']; ?></h6>
-        <h6><?php echo "Number of days " . $row['num_days']; ?></h6>
-
+        <div class="row">
+            <h6><?php echo "Vehicle Type: " . $row['vehicle']; ?></h6>
+            <h6><?php echo  "Travel Date: " . $row['travel_date']; ?></h6>
+            <h6><?php echo "Number of people: " . $row['num_people']; ?></h6>
+            <h6><?php echo "Number of days: " . $row['num_days']; ?></h6>
+            <a href="#"><button id="status">Status:
+                <?php 
+                            // Check and display booking status
+                            switch ($row['booking_status']) {
+                                case 'd_approved': echo "Approved by Director"; break;
+                                case 'd_rejected': echo "Rejected by Director"; break;
+                                case 'a_d_approved': echo "Approved by Assistant Director"; break;
+                                case 'a_d_rejected': echo "Rejected by Assistant Director"; break;
+                                case 'p_approved': echo "Approved by Principal"; break;
+                                case 'p_rejected': echo "Rejected by Principal"; break;
+                                case 'hod_approved': echo "Approved by HOD"; break;
+                                case 'hod_rejected': echo "Rejected by HOD"; break;
+                                default: echo "Pending"; break;
+                            }
+                        ?>
+            </button></a>
+        </div>
         <div class="step-progress">
             <div class="step-indicator ">
                 <span
@@ -71,25 +89,7 @@ include('../header.php');
                 <span class="step-label">Director</span>
             </div>
         </div>
-
-        <h3>
-            <?php 
-                            // Check and display booking status
-                            switch ($row['booking_status']) {
-                                case 'd_approved': echo "Approved by Director"; break;
-                                case 'd_rejected': echo "Rejected by Director"; break;
-                                case 'a_d_approved': echo "Approved by Assistant Director"; break;
-                                case 'a_d_rejected': echo "Rejected by Assistant Director"; break;
-                                case 'p_approved': echo "Approved by Principal"; break;
-                                case 'p_rejected': echo "Rejected by Principal"; break;
-                                case 'hod_approved': echo "Approved by HOD"; break;
-                                case 'hod_rejected': echo "Rejected by HOD"; break;
-                                default: echo "Pending"; break;
-                            }
-                        ?>
-        </h3>
     </div>
-    </a>
     <?php } else {
             echo "No Bookings...";
         }
@@ -97,6 +97,19 @@ include('../header.php');
         ?>
 
 </div>
-</body>
+</section>
+</main>
+<!-- <script src="../scripts/script.js"></script> -->
+ <script>
+    const sidebar = document.querySelector('.sidebar'); // Sidebar element
+const gridContainer = document.querySelector('.grid-container'); // Grid container
+const sidebarToggle = document.querySelector('.sidebar-toggle');
 
+sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('sidebar-collapsed');
+    // Adjust the grid container margin to account for the sidebar collapse
+    gridContainer.classList.toggle('sidebar-collapsed');
+});
+ </script>
+</body>
 </html>

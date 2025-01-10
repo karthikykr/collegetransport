@@ -22,14 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $role = $_POST['role']; //
     $department = $_POST['department'];//
 ?>
-    <link rel="stylesheet" href="../styles/vehicle_details.css">
+    <link rel="stylesheet" href="../styles/approval_details.css">
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> Font Awesome for icons -->
-    </head>
-    <h1>Bookings detail</h1>
-    <body>
-        <div class="container">
-    <table class="table table-hover" border="1">
+    <div class="board-header">
+        <h2>Approval Details</h2>
+    </div> 
+    <div class="container">
+    <center>
+    <table class="confirm-details" border="1">
     <tr>
                 <th>Name</th>
                 <td><?php echo htmlspecialchars($name); ?></td>
@@ -88,8 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="hidden" name="booking_id" value="<?php echo $b_id; ?>">
             <input type="hidden" name="vehicle" value="<?php echo $vehicle ?>">
             <div class="btn-con">
-                <button type="submit" name="action" value="approve" class="update-btn">Approve</button>
-                <button type="button" id="openPopupBtn">Reject</button>
+                <button type="submit" name="action" value="approve" class="confirm-btn">Approve</button>
+                <button type="button" id="openPopupBtn" class="cancel-btn">Reject</button>
             </div>     
             <!-- Popup Modal for Reason -->
             <div id="popup" class="popup">
@@ -99,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="reason">Reason:</label>
                     <textarea id="reason" name="reason" rows="4" cols="50" ></textarea>
                     <br>
-                    <button type="submit" name="action" value="reject" class="delete-btn">Confirm</button>       
+                    <button type="submit" name="action" value="reject" class="confirm-btn">Confirm</button>       
                 </div>
             </div>
         </form>
@@ -124,9 +125,14 @@ openPopupBtn.addEventListener('click', () => {
 });
 
 // Close the popup when the "×" button is clicked
-closePopupBtn.addEventListener('click', () => {
-   
+closePopupBtn.addEventListener('click', (e) => {
+   e.preventDefault();
+
   popup.style.display = 'none'; // Hide the popup
+  reason.removeAttribute("required");
+  reason.value="";
+
+
 });
 
 </script>

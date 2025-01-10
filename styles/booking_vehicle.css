@@ -14,7 +14,7 @@ body {
 }
 
 .board-header {
-    margin: 130px 0px 20px 0px; /* Centers the header horizontally */
+    margin: 140px 0px 20px 0px; 
     text-align: center; /* Centers text inside the header */
     color: rgb(31, 30, 30);
     font-size: 20px;
@@ -22,9 +22,7 @@ body {
 
 .board-header h1 {
     text-align: center;
-    margin: 20px 0;
     color: #444;
-    /* background-color: black; */
 } 
 
 .container {
@@ -133,7 +131,7 @@ textarea {
         flex-direction: column;
     }
     .board-header{
-        margin-top:530px;
+        margin:530px 0px 10px 0px;
     }
     .board-header h2{
         font-size:1.2rem;
@@ -144,13 +142,13 @@ textarea {
         flex-direction: column;
     }
     .board-header {
-        margin-top: 530px;
+        margin: 530px 0px 10px 0px;
     }
     .board-header h2{
         font-size:1.2rem;
     }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     /* .row {
         flex-direction: column;
     } */
@@ -159,5 +157,37 @@ textarea {
         width: 100%;
         padding: 45px;
         background-color:black;
+    }
+    .board-header {
+        margin: 120px 0px 10px 40px;
+    }
+     .board-header h2{
+        font-size:1.4rem;
+    }
+}
+@media (width: 1024px) {
+    .board-header{
+        /* margin: 10 auto; */
+        margin: 100px 0px 10px -100px;
+        /* background-color:black; */
+    }
+    .container{
+        max-width:1700px;
+        width:100%;
+        margin: 20px 0px 0px -50px;
+        padding:20px;
+    }
+}
+@media (min-width: 1440px) {
+    .board-header{
+        /* margin: 10 auto; */
+        margin: 120px 150px 10px 0px;
+        /* background-color:black; */
+    }
+    .container{
+        max-width:1000px;
+        width:100%;
+        margin: 20px 0px 0px 20px;
+        padding:20px;
     }
 }

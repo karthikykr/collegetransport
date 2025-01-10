@@ -38,7 +38,7 @@ html, body {
 .grid-container {
     display: grid;
     /* background-color: rgb(255, 255, 255); */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -54,9 +54,12 @@ html, body {
 
 /* State when the sidebar is hidden */
 .grid-container.sidebar-collapsed {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
     margin-left: -100px;
-    width: calc(100% - 10px);
-    max-width:1600px; 
+    width: fit-content;
+    /* width: calc(100% - 10px); */
+    max-width:1300px; 
+    gap:10px;
 }
 
 /* Grid Item */
@@ -104,17 +107,25 @@ html, body {
 }
 
 /* Responsive design */
-@media (max-width: 2288px) {
+/* @media (width: 2288px) {
     .grid-container {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         justify-content: center;
         align-items: center;
     }
-}
+} */
 
-@media (max-width: 1500px) {
+@media (width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin-left: -5px;
+    }
+    .grid-container.sidebar-collapsed{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin-left:-100px
+    }
+    .board-header.sidebar-collapsed{
+        margin: 100px 0 0 250px;
     }
 }
 
@@ -140,6 +151,7 @@ html, body {
         text-align:center;
     }
     .grid-container.sidebar-collapsed {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         max-width:80%;
         width: 100%;
         padding: 20px 10px 10px -0px;
