@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h2>Approval Details</h2>
     </div> 
     <div class="container">
-    <center>
     <table class="confirm-details" border="1">
     <tr>
                 <th>Name</th>
@@ -83,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <th>Purpose</th>
                 <td><?php echo htmlspecialchars($purpose); ?></td>
             </tr>
-            </table> 
+        </table> 
             
         <form action="approve_backend.php" method="POST">
             <input type="hidden" name="booking_id" value="<?php echo $b_id; ?>">

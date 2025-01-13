@@ -13,7 +13,7 @@
 
 .container {
     max-width: 800px;
-    width:100%;
+    width:40px;
     margin: 0 auto;
     padding: 10px;
     background: #fff;
@@ -30,7 +30,7 @@
 
 .confirm-details th,
 .confirm-details td {
-    padding: 12px;
+    padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
 }
@@ -58,8 +58,10 @@
 }
 
 .btn-con{
+    /* margin-top:20px; */
     display: flex;
-    gap:10px;
+    gap:30px;
+    justify-content: center;
 }
 .confirm-btn {
     background-color: #020267;
@@ -94,7 +96,7 @@
     background-color: #b11a1a;
     border: none;
     color:white;
-}
+} 
 
 
 .popup {
