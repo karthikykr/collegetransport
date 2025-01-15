@@ -17,7 +17,7 @@ include('../header.php');?>
     if ($result->num_rows > 0) 
       // Loop through the results and display them
         while ($row = $result->fetch_assoc()) { 
-            $statuses = ['hod_approved', 'p_approved', 'a_d_approved', 'd_approved'];
+            $statuses = ['hod_approved', 'p_approved', 'a_d_approved', 'd_approved','t_approved'];
             $progress = 0;
 
 
@@ -33,7 +33,7 @@ include('../header.php');?>
             <h6><?php echo  "Travel Date: " . $row['travel_date']; ?></h6>
             <h6><?php echo "Number of people: " . $row['num_people']; ?></h6>
             <h6><?php echo "Number of days: " . $row['num_days']; ?></h6>
-            <a href="#"><button id="status">Status:
+           <button id="status">Status:
                 <?php 
                             // Check and display booking status
                             switch ($row['booking_status']) {
@@ -48,45 +48,61 @@ include('../header.php');?>
                                 default: echo "Pending"; break;
                             }
                         ?>
-            </button></a>
+            </button>
+            <form method="POST" action="view_my_booking.php">
+                <input type="hidden" name="bookid" value="<?php echo $row['id']; ?>"/>
+                <input type="submit" value="View"/>
+            </form>
+           
+            
         </div>
         <div class="step-progress">
             <div class="step-indicator ">
                 <span
-                    class="step-circle <?php echo ($progress >= 25) ? 'approved' : ''; echo ($row['booking_status'] == 'hod_rejected') ? 'rejected' : ''; ?>">
+                    class="step-circle <?php echo ($progress >= 20) ? 'approved' : ''; echo ($row['booking_status'] == 'hod_rejected') ? 'rejected' : ''; ?>">
 
-                    <?php echo ($progress >= 25) ? '✔' : ''; echo ($row['booking_status'] == 'hod_rejected' ) ? '✘' : '';?></span>
+                    <?php echo ($progress >= 20) ? '✔' : ''; echo ($row['booking_status'] == 'hod_rejected' ) ? '✘' : '';?></span>
                 <span class="step-label">HOD</span>
             </div>
 
-            <div class="step-line <?php echo ($progress >= 50) ? 'active' : ''; ?>"></div>
+            <div class="step-line <?php echo ($progress >= 40) ? 'active' : ''; ?>"></div>
 
-            <div class="step-indicator <?php echo ($progress >= 50) ? 'completed' : ''; ?>">
+            <div class="step-indicator <?php echo ($progress >= 40) ? 'completed' : ''; ?>">
                 <span
-                    class="step-circle <?php echo ($progress >= 50) ? 'approved' : ''; echo ($row['booking_status'] == 'p_rejected') ? 'rejected' : ''; ?>">
+                    class="step-circle <?php echo ($progress >= 40) ? 'approved' : ''; echo ($row['booking_status'] == 'p_rejected') ? 'rejected' : ''; ?>">
 
-                    <?php echo ($progress >= 50) ? '✔' : ''; echo ($row['booking_status'] == 'p_rejected' ) ? '✘' : '';?></span>
+                    <?php echo ($progress >= 40) ? '✔' : ''; echo ($row['booking_status'] == 'p_rejected' ) ? '✘' : '';?></span>
                 <span class="step-label">Principal</span>
             </div>
 
-            <div class="step-line <?php echo ($progress >= 75) ? 'active' : ''; ?>"></div>
+            <div class="step-line <?php echo ($progress >= 60) ? 'active' : ''; ?>"></div>
 
-            <div class="step-indicator <?php echo ($progress >= 75) ? 'completed' : ''; ?>">
+            <div class="step-indicator <?php echo ($progress >= 60) ? 'completed' : ''; ?>">
                 <span
-                    class="step-circle <?php echo ($progress >= 75) ? 'approved' : ''; echo ($row['booking_status'] == 'a_d_rejected') ? 'rejected' : ''; ?>">
+                    class="step-circle <?php echo ($progress >= 60) ? 'approved' : ''; echo ($row['booking_status'] == 'a_d_rejected') ? 'rejected' : ''; ?>">
 
-                    <?php echo ($progress >= 75) ? '✔' : ''; echo ($row['booking_status'] == 'a_d_rejected' ) ? '✘' : '';?></span>
+                    <?php echo ($progress >= 60) ? '✔' : ''; echo ($row['booking_status'] == 'a_d_rejected' ) ? '✘' : '';?></span>
                 <span class="step-label">Assistant Director</span>
             </div>
 
-            <div class="step-line <?php echo ($progress == 100) ? 'active' : ''; ?>"></div>
+            <div class="step-line <?php echo ($progress == 80) ? 'active' : ''; ?>"></div>
 
-            <div class="step-indicator <?php echo ($progress == 100) ? 'completed' : ''; ?>">
+            <div class="step-indicator <?php echo ($progress == 80) ? 'completed' : ''; ?>">
                 <span
-                    class="step-circle <?php echo ($progress >= 100) ? 'approved' : ''; echo ($row['booking_status'] == 'd_rejected') ? 'rejected' : ''; ?>">
+                    class="step-circle <?php echo ($progress >= 80) ? 'approved' : ''; echo ($row['booking_status'] == 'd_rejected') ? 'rejected' : ''; ?>">
 
-                    <?php echo ($progress >= 100) ? '✔' : ''; echo ($row['booking_status'] == 'd_rejected' ) ? '✘' : '';?></span>
+                    <?php echo ($progress >= 80) ? '✔' : ''; echo ($row['booking_status'] == 'd_rejected' ) ? '✘' : '';?></span>
                 <span class="step-label">Director</span>
+            </div>
+
+            <div class="step-line <?php echo ($progress >= 100) ? 'active' : ''; ?>"></div>
+
+            <div class="step-indicator <?php echo ($progress >= 100) ? 'completed' : ''; ?>">
+                <span
+                    class="step-circle <?php echo ($progress >= 100) ? 'approved' : ''; echo ($row['booking_status'] == 't_rejected') ? 'rejected' : ''; ?>">
+
+                    <?php echo ($progress >= 100) ? '✔' : ''; echo ($row['booking_status'] == 't_rejected' ) ? '✘' : '';?></span>
+                <span class="step-label">Transport department</span>
             </div>
         </div>
     </div>
