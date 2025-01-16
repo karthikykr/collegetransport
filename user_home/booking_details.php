@@ -34,10 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <th>Name</th>
                 <td><?php echo htmlspecialchars($name); ?></td>
             </tr>
+            <?php if($department !=null){?>
             <tr>
                 <th>Department</th>
                 <td><?php echo htmlspecialchars($department); ?></td>
             </tr>
+            <?php } ?>
             <tr>
                 <th>Designation</th>
                 <td><?php echo htmlspecialchars($role); ?></td>
