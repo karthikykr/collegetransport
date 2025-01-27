@@ -22,7 +22,11 @@ if ($result->num_rows > 0) {
    
 ?>
 
-            <a class="details-link" href="vehicle_details.php?v_id=<?php echo $row['v_id']; ?>">
+<?php if($user_role =='transport'){?>
+    <a class="details-link" href="../transport/vehicle_detail.php?v_id=<?php echo $row['v_id']; ?>">
+<?php } else {?>
+    <a class="details-link" href="vehicle_details.php?v_id=<?php echo $row['v_id']; ?>">
+<?php }?>
                 <div class="grid-item">
                     <h3><?php  echo $row['vehicle_type'] ;?></h3>
                     <h3><?php  echo  $row['v_reg_no'] ?></h3>

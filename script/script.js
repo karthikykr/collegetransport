@@ -7,10 +7,3 @@ sidebarToggle.addEventListener('click', () => {
     // Adjust the grid container margin to account for the sidebar collapse
     gridContainer.classList.toggle('sidebar-collapsed');
 });
-
-// const approved = document.querySelector('.approved');
-// const rejected = document.querySelector('.rejected');
-// const status = document.getElementById('status');
-// if (rejected) {
-//     status.style.backgroundColor = 'green';
-// }

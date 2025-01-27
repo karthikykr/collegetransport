@@ -13,7 +13,7 @@
 .container {
     max-width: 800px;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -97,13 +97,12 @@ input[type="date"]:focus {
 }
 
 /* Extra small devices (phones, portrait mode) */
-@media only screen and (max-width: 480px) {
+@media(max-width: 480px) {
     .container {
         margin: 10px 10px 5px 10px;
     }
     table{
         width: 100%;
-        padding:0px 10px 0px 10px;
     }
 
     th, td {
@@ -111,25 +110,39 @@ input[type="date"]:focus {
         padding: 5px;
         border: 1px solid #ddd;
     }
-    .board-header h1{
+    .board-header{
         margin-top: 540px;
+    }
+    .board-header h1{
         font-size: 1.2rem;
     }
   }
   
   /* Small devices (phones, landscape mode) */
-  @media only screen and (max-width: 767px) {
+  @media(width: 768px) {
     .container {
-        margin: 10px 10px 5px 10px;
+        margin:10px 10px 5px 10px;
     }
+      .board-header{
+          margin:120px 0px 0px 0px;
+      }
     .board-header h1{
-        margin:100px 0px 0px 0px;
+        font-size:1.2rem;
     }
   }
   
   /* Medium devices (tablets) */
-  @media only screen and (max-width: 1024px) {
+  @media(width: 1024px) {
     /* Styles for tablets */
+    .container {
+        margin:10px 10px 5px -80px;
+    }
+      .board-header{
+          margin:100px 200px 0px 0px;
+      }
+    .board-header h1{
+        font-size:1.4rem;
+    }
   }
   
   /* Large devices (laptops) */

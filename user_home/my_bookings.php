@@ -33,7 +33,7 @@ include('../header.php');?>
             <h6><?php echo  "Travel Date: " . $row['travel_date']; ?></h6>
             <h6><?php echo "Number of people: " . $row['num_people']; ?></h6>
             <h6><?php echo "Number of days: " . $row['num_days']; ?></h6>
-           <button id="status">Status:
+           <button id="status" class="pending">Status:
                 <?php 
                             // Check and display booking status
                             switch ($row['booking_status']) {
@@ -51,7 +51,7 @@ include('../header.php');?>
             </button>
             <form method="POST" action="view_my_booking.php">
                 <input type="hidden" name="bookid" value="<?php echo $row['id']; ?>"/>
-                <input type="submit" value="View"/>
+                <input type="submit" class="submit-btn" value="View"/>
             </form>
            
             
@@ -118,14 +118,44 @@ include('../header.php');?>
 <!-- <script src="../scripts/script.js"></script> -->
  <script>
     const sidebar = document.querySelector('.sidebar'); // Sidebar element
-const gridContainer = document.querySelector('.grid-container'); // Grid container
-const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const gridContainer = document.querySelector('.grid-container'); // Grid container
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+
 
 sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-collapsed');
     // Adjust the grid container margin to account for the sidebar collapse
     gridContainer.classList.toggle('sidebar-collapsed');
 });
+
+// var status = document.getElementById('status');
+// let text = status.innerHTML;
+//     var value = text.match(/rejected/gi);
+//     document.getElementById("result").innerHTML = value;
+//     if (value && value.length > 0) {
+//         status.style.boxShadow = "0 4px 8px rgb(248, 57, 57)";
+//     }
+
+// Function to change the status of the button
+function changeStatus(newStatus) {
+  const button = document.getElementById('status');
+
+  // Remove existing status classes
+  button.classList.remove('pending', 'rejected');
+
+  // Add the new status class
+  button.classList.add(newStatus);
+
+  // Update the button text based on status
+//   if (newStatus === 'pending') {
+//     button.textContent = 'Pending';
+//   } else if (newStatus === 'rejected') {
+//     button.textContent = 'Rejected';
+//   }
+}
+
+// Example: Change to "rejected" status after 2 seconds
+changeStatus('pending');
  </script>
 </body>
 </html>

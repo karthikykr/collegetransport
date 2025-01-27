@@ -92,6 +92,12 @@ $user_role = $_SESSION['role'];
                     class="<?php if($current_page==='add_driver.php')echo"active";?>"><i
                         class="fa fa-user-plus"></i>
                     <span>Add Driver</span></a></li>
+            <li><a href="../transport/add_vehicle.php"
+                    class="<?php if($current_page==='add_vehicle.php')echo"active";?>"><i
+                    class="fa fa-car">
+                    <span class="h5">+</span>
+                    </i>
+                    <span>Add Vehicle</span></a></li>
             <?php }
             ?>
         </ul>

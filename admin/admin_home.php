@@ -53,18 +53,19 @@ if ($result->num_rows > 0) {
         </div>
     </section>
     </main>
-    <!-- <script>
-const sidebar = document.querySelector('.sidebar-toggle'); // Sidebar element
+    <script>
+    const sidebar = document.querySelector('.sidebar'); // Sidebar element
 const gridContainer = document.querySelector('.grid-container'); // Grid container
+const sidebarToggle = document.querySelector('.sidebar-toggle');
 
-document.querySelector('.sidebar-toggle').addEventListener('click', () => {
-
-// Toggle the grid container's class for resizing
-gridContainer.classList.toggle('sidebar-collapsed');
+sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('sidebar-collapsed');
+    // Adjust the grid container margin to account for the sidebar collapse
+    gridContainer.classList.toggle('sidebar-collapsed');
 });
-</script> -->
+ </script>
 
-<script src="../scripts/script.js"></script>
+<!-- <script src="../scripts/script.js"></script> -->
 </body>
 
 </html>

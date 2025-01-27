@@ -82,7 +82,7 @@ body {
 
 .grid-item:hover {
     background-color: rgb(245, 245, 245);
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 .grid-item h3 {
@@ -190,6 +190,38 @@ body {
     border: none;
 }
 
+.submit-btn {
+    background-color: #020267;
+    border-radius: 8px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* box-shadow: 0 4px 8px #f3fbf8; */
+}
+
+.submit-btn:hover {
+    background-color: #0f0fa1;
+}
+
+.pending {
+    /* background-color: white;
+    color: green; */
+    /* box-shadow: 0px 4px 8px rgba(0, 255, 0, 0.5); Green shadow */
+    box-shadow: 0 4px 8px #f3fbf8;
+  }
+  
+  .rejected {
+    /* background-color: white;
+    color: red; */
+    box-shadow: 0px 4px 8px rgba(248, 150, 150, 0.5); /* Red shadow */
+  }
+#result{
+    background-color: black;
+    color:white;
+}
 /* Media Queries */
 @media(max-width:380px){
     .board-header{
